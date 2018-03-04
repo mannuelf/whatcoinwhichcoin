@@ -1,0 +1,9 @@
+{
+  "name": "whatcoinwhichcoin",
+  "version": "0.0.1",
+  "description": "dashboards and charts of all the coins",
+  "main": "index.js",
+  "repository": "git@github.com:mannuelf/whatcoinwhichcoin.git",
+  "author": "Mannuel Ferreira",
+  "license": "MIT"
+}
