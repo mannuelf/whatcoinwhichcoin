@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "nodemon server.js",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "build-dev": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
     "test": "mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/*.spec.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "expect": "^22.4.3",
     "express": "^4.16.3",
     "jsdom": "^11.7.0",
