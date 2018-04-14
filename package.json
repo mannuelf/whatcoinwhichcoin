@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --open",
+    "serve": "nodemon server.js",
     "build": "vue-cli-service build",
+    "build-dev": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
     "test": "mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/*.spec.js"
   },
@@ -16,17 +17,17 @@
     "mocha": "^5.0.5",
     "mocha-webpack": "^1.1.0",
     "nodemon": "^1.17.3",
-    "vue": "^2.5.13",
+    "vue": "^2.5.16",
     "vue-loader": "^14.2.2",
-    "vue-server-renderer": "^2.5.13",
+    "vue-server-renderer": "^2.5.16",
     "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^4.5.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.3",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.3",
-    "@vue/cli-service": "^3.0.0-beta.3",
-    "vue-template-compiler": "^2.5.13"
+    "@vue/cli-plugin-babel": "^3.0.0-beta.6",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
+    "@vue/cli-service": "^3.0.0-beta.6",
+    "vue-template-compiler": "^2.5.16"
   },
   "babel": {
     "presets": [
