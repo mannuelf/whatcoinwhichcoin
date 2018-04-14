@@ -1,24 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Welcome msg="What Coin Which Coin?"/>
+    <Bitstamp />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Welcome from "./components/Welcome.vue";
+import Bitstamp from "./components/BitStamp";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Welcome,
+    Bitstamp
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
