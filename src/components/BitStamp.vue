@@ -19,18 +19,13 @@ export default {
         }
     },
     created() {
-        const currency = [
-            'btcusd', 'btceur', 'eurusd', 'xrpusd', 'xrpeur', 
-            'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
-            'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
+        const currencies = [
+            'https://www.bitstamp.net/api/v2/ticker/btcusd', 'https://www.bitstamp.net/api/v2/ticker/btceur', 'https://www.bitstamp.net/api/v2/ticker/eurusd', 'https://www.bitstamp.net/api/v2/ticker/xrpusd', 'https://www.bitstamp.net/api/v2/ticker/xrpeur', 
+            'https://www.bitstamp.net/api/v2/ticker/xrpbtc', 'https://www.bitstamp.net/api/v2/ticker/ltcusd', 'https://www.bitstamp.net/api/v2/ticker/ltceur', 'https://www.bitstamp.net/api/v2/ticker/ltcbtc', 'https://www.bitstamp.net/api/v2/ticker/ethusd', 
+            'https://www.bitstamp.net/api/v2/ticker/etheur', 'https://www.bitstamp.net/api/v2/ticker/ethbtc', 'https://www.bitstamp.net/api/v2/ticker/bchusd', 'https://www.bitstamp.net/api/v2/ticker/bcheur', 'https://www.bitstamp.net/api/v2/ticker/bchbtc'
         ];
-        const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`;
-        
-        currency.forEach((currency) => {
-            console.log(currency);
-        });
 
-        axios.get(urlBitstamp)
+        axios.get(currencies[0])
             .then(response => {
                 this.prices = response.data
                 console.log(prices.data);
