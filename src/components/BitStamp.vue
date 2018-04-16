@@ -19,16 +19,26 @@ export default {
         }
     },
     created() {
-        let currencyPair = 'currency_pair/';
-        let currency = 'btceur';
-        let urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`;
+        const currency = [
+            'btcusd', 'btceur', 'eurusd', 'xrpusd', 'xrpeur', 
+            'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
+            'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
+        ];
+        const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`;
+        
+        currency.forEach((currency) => {
+            console.log(currency);
+        });
+
         axios.get(urlBitstamp)
             .then(response => {
                 this.prices = response.data
                 console.log(prices.data);
             })
             .catch(e => {
-                this.errors.push(e);
+                let errorsNote = e;
+                this.errors.push(errorsNote);
+                console.log(errorsNote);
             });
     }
 };
