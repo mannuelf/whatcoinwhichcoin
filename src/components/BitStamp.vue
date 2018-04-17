@@ -19,14 +19,15 @@ export default {
         }
     },
     created() {
-        const currencies = [
-            'https://www.bitstamp.net/api/v2/ticker/btcusd', 'https://www.bitstamp.net/api/v2/ticker/btceur', 'https://www.bitstamp.net/api/v2/ticker/eurusd', 'https://www.bitstamp.net/api/v2/ticker/xrpusd', 'https://www.bitstamp.net/api/v2/ticker/xrpeur', 
-            'https://www.bitstamp.net/api/v2/ticker/xrpbtc', 'https://www.bitstamp.net/api/v2/ticker/ltcusd', 'https://www.bitstamp.net/api/v2/ticker/ltceur', 'https://www.bitstamp.net/api/v2/ticker/ltcbtc', 'https://www.bitstamp.net/api/v2/ticker/ethusd', 
-            'https://www.bitstamp.net/api/v2/ticker/etheur', 'https://www.bitstamp.net/api/v2/ticker/ethbtc', 'https://www.bitstamp.net/api/v2/ticker/bchusd', 'https://www.bitstamp.net/api/v2/ticker/bcheur', 'https://www.bitstamp.net/api/v2/ticker/bchbtc'
-        ];
-
-        axios.get(currencies[0])
-            .then(response => {
+        const currency = [
+            'btcusd', 'btceur', 'eurusd', 'xrpusd', 'xrpeur', 
+            'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
+            'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
+        ];        
+        currency.forEach((currency) => {
+            const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`;
+            
+            axios.get(urlBitstamp).then(response => {
                 this.prices = response.data
                 console.log(prices.data);
             })
@@ -35,6 +36,11 @@ export default {
                 this.errors.push(errorsNote);
                 console.log(errorsNote);
             });
+            
+            console.log(currency);
+        });
+
+       
     }
 };
 
