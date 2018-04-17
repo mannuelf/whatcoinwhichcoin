@@ -23,13 +23,19 @@ export default {
             'btcusd', 'btceur', 'eurusd', 'xrpusd', 'xrpeur', 
             'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
             'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
-        ];        
+        ];
+              
         currency.forEach((currency) => {
             const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`;
             
             axios.get(urlBitstamp).then(response => {
                 this.prices = response.data
                 console.log(prices.data);
+                console.log(response.data);
+                console.log(response.status);
+                console.log(response.statusText);
+                console.log(response.headers);
+                console.log(response.config);
             })
             .catch(e => {
                 let errorsNote = e;
