@@ -32,11 +32,16 @@ export default {
         ]
         let results = {}
         currency.forEach((currency) => {
+            const config = {
+                headers: {'Access-Control-Allow-Origin': '*'}
+            }
             const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`
             axios.get(urlBitstamp)
                 .then((response) => {
                     console.log("<-- // DATA RECEIVED FROM SERVER // -->")
-                    console.log(response.request.response);
+                    results = response.request.response
+                    console.log(results)
+                    return results
                 })
                 .catch((e) => {
                     console.log("// ERROR RECEIVED FROM SERVER //")
