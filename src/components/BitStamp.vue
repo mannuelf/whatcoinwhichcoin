@@ -3,13 +3,13 @@
         <h2>Bitstamp</h2>
         
         <h3>Bitcoin</h3>
-        <p>{{ currencies.high }}</p>
+        <p>{{ results.high }}</p>
         
         <h3>Bitcoin Cash</h3>
-        <p>{{ currencies.high }}</p>
+        <p>{{ results.high }}</p>
         
         <h3>Etherium</h3>
-        <p>{{ currencies.high }}</p>
+        <p>{{ results.high }}</p>
         <div v-if="errors">{{ errors }}</div>
     </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     name: "Bitstamp",
     data() {
         return {
-            currencies: {},
+            results: [],
             errors: []
         }
     },
@@ -36,7 +36,7 @@ export default {
             axios.get(urlBitstamp)
                 .then((response) => {
                     console.log("<-- // DATA RECEIVED FROM SERVER // -->")
-                    this.currencies = response.data
+                    this.results = response.data
                 })
                 .catch((e) => {
                     console.log("// ERROR RECEIVED FROM SERVER //")
