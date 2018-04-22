@@ -30,18 +30,19 @@ export default {
             'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
             'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
         ]
+        let results = {}
         currency.forEach((currency) => {
             const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`
-        
             axios.get(urlBitstamp)
                 .then((response) => {
                     console.log("<-- // DATA RECEIVED FROM SERVER // -->")
-                    this.results = response.data
+                    console.log(response.request.response);
                 })
                 .catch((e) => {
                     console.log("// ERROR RECEIVED FROM SERVER //")
                     let errorsNote = e
                     this.errors.push(errorsNote)
+                    console.log(errorsNote)
                 })
         })
     }
