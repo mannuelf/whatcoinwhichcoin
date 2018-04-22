@@ -1,12 +1,16 @@
 <template>
     <div>
         <h2>Bitstamp</h2>
-        <div v-if="errors">{{ errors }}</div>
+        
         <h3>Bitcoin</h3>
+        <p>{{ currencies.high }}</p>
         
         <h3>Bitcoin Cash</h3>
-
+        <p>{{ currencies.high }}</p>
+        
         <h3>Etherium</h3>
+        <p>{{ currencies.high }}</p>
+        <div v-if="errors">{{ errors }}</div>
     </div>
 </template>
 <script>
@@ -16,7 +20,7 @@ export default {
     name: "Bitstamp",
     data() {
         return {
-            prices: [],
+            currencies: {},
             errors: []
         }
     },
@@ -26,27 +30,22 @@ export default {
             'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
             'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
         ]
-        
         currency.forEach((currency) => {
             const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`
         
             axios.get(urlBitstamp)
                 .then((response) => {
+                    console.log("<-- // DATA RECEIVED FROM SERVER // -->")
                     this.currencies = response.data
                 })
                 .catch((e) => {
-                    let errorsNote = e;
+                    console.log("// ERROR RECEIVED FROM SERVER //")
+                    let errorsNote = e
                     this.errors.push(errorsNote)
-                });
-        });
-
-        // filter
-        // currency.filter((currency) => {
-            // return
-        // });
+                })
+        })
     }
 }
-
 </script>
 <style>
 
