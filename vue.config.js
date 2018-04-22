@@ -1,4 +1,5 @@
 module.exports = {
+  let tailWindCss = require(tailwindcss)
   // Project deployment base
   // By default we assume your app will be deployed at the root of a domain,
   // e.g. https://www.my-app.com/
@@ -76,6 +77,9 @@ module.exports = {
 
   // options for 3rd party plugins
   pluginOptions: {
-    // ...
+    plugins: [
+      tailWindCss(''),
+      require('autoprefixer')
+    ]
   }
 };
