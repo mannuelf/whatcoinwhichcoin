@@ -38,13 +38,11 @@ export default {
             const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`
             axios.get(urlBitstamp)
                 .then((response) => {
-                    console.log("<-- // DATA RECEIVED FROM SERVER // -->")
                     results = response.request.response
                     console.log(results)
                     return results
                 })
                 .catch((e) => {
-                    console.log("// ERROR RECEIVED FROM SERVER //")
                     let errorsNote = e
                     this.errors.push(errorsNote)
                     console.log(errorsNote)
