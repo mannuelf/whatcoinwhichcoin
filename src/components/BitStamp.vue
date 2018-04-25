@@ -25,17 +25,17 @@ export default {
         }
     },
     created() {
-        const currency = [
+        let currency = [
             'btcusd', 'btceur', 'eurusd', 'xrpusd', 'xrpeur', 
             'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
             'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
         ]
         let results = {}
         currency.forEach((currency) => {
-            const config = {
-                headers: {'Access-Control-Allow-Origin': '*'}
-            }
-            const urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`
+            // let config = {
+            //     headers: {}
+            // }
+            let urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`
             axios.get(urlBitstamp)
                 .then((response) => {
                     results = response.request.response
