@@ -1,13 +1,13 @@
 <template>
     <div>
         <h2>Bitstamp</h2>
-        
+
         <h3>Bitcoin</h3>
         <p>{{ results.high }}</p>
-        
+
         <h3>Bitcoin Cash</h3>
         <p>{{ results.high }}</p>
-        
+
         <h3>Etherium</h3>
         <p>{{ results.high }}</p>
         <div v-if="errors">{{ errors }}</div>
@@ -24,36 +24,32 @@ export default {
             errors: []
         }
     },
-    created() {
-        let currency = [
-            'btcusd', 'btceur', 'eurusd', 'xrpusd', 'xrpeur', 
-            'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd', 
-            'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
-        ]
+    beforeMount(){
+        const app = this;
 
-        let results = {}
-        let data = {}
-        currency.forEach((currency) => {
-            // let config = {
-            //     headers: {}
-            // }
-            
-            let urlBitstamp = `https://www.bitstamp.net/api/v2/ticker/${currency}`
-            axios.get(urlBitstamp)
+        let currency = [
+            'btcusd', 'btceur', 'eurusd', 'xrpusd', 'xrpeur',
+            'xrpbtc', 'ltcusd', 'ltceur', 'ltcbtc', 'ethusd',
+            'etheur', 'ethbtc', 'bchusd', 'bcheur', 'bchbtc'
+        ];
+
+        const conversionUrl = 'https://cors-anywhere.herokuapp.com/';
+        const url = 'https://www.bitstamp.net/api/v2/ticker/';
+    
+        for(let i = 0; i < currency.length; i++){
+                axios.get(conversionUrl+url+currency[i])
                 .then((response) => {
-                    data = response.request.response
-                    console.log(data)
-                    return data
+                    console.log(response.data,'response');
+                    app.results = response.data;
                 })
                 .catch((e) => {
                     let errorsNote = e
                     this.errors.push(errorsNote)
                     console.log(errorsNote)
                 })
-        })
-        results.map((data) => {
-            console.log(data)
-        })
+        }
+    },
+    created() {
     }
 }
 </script>
