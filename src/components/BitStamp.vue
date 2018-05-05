@@ -3,19 +3,20 @@
         <h2>Bitstamp</h2>
 
         <h3>Bitcoin</h3>
-        <p>{{ results['btcusd'].high }}</p>
+        <p v-if="results">{{ results['btcusd'].high }}</p>
 
         <h3>Bitcoin Cash</h3>
-        <p>{{ results['btcusd'].high }}</p>
+        <p v-if="results">{{ results['btcusd'].high }}</p>
 
         <h3>XRP</h3>
-        <p>{{ results['xrpusd'].high }}</p>
+        <p v-if="results">{{ results['xrpusd'].high }}</p>
 
         <h3>Litecoin</h3>
-        <p>{{ results['ltcusd'].high }}</p>
+        <p v-if="results">{{ results['ltcusd'].high }}</p>
 
         <h3>Etherium</h3>
-        <p>{{ results['ethusd'].high }}</p>
+        <p v-if="results">{{ results['ethusd'].high }}</p>
+        
         <div v-if="errors">{{ errors }}</div>
     </div>
 </template>
@@ -31,10 +32,7 @@ export default {
     };
   },
   beforeCreate() {
-    const app = this
-
     let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"]
-
     const conversionUrl = "https://cors-anywhere.herokuapp.com/"
     const url = "https://www.bitstamp.net/api/v2/ticker/";
 
@@ -44,12 +42,11 @@ export default {
         .get(conversionUrl + url + currency[i])
         .then(response => {
           coins[currency[i]] = response.data
-          app.results[currency[i]] = response.data
+          this.results[currency[i]] = response.data
         })
         .catch(e => {
           let errorsNote = e
           this.errors.push(errorsNote)
-          console.log(errorsNote)
         });
     }
   },
