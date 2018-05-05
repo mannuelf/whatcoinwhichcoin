@@ -31,34 +31,27 @@ export default {
     };
   },
   beforeCreate() {
-    const app = this;
+    const app = this
 
-    let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"];
+    let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"]
 
-    const conversionUrl = "https://cors-anywhere.herokuapp.com/"; // ahppy
+    const conversionUrl = "https://cors-anywhere.herokuapp.com/"
     const url = "https://www.bitstamp.net/api/v2/ticker/";
 
-    let coins = {};
+    let coins = {}
     for (let i = 0; i < currency.length; i++) {
-      // console.log(currency[i])
-      // coins[currency[i]] = {
-      // 'a': '789'
-      // }
       axios
         .get(conversionUrl + url + currency[i])
         .then(response => {
-          // console.log(response.data,'response');
-          coins[currency[i]] = response.data;
-          app.results[currency[i]] = response.data;
+          coins[currency[i]] = response.data
+          app.results[currency[i]] = response.data
         })
         .catch(e => {
-          let errorsNote = e;
-          this.errors.push(errorsNote);
-          console.log(errorsNote);
+          let errorsNote = e
+          this.errors.push(errorsNote)
+          console.log(errorsNote)
         });
     }
-    console.log('appResults', app.results);
-    // console.log(coins)
   },
   beforeMount() {},
   created() {}
