@@ -33,22 +33,20 @@ export default {
   },
   beforeCreate() {
     console.log("beforeCreate");
-        let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"];
-      const conversionUrl = "https://cors-anywhere.herokuapp.com/";
-      const url = "https://www.bitstamp.net/api/v2/ticker/";
-      let coins = {};
-      for (let i = 0; i < currency.length; i++) {
-        axios
-          .get(conversionUrl + url + currency[i])
-          .then(response => {
-            coins[currency[i]] = response.data;
-            this.results[currency[i]] = response.data;
-          })
-          .catch(e => {
-            let errorsNote = e;
-            this.errors.push(errorsNote);
-          });
-      }
+    let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"];
+    const conversionUrl = "https://cors-anywhere.herokuapp.com/";
+    const url = "https://www.bitstamp.net/api/v2/ticker/";
+    let coins = {};
+    for (let i = 0; i < currency.length; i++) {
+      axios.get(conversionUrl + url + currency[i]).then(response => {
+        coins[currency[i]] = response.data;
+        this.results[currency[i]] = response.data;
+      })
+      .catch(e => {
+        let errorsNote = e;
+        this.errors.push(errorsNote);
+      });
+    }
   },
   beforeMount() {
     console.log("beforeMount");
