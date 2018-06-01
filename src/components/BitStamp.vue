@@ -1,22 +1,25 @@
 <template>
     <div>
-      <section v-if="dataLodaded">
-      <h2>Bitstamp</h2>
+      <section v-if="loading">
+      Loading...
+      </section>
+      <section v-else>
+        <h2>Bitstamp</h2>
 
-      <h3>Bitcoin</h3>
-      <p>{{ results['btcusd'].high }}</p>
+        <h3>Bitcoin</h3>
+        <p>{{ results['btcusd'].high }}</p>
 
-      <h3>Bitcoin Cash</h3>
-      <p>{{ results['btcusd'].high }}</p>
+        <h3>Bitcoin Cash</h3>
+        <p>{{ results['btcusd'].high }}</p>
 
-      <h3>XRP</h3>
-      <p>{{ results['xrpusd'].high }}</p>
+        <h3>XRP</h3>
+        <p>{{ results['xrpusd'].high }}</p>
 
-      <h3>Litecoin</h3>
-      <p>{{ results['ltcusd'].high }}</p>
+        <h3>Litecoin</h3>
+        <p>{{ results['ltcusd'].high }}</p>
 
-      <h3>Etherium</h3>
-      <p>{{ results['ethusd'].high }}</p>
+        <h3>Etherium</h3>
+        <p>{{ results['ethusd'].high }}</p>
       </section>
     </div>
 </template>
@@ -28,31 +31,38 @@ export default {
   data() {
     return {
       results: {},
-      errors: []
+      errors: [],
+      loading: true
     };
+  },
+  methods: {
+    fetchCoins() {
+      let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"];
+      const conversionUrl = "https://cors-anywhere.herokuapp.com/";
+      const url = "https://www.bitstamp.net/api/v2/ticker/";
+      let coins = {};
+      for (let i = 0; i < currency.length; i++) {
+        axios.get(conversionUrl + url + currency[i]).then(response => {
+          coins[currency[i]] = response.data;
+          this.results[currency[i]] = response.data;
+          this.loading = true;
+        })
+        .catch(e => {
+          let errorsNote = e;
+          this.errors.push(errorsNote);
+        });
+      }
+    }
   },
   beforeCreate() {
     console.log("beforeCreate");
-    let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"];
-    const conversionUrl = "https://cors-anywhere.herokuapp.com/";
-    const url = "https://www.bitstamp.net/api/v2/ticker/";
-    let coins = {};
-    for (let i = 0; i < currency.length; i++) {
-      axios.get(conversionUrl + url + currency[i]).then(response => {
-        coins[currency[i]] = response.data;
-        this.results[currency[i]] = response.data;
-      })
-      .catch(e => {
-        let errorsNote = e;
-        this.errors.push(errorsNote);
-      });
-    }
   },
   beforeMount() {
     console.log("beforeMount");
   },
   created() {
-    console.log("created");
+    this.loading = false;
+    console.log("created"); 
   },
   beforeDestroy() {
     console.log("beforeDestroy");
@@ -61,6 +71,7 @@ export default {
     console.log("destroyed");
   },
   mounted() {
+    this.fetchCoins();
     console.log("mounted");
   },
   beforeUpdate() {
@@ -68,7 +79,6 @@ export default {
   },
   updated() {
     console.log("updated");
-
   },
   activated() {
     console.log("activated");
