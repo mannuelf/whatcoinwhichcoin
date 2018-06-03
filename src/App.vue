@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <Welcome msg="What Coin Which Coin?"/>
+    <Header />
     <Bitstamp />
   </div>
 </template>
 
 <script>
-import Welcome from "./components/Welcome.vue";
+import Header from './components/Header';
 import Bitstamp from "./components/BitStamp";
 
 export default {
   name: "app",
   components: {
-    Welcome,
+    Header,
     Bitstamp
   }
 };
@@ -25,6 +25,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: grid;
 }
 </style>
