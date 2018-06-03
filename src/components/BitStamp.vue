@@ -39,7 +39,6 @@ export default {
         axios.get(conversionUrl + url + currency[i]).then(response => {
           coins[currency[i]] = response.data
           this.results[currency[i]] = response.data
-          this.loading = true
         })
         .catch(e => {
           let errorsNote = e

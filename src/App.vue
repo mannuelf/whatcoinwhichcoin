@@ -1,30 +1,32 @@
 <template>
   <div id="app">
-    <Header />
+    <SiteHeader />
     <Bitstamp />
   </div>
 </template>
 
 <script>
-import Header from './components/Header';
+import SiteHeader from './components/Site-Header';
 import Bitstamp from "./components/BitStamp";
 
 export default {
   name: "app",
   components: {
-    Header,
+    SiteHeader,
     Bitstamp
   }
 };
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  display: grid;
-}
+<style lang="sass">
+body
+  background: #eee
+
+#app
+  font-family: "Avenir", Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  display: grid
 </style>
