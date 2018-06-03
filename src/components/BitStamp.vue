@@ -48,36 +48,9 @@ export default {
       }
     }
   },
-  beforeCreate() {
-    console.log("beforeCreate")
-  },
-  beforeMount() {
-    console.log("beforeMount")
-  },
-  created() {
-    console.log("created") 
-  },
-  beforeDestroy() {
-    console.log("beforeDestroy")
-  },
-  destroyed() {
-    console.log("destroyed")
-  },
   mounted() {
     this.fetchCoins()
     console.log("mounted")
-  },
-  beforeUpdate() {
-    console.log("beforeUpdate")
-  },
-  updated() {
-    console.log("updated")
-  },
-  activated() {
-    console.log("activated")
-  },
-  deactivated() {
-    console.log("deactivated")
   }
 };
 </script>
