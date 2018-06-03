@@ -1,9 +1,9 @@
 <template>
     <div>
-      <section v-if="loading">
-      Loading...
-      </section>
-      <section v-else>
+      <div v-if="loading">
+        Loading...
+      </div>
+      <div v-else>
         <h2>Bitstamp</h2>
 
         <h3>Bitcoin</h3>
@@ -20,7 +20,7 @@
 
         <h3>Etherium</h3>
         <p>{{ results['ethusd'].high }}</p>
-      </section>
+      </div>
     </div>
 </template>
 <script>
@@ -31,8 +31,7 @@ export default {
   data() {
     return {
       results: {},
-      errors: [],
-      loading: true
+      errors: []
     };
   },
   methods: {
@@ -61,7 +60,7 @@ export default {
     console.log("beforeMount");
   },
   created() {
-    this.loading = false;
+    this.loading = true;
     console.log("created"); 
   },
   beforeDestroy() {
