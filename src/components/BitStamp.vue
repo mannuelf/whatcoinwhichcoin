@@ -1,10 +1,6 @@
 <template>
     <div>
-      <div v-if="loading">
-        Loading...
-      </div>
-      <div v-else>
-        <h2>Bitstamp</h2>
+        <h2 class="coin-title">Bitstamp</h2>
 
         <h3>Bitcoin</h3>
         <p>{{ results['btcusd'].high }}</p>
@@ -20,11 +16,10 @@
 
         <h3>Etherium</h3>
         <p>{{ results['ethusd'].high }}</p>
-      </div>
     </div>
 </template>
 <script>
-import axios from "axios";
+import axios from "axios"
 
 export default {
   name: "Bitstamp",
@@ -36,54 +31,53 @@ export default {
   },
   methods: {
     fetchCoins() {
-      let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"];
-      const conversionUrl = "https://cors-anywhere.herokuapp.com/";
-      const url = "https://www.bitstamp.net/api/v2/ticker/";
+      let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"]
+      const conversionUrl = "https://cors-anywhere.herokuapp.com/"
+      const url = "https://www.bitstamp.net/api/v2/ticker/"
       let coins = {};
       for (let i = 0; i < currency.length; i++) {
         axios.get(conversionUrl + url + currency[i]).then(response => {
-          coins[currency[i]] = response.data;
-          this.results[currency[i]] = response.data;
-          this.loading = true;
+          coins[currency[i]] = response.data
+          this.results[currency[i]] = response.data
+          this.loading = true
         })
         .catch(e => {
-          let errorsNote = e;
-          this.errors.push(errorsNote);
-        });
+          let errorsNote = e
+          this.errors.push(errorsNote)
+        })
       }
     }
   },
   beforeCreate() {
-    console.log("beforeCreate");
+    console.log("beforeCreate")
   },
   beforeMount() {
-    console.log("beforeMount");
+    console.log("beforeMount")
   },
   created() {
-    this.loading = true;
-    console.log("created"); 
+    console.log("created") 
   },
   beforeDestroy() {
-    console.log("beforeDestroy");
+    console.log("beforeDestroy")
   },
   destroyed() {
-    console.log("destroyed");
+    console.log("destroyed")
   },
   mounted() {
-    this.fetchCoins();
-    console.log("mounted");
+    this.fetchCoins()
+    console.log("mounted")
   },
   beforeUpdate() {
-    console.log("beforeUpdate");
+    console.log("beforeUpdate")
   },
   updated() {
-    console.log("updated");
+    console.log("updated")
   },
   activated() {
-    console.log("activated");
+    console.log("activated")
   },
   deactivated() {
-    console.log("deactivated");
+    console.log("deactivated")
   }
 };
 </script>
