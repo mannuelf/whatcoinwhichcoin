@@ -7,19 +7,19 @@ Display Crypto currency price tables and charts.
 Install dependencies. run...
 
 ```bash
-$ yarn
+yarn
 ```
 
 ## Testing
 
-#### Feature tests
+### Feature tests
 
 Using jsdom, mocha, mocha-webpack, we can test the front end components
 
 run...
 
 ```bash
-$ yarn test
+yarn test
 ```
 
-#### Unit Tests
+### Unit Tests
