@@ -6,14 +6,17 @@
 </template>
 
 <script>
-import SiteHeader from './components/Site-Header';
-import Bitstamp from "./components/BitStamp";
+import SiteHeader from './components/Site-Header'
+import Bitstamp from "./components/BitStamp"
 
 export default {
   name: "app",
   components: {
     SiteHeader,
     Bitstamp
+  },
+  beforeCreate: function() {
+    console.log(this.$appName)
   }
 };
 </script>
