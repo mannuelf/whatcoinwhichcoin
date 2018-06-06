@@ -1,19 +1,22 @@
 <template>
   <div id="app">
     <SiteHeader />
-    <Bitstamp />
+    <!-- <Bitstamp /> -->
+    <CoinDesk />
   </div>
 </template>
 
 <script>
 import SiteHeader from './components/Site-Header'
-import Bitstamp from "./components/BitStamp"
+// import Bitstamp from "./components/BitStamp"
+import CoinDesk from "./components/CoinDesk"
 
 export default {
   name: "app",
   components: {
     SiteHeader,
-    Bitstamp
+    // Bitstamp,
+    CoinDesk
   },
   beforeCreate: function() {
     console.log(this.$appName)

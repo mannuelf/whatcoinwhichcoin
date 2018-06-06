@@ -9,7 +9,7 @@
           <h3>Bitcoin</h3>
           <p>{{ results['btcusd'].high }}</p>
 
-          <!-- <h3>Bitcoin Cash</h3>
+          <h3>Bitcoin Cash</h3>
           <p>{{ results['btcusd'].high }}</p>
 
           <h3>XRP</h3>
@@ -19,7 +19,7 @@
           <p>{{ results['ltcusd'].high }}</p>
 
           <h3>Etherium</h3>
-          <p>{{ results['ethusd'].high }}</p> -->
+          <p>{{ results['ethusd'].high }}</p>
         </section>
     </div>
 </template>
