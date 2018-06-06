@@ -39,7 +39,7 @@ module.exports = {
     extract: false,
 
     // enable CSS source maps?
-    sourceMap: false,
+    sourceMap: true,
 
     // pass custom options to pre-processor loaders. e.g. to pass options to
     // sass-loader, use { sass: { ... } }
@@ -76,7 +76,7 @@ module.exports = {
   },
   
   // options for 3rd party plugins
-  pluginOptions: {
-    tailWindCss: require("tailwindcss"),
-  }
+  // pluginOptions: {
+  //   normalise: require("normalize.css"),
+  // }
 };

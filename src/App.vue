@@ -1,21 +1,21 @@
 <template>
   <div id="app">
     <SiteHeader />
-    <!-- <Bitstamp /> -->
+    <Bitstamp />
     <CoinDesk />
   </div>
 </template>
 
 <script>
 import SiteHeader from './components/Site-Header'
-// import Bitstamp from "./components/BitStamp"
+import Bitstamp from "./components/BitStamp"
 import CoinDesk from "./components/CoinDesk"
 
 export default {
   name: "app",
   components: {
     SiteHeader,
-    // Bitstamp,
+    Bitstamp,
     CoinDesk
   },
   beforeCreate: function() {
@@ -35,4 +35,9 @@ body
   text-align: center
   color: #2c3e50
   display: grid
+
+.block
+  display: grid
+  grid-template-columns: repeat(auto, 1fr)
+
 </style>

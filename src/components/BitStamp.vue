@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="block bitstamp">
         <section v-if="isLoaded">
           Loading...
         </section>
@@ -50,10 +50,8 @@ export default {
           .then(response => {
             coins[currency[i]] = response.data
             this.results[currency[i]] = response.data
-            this.isLoaded = true
           })
           .catch(e => {
-            this.isLoaded = false
             let errorsNote = e
             this.errors.push(errorsNote)
         })
