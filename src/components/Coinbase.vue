@@ -5,7 +5,7 @@
         <h3>Bitcoin</h3>
         <p>{{ results['btcusd'].high }}</p>
 
-        <h3>Bitcoin Cash</h3>
+        <h3>Bitcoin Cash </h3>
         <p>{{ results['btcusd'].high }}</p>
 
         <h3>XRP</h3>
