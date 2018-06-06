@@ -9,7 +9,7 @@
           <h3>Bitcoin</h3>
           <p>{{ results['btcusd'].high }}</p>
 
-          <h3>Bitcoin Cash</h3>
+          <!-- <h3>Bitcoin Cash</h3>
           <p>{{ results['btcusd'].high }}</p>
 
           <h3>XRP</h3>
@@ -19,7 +19,7 @@
           <p>{{ results['ltcusd'].high }}</p>
 
           <h3>Etherium</h3>
-          <p>{{ results['ethusd'].high }}</p>
+          <p>{{ results['ethusd'].high }}</p> -->
         </section>
     </div>
 </template>
@@ -37,20 +37,25 @@ export default {
   },
   methods: {
     fetchCoins() {
-      let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"]
+      let currency = ["btcusd"]
+      // let currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"]
       
       const conversionUrl = "https://cors-anywhere.herokuapp.com/"
       const url = "https://www.bitstamp.net/api/v2/ticker/"
       
       let coins = {};
       for (let i = 0; i < currency.length; i++) {
-        axios.get(conversionUrl + url + currency[i]).then(response => {
-          coins[currency[i]] = response.data
-          this.results[currency[i]] = response.data
-        })
-        .catch(e => {
-          let errorsNote = e
-          this.errors.push(errorsNote)
+        axios
+          .get(conversionUrl + url + currency[i])
+          .then(response => {
+            coins[currency[i]] = response.data
+            this.results[currency[i]] = response.data
+            this.isLoaded = true
+          })
+          .catch(e => {
+            this.isLoaded = false
+            let errorsNote = e
+            this.errors.push(errorsNote)
         })
       }
     }
@@ -58,7 +63,6 @@ export default {
   beforeMount() {
     console.log("before mount")
     this.fetchCoins()
-    this.isLoaded = true
   },
   mounted() {
     console.log("mounted")
