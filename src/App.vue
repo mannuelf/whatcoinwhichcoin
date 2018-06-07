@@ -45,7 +45,7 @@ body
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
   grid-gap: 0
-  
+
 .site-header
   grid-area: header
   background-color: azure
@@ -58,7 +58,7 @@ body
   justify-content: center
   border: none
   padding: 0.5em
-  background-color: #f90
+  background-color: #fee
   
 
 </style>
