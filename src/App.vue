@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <SiteHeader />
-    <Bitstamp />
-    <CoinDesk />
+    <div class="container">
+      <Bitstamp />
+      <CoinDesk />
+      <CoinDesk />
+      <CoinDesk />
+      <CoinDesk />
+      <CoinDesk />
+    </div>
   </div>
 </template>
 
@@ -34,10 +40,25 @@ body
   -moz-osx-font-smoothing: grayscale
   text-align: center
   color: #2c3e50
-  display: grid
-
+  
+.container
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+  grid-gap: 0
+  
+.site-header
+  grid-area: header
+  background-color: azure
+  margin: 0
+  padding: 0.5em
+    
 .block
-  display: grid
-  grid-template-columns: repeat(auto, 1fr)
+  grid-gap: 0.5em
+  grid-template-columns: 200px 1fr
+  justify-content: center
+  border: none
+  padding: 0.5em
+  background-color: #f90
+  
 
 </style>
