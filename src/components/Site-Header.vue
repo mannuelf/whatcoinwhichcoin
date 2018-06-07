@@ -1,18 +1,17 @@
 <template>
     <div>
-        <header class="header"><h1>What Coin Which Coin</h1></header>
+        <header class="site-header">
+            <h1>What Coin Which Coin</h1>
+        </header>
     </div>    
 </template>
 
 <script>
 export default {
-  name: "site-header"
+  name: "Site-header"
 }
 </script>
-<style lang="sass">
-.header
-    display: grid;
-    grid-template-columns: repeat(auto 1fr);
-    background-color: azure;
-    
+<style lang="sass" scoped>
+h1
+    font-size: 1em
 </style>
