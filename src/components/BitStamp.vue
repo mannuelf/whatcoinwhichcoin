@@ -51,8 +51,8 @@ export default {
           this.results = response.data
           console.log(results)
         })
-        .catch(e => {
-          let errorsNote = e
+        .catch(error => {
+          let errorsNote = error
           this.errors.push(errorsNote)
         })
         .finally(() => {
