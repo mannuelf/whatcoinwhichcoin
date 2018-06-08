@@ -9,10 +9,8 @@
         <section v-else>
             <div v-if="loading">Loading...</div>
             <div v-else v-for="currency in info" v-bind:key="info.id" class="currency">
-                <span class="lighten">
-                    <span v-html="currency.symbol"></span>
-                    {{ currency.rate_float | currencydecimal }}
-                </span>
+                <span v-html="currency.symbol"></span>
+                {{ currency.rate_float | currencydecimal }}
             </div>
 
         </section>
