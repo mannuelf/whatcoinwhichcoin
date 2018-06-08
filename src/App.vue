@@ -4,10 +4,6 @@
     <div class="container">
       <Bitstamp />
       <CoinDesk />
-      <CoinDesk />
-      <CoinDesk />
-      <CoinDesk />
-      <CoinDesk />
     </div>
   </div>
 </template>
