@@ -3,6 +3,10 @@
     <SiteHeader />
     <div class="container">
       <Bitstamp />
+      <Bitstamp />
+      <Bitstamp />
+      <Bitstamp />
+      <Bitstamp />
       <CoinDesk />
     </div>
   </div>
@@ -27,6 +31,7 @@ export default {
 </script>
 
 <style lang="sass">
+$charcoal: #373F51
 $richBlack: #001021
 $darkLiver: #50514F
 $maximumBluePurple: #B4ADEA
@@ -48,12 +53,13 @@ body
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
   grid-gap: 0
   padding: 0
+  max-width: 100%
 
 .site-header
   grid-area: header
-  background-color: $richBlack
+  background-color: $maize
   padding: 0.5em
-  color: $burntOrange
+  color: $brightCerulean
     
 .block
   grid-gap: 0.5em
@@ -61,4 +67,13 @@ body
   justify-content: center
   border: none
   padding: 0.5em
+
+a
+  color: $darkLiver
+
+  &:hover
+
+  &:visited
+    color: $darkLiver
+
 </style>
