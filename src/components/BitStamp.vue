@@ -1,5 +1,5 @@
 <template>
-    <div class="block bitstamp">
+    <div class="block bitstamp animated fadeIn">
         <section v-if="errored">
             <p>Sorry something broke, please check back later</p>
         </section>
@@ -52,10 +52,42 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+$richBlack: #001021
+$charcoal: #373F51
+$darkLiver: #50514F
+$maximumBluePurple: #B4ADEA
+$babyPowder: #FDFFF7
+$mediumAquamarine: #59FFA0
+$maize: #FFED65
+$burntOrange: #FF5E5B
+$brightCerulean: #1B98E0
+$blockBtnHover: #EDEDED
+
 .block
+  padding: 0
+
   &__btn--std
+    border-left: 5px solid $babyPowder
     display: grid
+    grid-template-columns: 2fr 20px 1fr
+    grid-gap: 0
+    font-size: 2em
+    padding: 0.5em
+    transition: all 0.5s ease-out
 
+    &:hover
+      border-left: 5px solid $brightCerulean
+      background: $blockBtnHover
+      transition: all 0.5s ease-out
+
+  &__btn--coin
+    align-self: end
+    font-size: 0.8em
+
+  &__btn--currency
+    font-size: 0.8em
+  
   &__btn--price
-
+    font-size: 2em
+  
 </style>
