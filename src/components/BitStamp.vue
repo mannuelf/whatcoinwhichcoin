@@ -5,16 +5,16 @@
             <p>Sorry something broke, please check back later</p>
         </section>
         <section v-else>
-          <div v-if="isLoaded">
+          <div v-if="loading">
             Loading...
           </div>
           <div v-else>
             <h2 class="coin-title">Bitstamp</h2>
 
             <h3>Bitcoin</h3>
-            <p>{{ results['btcusd'].high }}</p>
+            <p>$ {{ results.high }}</p>
 
-            <h3>Bitcoin Cash</h3>
+            <!-- <h3>Bitcoin Cash</h3>
             <p>{{ results['btcusd'].high }}</p>
 
             <h3>XRP</h3>
@@ -24,7 +24,7 @@
             <p>{{ results['ltcusd'].high }}</p>
 
             <h3>Etherium</h3>
-            <p>{{ results['ethusd'].high }}</p>
+            <p>{{ results['ethusd'].high }}</p> -->
           </div>
         </section>
     </div>
@@ -38,31 +38,26 @@ export default {
       results: null,
       errors: [],
       errored: false,
-      isLoaded: false
+      loading: true
     };
   },
   mounted() {
-    const currency = ["btcusd", "bchusd", "xrpusd", "ltcusd", "ethusd"]
+    const currency = "btcusd";
     const conversionUrl = "https://cors-anywhere.herokuapp.com/"
     const url = "https://www.bitstamp.net/api/v2/ticker/"
-    const coins = {};
-    for (let i = 0; i < currency.length; i++) {
-      axios
-        .get(conversionUrl + url + currency[i])
+     axios
+        .get(conversionUrl + url + currency)
         .then(response => {
-          coins[currency[i]] = response.data
-          this.results[currency[i]] = response.data
+          this.results = response.data
+          console.log(results)
         })
         .catch(e => {
           let errorsNote = e
           this.errors.push(errorsNote)
-          this.errored = true
         })
         .finally(() => {
-          this.isLoaded = false
+          this.loading = false
         })
-    }
-    console.log("mounted")
   }
 }
 </script>
