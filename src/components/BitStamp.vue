@@ -1,6 +1,5 @@
 <template>
     <div class="block bitstamp">
-        
         <section v-if="errored">
             <p>Sorry something broke, please check back later</p>
         </section>
@@ -9,26 +8,16 @@
             Loading...
           </div>
           <div v-else>
-            <h2 class="coin-title">Bitstamp</h2>
-
-            <h3>Bitcoin</h3>
-            <p>$ {{ results.high }}</p>
-
-            <!-- <h3>Bitcoin Cash</h3>
-            <p>{{ results['btcusd'].high }}</p>
-
-            <h3>XRP</h3>
-            <p>{{ results['xrpusd'].high }}</p>
-
-            <h3>Litecoin</h3>
-            <p>{{ results['ltcusd'].high }}</p>
-
-            <h3>Etherium</h3>
-            <p>{{ results['ethusd'].high }}</p> -->
+            <a href="#" class="block__btn--std">
+              <span class="block__btn--coin">BTC</span>
+              <span class="block__btn--currency">$</span>
+              <span class="block__btn--price">{{ results.high }}</span>
+            </a> 
           </div>
         </section>
     </div>
 </template>
+
 <script>
 import axios from "axios"
 export default {
@@ -63,5 +52,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.block
+  &__btn--std
+    display: grid
+
+  &__btn--price
 
 </style>

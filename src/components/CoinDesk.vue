@@ -1,7 +1,5 @@
 <template>
     <div class="block coindesk">
-       <h2>Coindesk</h2>
-
         <section v-if="errored">
             <p>Sorry something broke, please check back later</p>
         </section>
@@ -12,7 +10,6 @@
                 <span v-html="currency.symbol"></span>
                 {{ currency.rate_float | currencydecimal }}
             </div>
-
         </section>
     </div>
 </template>

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import SiteHeader from './components/Site-Header'
+import SiteHeader from './components/SiteHeader'
 import Bitstamp from "./components/BitStamp"
 import CoinDesk from "./components/CoinDesk"
 
@@ -23,30 +23,37 @@ export default {
   beforeCreate: function() {
     console.log(this.$appName)
   }
-};
+}
 </script>
 
 <style lang="sass">
+$richBlack: #001021
+$darkLiver: #50514F
+$maximumBluePurple: #B4ADEA
+$babyPowder: #FDFFF7
+$mediumAquamarine: #59FFA0
+$maize: #FFED65
+$burntOrange: #FF5E5B
+$brightCerulean: #1B98E0
+
 body
-  background: #eee
+  background: $babyPowder
 
 #app
   font-family: "Avenir", Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
+  color: $darkLiver 
   
 .container
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
   grid-gap: 0
+  padding: 0
 
 .site-header
   grid-area: header
-  background-color: azure
-  margin: 0
+  background-color: $richBlack
   padding: 0.5em
+  color: $burntOrange
     
 .block
   grid-gap: 0.5em
@@ -54,7 +61,4 @@ body
   justify-content: center
   border: none
   padding: 0.5em
-  background-color: #fee
-  
-
 </style>
