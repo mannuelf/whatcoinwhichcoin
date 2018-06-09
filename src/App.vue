@@ -58,22 +58,24 @@ body
   
 .container
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
   grid-gap: 0
-  padding: 0
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
   max-width: 100%
+  padding: 0
+  @media(min-width: 640px)
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
 
 .site-header
-  grid-area: header
   background-color: $maize
-  padding: 0.5em
   color: $brightCerulean
+  grid-area: header
+  padding: 0.5em
     
 .block
+  border: none
   grid-gap: 0
   grid-template-columns: 200px 1fr
   justify-content: center
-  border: none
   padding: 0
 
 a
@@ -91,15 +93,15 @@ a
   &__btn--std
     border-left: 5px solid $babyPowder
     display: grid
-    grid-template-columns: 0.5fr 20px 1fr
-    grid-gap: 0
     font-size: 2em
+    grid-gap: 0
+    grid-template-columns: 0.5fr 20px 1fr
     padding: 0.5em
     transition: all 0.5s ease-out
 
     &:hover
-      border-left: 5px solid $brightCerulean
       background: $blockBtnHover
+      border-left: 5px solid $brightCerulean
       transition: all 0.5s ease-out
 
   &__btn--coin
@@ -110,10 +112,9 @@ a
     font-size: 0.8em
   
   &__btn--price
-    // align-self: end
+    align-self: end
     font-size: 1.3em
     
     @media(min-width: 460px)
       font-size: 2em
-  
 </style>

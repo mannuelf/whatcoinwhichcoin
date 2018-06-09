@@ -8,7 +8,7 @@
             Loading...
           </div>
           <div v-else>
-            <a href="#" class="block__btn--std">
+            <a href="#" class="block__btn--std animated flipInX">
               <span class="block__btn--coin">XRP</span>
               <span class="block__btn--currency">$</span>
               <span class="block__btn--price">{{ results.high }}</span>
