@@ -126,9 +126,9 @@ a
     font-weight: $fontBold
 
   &__btn--currency
-    font-family: $robotoMono, $defaultFont
+    font-family: $rajdHani, $defaultFont
     font-size: 0.8em
-    font-weight: $fontRegular
+    font-weight: $fontBold
   
   &__btn--price
     align-self: end
