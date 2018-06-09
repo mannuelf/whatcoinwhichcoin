@@ -14,7 +14,7 @@ export default {
 
 <style lang="sass" scoped>
 h1
-    font-size: 1.4em
+    font-size: 2em
     margin: 0
     padding: 0.2em 0.5em
 </style>
