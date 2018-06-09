@@ -42,7 +42,7 @@ export default {
 
 <style lang="sass">
 
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:700|Roboto+Mono:100,300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300');
 
 $defaultFont: Avenir, Helvetica, Arial, sans-serif
 $rajdHani: Rajdhani, sans-serif
