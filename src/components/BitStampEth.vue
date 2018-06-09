@@ -38,7 +38,6 @@ export default {
         .get(conversionUrl + url + currency)
         .then(response => {
           this.results = response.data
-          console.log(results)
         })
         .catch(error => {
           let errorsNote = error
