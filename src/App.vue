@@ -42,7 +42,7 @@ export default {
 
 <style lang="sass">
 
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:700|Roboto+Mono:100,300,500,700');
 
 $defaultFont: Avenir, Helvetica, Arial, sans-serif
 $rajdHani: Rajdhani, sans-serif
@@ -66,7 +66,6 @@ $richBlack: #001021
 
 body
   background: $babyPowder
-  overflow: hidden
 
 #app
   font-family: $defaultFont
@@ -122,21 +121,20 @@ a
 
   &__btn--coin
     align-self: end
-    font-family: $rajdHani
+    font-family: $rajdHani, $defaultFont
     font-size: 0.8em
     font-weight: $fontBold
 
   &__btn--currency
-    font-family: $rajdHani
+    font-family: $robotoMono, $defaultFont
     font-size: 0.8em
-    font-weight: $fontBold
+    font-weight: $fontRegular
   
   &__btn--price
     align-self: end
-    font-family: $robotoMono
+    font-family: $robotoMono, $defaultFont
     font-weight: $fontThin
     font-size: 1.3em
-    
     @media(min-width: 460px)
       font-size: 2em
 </style>
