@@ -1,12 +1,15 @@
 <template>
   <div id="app">
+    
     <SiteHeader />
+    
     <div class="container">
       <BitstampBtc />
       <BitstampBch />
       <BitstampEth />
       <BitstampXrp />
       <BitstampLtcoin />
+      <SiteFooter />
     </div>
   </div>
 </template>
@@ -18,6 +21,7 @@ import BitstampBch from "./components/BitStampBch"
 import BitstampEth from "./components/BitStampEth"
 import BitstampXrp from "./components/BitStampXrp"
 import BitstampLtcoin from "./components/BitStampLtcoin"
+import SiteFooter from "./components/SiteFooter"
 
 export default {
   name: "app",
@@ -27,7 +31,8 @@ export default {
     BitstampBch,
     BitstampEth,
     BitstampXrp,
-    BitstampLtcoin
+    BitstampLtcoin,
+    SiteFooter
   },
   beforeCreate: function() {
     console.log(this.$appName)
@@ -37,23 +42,34 @@ export default {
 
 <style lang="sass">
 
-$richBlack: #001021
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300');
+
+$defaultFont: Avenir, Helvetica, Arial, sans-serif
+$rajdHani: Rajdhani, sans-serif
+$robotoMono: Roboto Mono, monospace
+
+$fontThin: 100
+$fontLight: 300
+$fontRegular: 500 
+$fontBold: 700 
+
+$babyPowder: #FDFFF7
+$blockBtnHover: #EDEDED
+$brightCerulean: #1B98E0
+$burntOrange: #FF5E5B
 $charcoal: #373F51
 $darkLiver: #50514F
-$maximumBluePurple: #B4ADEA
-$babyPowder: #FDFFF7
-$mediumAquamarine: #59FFA0
 $maize: #FFED65
-$burntOrange: #FF5E5B
-$brightCerulean: #1B98E0
-$blockBtnHover: #EDEDED
+$maximumBluePurple: #B4ADEA
+$mediumAquamarine: #59FFA0
+$richBlack: #001021
 
 body
   background: $babyPowder
   overflow: hidden
 
 #app
-  font-family: "Avenir", Helvetica, Arial, sans-serif
+  font-family: $defaultFont
   color: $darkLiver 
   
 .container
@@ -82,16 +98,16 @@ a
   color: $darkLiver
 
   &:hover
+    color: $richBlack
 
   &:visited
     color: $darkLiver
-
 
 .block
   padding: 0
 
   &__btn--std
-    border-left: 5px solid $babyPowder
+    border-left: 10px solid $babyPowder
     display: grid
     font-size: 2em
     grid-gap: 0
@@ -106,13 +122,19 @@ a
 
   &__btn--coin
     align-self: end
+    font-family: $rajdHani
     font-size: 0.8em
+    font-weight: $fontBold
 
   &__btn--currency
+    font-family: $rajdHani
     font-size: 0.8em
+    font-weight: $fontBold
   
   &__btn--price
     align-self: end
+    font-family: $robotoMono
+    font-weight: $fontThin
     font-size: 1.3em
     
     @media(min-width: 460px)
