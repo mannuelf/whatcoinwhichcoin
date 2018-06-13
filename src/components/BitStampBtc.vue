@@ -1,7 +1,7 @@
 <template>
     <div class="block bitstamp animated fadeIn">
         <section v-if="errored">
-            <p>Sorry something broke, please check back later</p>
+            <p>Oops, try reloading the page</p>
         </section>
         <section v-else>
           <div v-if="loading">
