@@ -33,9 +33,6 @@ export default {
     BitstampXrp,
     BitstampLtcoin,
     SiteFooter
-  },
-  beforeCreate: function() {
-    console.log(this.$appName)
   }
 }
 </script>
