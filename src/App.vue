@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    
-    <SiteHeader />
-    
-    <div class="container">
+    <!-- <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div> -->
+   <SiteHeader />
+   <div class="container">
       <BitstampBtc />
       <BitstampBch />
       <BitstampEth />
@@ -11,31 +13,9 @@
       <BitstampLtcoin />
       <SiteFooter />
     </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import SiteHeader from './components/SiteHeader'
-import BitstampBtc from "./components/BitStampBtc"
-import BitstampBch from "./components/BitStampBch"
-import BitstampEth from "./components/BitStampEth"
-import BitstampXrp from "./components/BitStampXrp"
-import BitstampLtcoin from "./components/BitStampLtcoin"
-import SiteFooter from "./components/SiteFooter"
-
-export default {
-  name: "app",
-  components: {
-    SiteHeader,
-    BitstampBtc,
-    BitstampBch,
-    BitstampEth,
-    BitstampXrp,
-    BitstampLtcoin,
-    SiteFooter
-  }
-}
-</script>
 
 <style lang="sass">
 
