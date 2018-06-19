@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
+    <SiteHeader />
+    <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div> -->
-   <SiteHeader />
-   <div class="container">
-      <BitstampBtc />
-      <BitstampBch />
-      <BitstampEth />
-      <BitstampXrp />
-      <BitstampLtcoin />
-      <SiteFooter />
     </div>
     <router-view/>
+     <SiteFooter />
   </div>
 </template>
+<script>
+import SiteHeader from '@/components/SiteHeader'
+import SiteFooter from '@/components/SiteFooter'
+
+export default {
+  name: "App",
+  components: {
+    SiteHeader,
+    SiteFooter
+  }
+}
+</script>
 
 <style lang="sass">
 
