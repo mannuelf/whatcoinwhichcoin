@@ -10,8 +10,8 @@
   </div>
 </template>
 <script>
-import SiteHeader from '@/components/SiteHeader'
-import SiteFooter from '@/components/SiteFooter'
+import SiteHeader from '@/components/SiteHeader.vue'
+import SiteFooter from '@/components/SiteFooter.vue'
 
 export default {
   name: "App",
@@ -23,8 +23,6 @@ export default {
 </script>
 
 <style lang="sass">
-
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300');
 
 $defaultFont: Avenir, Helvetica, Arial, sans-serif
 $rajdHani: Rajdhani, sans-serif
