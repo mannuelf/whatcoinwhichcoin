@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import App from './App'
-import router from './router'
+import App from '@/App.vue'
+import router from '@/router'
 
 Vue.config.productionTip = false
-Vue.prototype.$appName = 'WHATCoinWHICHCoin'
+Vue.prototype.$appName = 'WHATCoinWhichcoin'
 
 new Vue({
   router,
