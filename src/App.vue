@@ -2,21 +2,24 @@
   <div id="app">
     <SiteHeader />
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <BitStampBtc />
+      <router-link to="/bitcoin">Bitcoin</router-link>
     </div>
     <router-view/>
-     <SiteFooter />
+    <SiteFooter />
   </div>
 </template>
 <script>
 import SiteHeader from '@/components/SiteHeader.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 
+import BitStampBtc from '@/components/BitStampBtc.vue'
+
 export default {
   name: "App",
   components: {
     SiteHeader,
+    BitStampBtc,
     SiteFooter
   }
 }
