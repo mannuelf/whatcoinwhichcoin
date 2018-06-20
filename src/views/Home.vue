@@ -12,11 +12,11 @@
 
 <script>
 // @ is an alias to /src
-import BitstampBtc from '@/components/BitstampBtc'
-import BitstampBch from '@/components/BitstampBch'
-import BitstampEth from '@/components/BitstampEth'
-import BitstampXrp from '@/components/BitstampXrp'
-import BitstampLtcoin from '@/components/BitstampLtcoin'
+import BitstampBtc from '@/components/BitstampBtc.vue'
+import BitstampBch from '@/components/BitstampBch.vue'
+import BitstampEth from '@/components/BitstampEth.vue'
+import BitstampXrp from '@/components/BitstampXrp.vue'
+import BitstampLtcoin from '@/components/BitstampLtcoin.vue'
 
 export default {
   name: 'home',
