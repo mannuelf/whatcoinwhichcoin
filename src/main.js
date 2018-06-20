@@ -3,7 +3,7 @@ import App from '@/App.vue'
 import router from '@/router'
 
 Vue.config.productionTip = false
-Vue.prototype.$appName = 'WHATCoinWhichcoin'
+Vue.prototype.$appName = 'WHATCoinWhichCoin'
 
 new Vue({
   router,
