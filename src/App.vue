@@ -2,8 +2,11 @@
   <div id="app">
     <SiteHeader />
     <div id="nav">
-      <BitStampBtc />
-      <router-link to="/bitcoin">Bitcoin</router-link>
+      <BitStampBtc @click.native="goToBitcoin" />
+      <BitStampBch @click.native="goToBitcoinCash" />
+      <BitStampEth @click.native="goToEther" />
+      <BitStampXrp @click.native="goToEther" />
+      <BitStampLtCoin @click.native="goToBitcoin" />
     </div>
     <router-view/>
     <SiteFooter />
@@ -12,15 +15,27 @@
 <script>
 import SiteHeader from '@/components/SiteHeader.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
-
 import BitStampBtc from '@/components/BitStampBtc.vue'
+import BitStampBch from '@/components/BitStampBch.vue'
+import BitStampEth from '@/components/BitStampEth.vue'
+import BitStampXrp from '@/components/BitStampXrp.vue'
+import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
 
 export default {
   name: "App",
   components: {
     SiteHeader,
     BitStampBtc,
+    BitStampBch,
+    BitStampEth,
+    BitStampXrp,
+    BitStampLtCoin,
     SiteFooter
+  },
+  methods: {
+    goToBitcoin: function (e) {
+      console.log('next page', e);
+    }
   }
 }
 </script>
