@@ -8,7 +8,10 @@
                 </p>
             </div>
             <div>
-                <p>Built by Mannuel Ferreira <a href="https://themwebs.me/about-me/">say hello</a></p>
+                <p>Built by Mannuel Ferreira 
+                    <a href="https://themwebs.me/about-me/">say hello</a> and 
+                    <a href="https://github.com/mannuelf/whatcoinwhichcoin">fork it.</a>
+                </p>
             </div>
         </section>
     </div>
