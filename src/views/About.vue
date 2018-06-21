@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>About</h1>
+    <p>I love technology, I love design & typography and I love Vue js this project is an opportunity make sure I get to play with all of the above.</p>
   </div>
 </template>

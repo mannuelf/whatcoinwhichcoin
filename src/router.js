@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import Bitcoin from './views/Bitcoin.vue'
+import Home from './views/Home'
+import Bitcoin from './views/Bitcoin'
 
 Vue.use(Router)
 

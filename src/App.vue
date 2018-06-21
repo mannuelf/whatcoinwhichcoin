@@ -5,21 +5,23 @@
       <BitStampBtc @click.native="goToBitcoin" />
       <BitStampBch @click.native="goToBitcoinCash" />
       <BitStampEth @click.native="goToEther" />
-      <BitStampXrp @click.native="goToEther" />
-      <BitStampLtCoin @click.native="goToBitcoin" />
+      <BitStampXrp @click.native="goToXrp" />
+      <BitStampLtCoin @click.native="goToLtCoin" />
     </div>
     <router-view/>
     <SiteFooter />
   </div>
 </template>
+
 <script>
-import SiteHeader from '@/components/SiteHeader.vue'
-import SiteFooter from '@/components/SiteFooter.vue'
-import BitStampBtc from '@/components/BitStampBtc.vue'
-import BitStampBch from '@/components/BitStampBch.vue'
-import BitStampEth from '@/components/BitStampEth.vue'
-import BitStampXrp from '@/components/BitStampXrp.vue'
-import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
+import SiteHeader from '@/components/SiteHeader'
+import SiteFooter from '@/components/SiteFooter'
+
+import BitStampBtc from '@/components/BitStampBtc'
+import BitStampBch from '@/components/BitStampBch'
+import BitStampEth from '@/components/BitStampEth'
+import BitStampXrp from '@/components/BitStampXrp'
+import BitStampLtCoin from '@/components/BitStampLtCoin'
 
 export default {
   name: "App",
@@ -35,7 +37,19 @@ export default {
   methods: {
     goToBitcoin: function (e) {
       console.log('next page', e);
-    }
+    },
+    goToBitcoinCash: function (e) {
+      console.log('next page', e);
+    },
+    goToEther: function (e) {
+      console.log('next page', e);
+    },
+    goToXrp: function (e) {
+      console.log('next page', e);
+    },
+    goToLtCoin: function (e) {
+      console.log('next page', e);
+    },
   }
 }
 </script>
