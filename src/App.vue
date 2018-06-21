@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     goToBitcoin: function (e) {
-      console.log('next page', e);
+      this.$router.go('/bitcoin')
     },
     goToBitcoinCash: function (e) {
       console.log('next page', e);
