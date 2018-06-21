@@ -8,7 +8,7 @@
                 </p>
             </div>
             <div>
-                <p>Built by Mannuel Ferreira 
+                <p>Built with VueJs by Mannuel Ferreira 
                     <a href="https://themwebs.me/about-me/">say hello</a> and 
                     <a href="https://github.com/mannuelf/whatcoinwhichcoin">fork it.</a>
                 </p>
