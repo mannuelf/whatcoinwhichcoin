@@ -6,6 +6,10 @@ Crypto currency price viewing dashboard.
 
 ```bash
 yarn
+
+yarn serve
+
+yarn build
 ```
 
 ### Why another crypto currency price dashboard/ticker
