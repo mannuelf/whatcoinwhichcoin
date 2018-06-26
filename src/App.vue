@@ -17,11 +17,11 @@
 import SiteHeader from '@/components/SiteHeader'
 import SiteFooter from '@/components/SiteFooter'
 
-import BitStampBtc from '@/components/BitStampBtc'
-import BitStampBch from '@/components/BitStampBch'
-import BitStampEth from '@/components/BitStampEth'
-import BitStampXrp from '@/components/BitStampXrp'
-import BitStampLtCoin from '@/components/BitStampLtCoin'
+import BitStampBtc from '@/components/BitStampBtc.vue'
+import BitStampBch from '@/components/BitStampBch.vue'
+import BitStampEth from '@/components/BitStampEth.vue'
+import BitStampXrp from '@/components/BitStampXrp.vue'
+import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
 
 export default {
   name: "App",
@@ -36,7 +36,8 @@ export default {
   },
   methods: {
     goToBitcoin: function (e) {
-      this.$router.go('/bitcoin')
+      // this.$router.go('/bitcoin')
+      console.log('next page', e);
     },
     goToBitcoinCash: function (e) {
       console.log('next page', e);
