@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import SiteHeader from '@/components/SiteHeader'
-import SiteFooter from '@/components/SiteFooter'
+import SiteHeader from '@/components/SiteHeader.vue'
+import SiteFooter from '@/components/SiteFooter.vue'
 
 import BitStampBtc from '@/components/BitStampBtc.vue'
 import BitStampBch from '@/components/BitStampBch.vue'
