@@ -7,10 +7,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "engines": {
-    "node": "9.11.1",
-    "npm": "5.6.0"
-  },
   "dependencies": {
     "animate.css": "^3.6.1",
     "axios": "^0.18.0",
@@ -21,7 +17,8 @@
     "normalize.css": "^8.0.0",
     "sass-loader": "^7.0.3",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
@@ -52,5 +49,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "engines": {
+    "node": "9.11.1",
+    "npm": "5.6.0"
+  }
 }
