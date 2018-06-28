@@ -3,7 +3,7 @@
     <div id="nav">
       <BitStampBtc @click.native="goToBitcoin" />
       <BitStampBch @click.native="goToBitcoinCash" />
-      <BitStampEth @click.native="goToEther" />
+      <BitStampEth @click.native="goToEtherium" />
       <BitStampXrp @click.native="goToXrp" />
       <BitStampLtCoin @click.native="goToLtCoin" />
     </div>
@@ -34,7 +34,7 @@ export default {
     goToBitcoinCash: function (e) {
       console.log('next page', e);
     },
-    goToEther: function (e) {
+    goToEtherium: function (e) {
       console.log('next page', e);
     },
     goToXrp: function (e) {
@@ -42,7 +42,7 @@ export default {
     },
     goToLtCoin: function (e) {
       console.log('next page', e);
-    },
+    }
   }
 }
 </script>
