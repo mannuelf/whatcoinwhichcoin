@@ -4,7 +4,7 @@
             <div>
                 <p>
                     The Prices are realtime data, sourced from the respective providers public API. 
-                    <a href="#">Click here</a> to see a list.
+                    <router-link to="/about-api">Click here</router-link> to see a list.
                 </p>
             </div>
             <div>
