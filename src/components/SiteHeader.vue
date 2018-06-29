@@ -1,7 +1,11 @@
 <template>
     <div>
         <header class="site-header">
-            <h1><strong>WHATCoin</strong> WHICHCoin</h1>
+            <h1>
+                <router-link to="/">
+                    <strong>WHATCoin</strong> WHICHCoin
+                </router-link>
+            </h1>
         </header>
     </div>    
 </template>
