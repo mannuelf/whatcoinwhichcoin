@@ -18,4 +18,4 @@ I love technology, I love design & typography and I love Vue js this project is 
 
 Join in the fun if you like fork it or just enjoy using it, [Click here](https://mannuelf.github.io/whatcoinwhichcoin.github.io/)
 
-![screenshot](_design/screenshot.jpg)
+![screenshot](_design/screenshot.jpg =320x)
