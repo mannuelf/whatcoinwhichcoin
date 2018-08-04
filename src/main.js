@@ -11,3 +11,12 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/sw.js')
+    // .register('/sw.js', { scope: '/someDir'})
+    .then(function() {
+      console.log('serviceWorker Registered');
+    })
+}
