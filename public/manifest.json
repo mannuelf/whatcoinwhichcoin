@@ -1,9 +1,9 @@
 {
   "name": "WHATCoin WHICHCoin",
-  "short_name": "WCHC",
+  "short_name": "WCWC",
   "icons": [
     {
-      "src": "/images/app-icon-48x48.png",
+      "src": "./images/app-icon-48x48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
