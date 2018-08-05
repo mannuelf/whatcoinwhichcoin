@@ -30,8 +30,8 @@ $robotoMono: Roboto Mono, monospace
 
 $fontThin: 100
 $fontLight: 300
-$fontRegular: 500 
-$fontBold: 700 
+$fontRegular: 500
+$fontBold: 700
 
 $babyPowder: #FDFFF7
 $blockBtnHover: #EDEDED
@@ -49,8 +49,8 @@ body
 
 #app
   font-family: $defaultFont
-  color: $darkLiver 
-  
+  color: $darkLiver
+
 .container
   display: grid;
   grid-gap: 0
@@ -65,7 +65,7 @@ body
   color: $brightCerulean
   grid-area: header
   padding: 0.5em
-    
+
 .block
   border: none
   grid-gap: 0
@@ -109,7 +109,7 @@ a
     font-family: $rajdHani, $defaultFont
     font-size: 0.8em
     font-weight: $fontBold
-  
+
   &__btn--price
     align-self: end
     font-family: $robotoMono, $defaultFont
