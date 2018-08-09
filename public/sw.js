@@ -1,7 +1,10 @@
+const CACHE_STATIC = 'static-00'
+const CACHE_DYNAMIC = 'dynamic-00'
+
 self.addEventListener('install', function(event) {
   console.log('[Service worker] Installing Service Worker...', event);
   event.waitUntil(
-    caches.open('static')
+    caches.open(CACHE_STATIC)
       .then(function(cache) {
         console.log('[Service Worker] Pre-caching static assets')
         cache.addAll([
@@ -31,10 +34,13 @@ self.addEventListener('fetch', function(event) {
         } else {
           return fetch(event.request)
             .then(function(res) {
-              return caches.open('dynamic')
+              return caches.open(CACHE_DYNAMIC)
                 .then(function(cache) {
                   cache.put(event.request.url, res.clone())
                   return res
+                })
+                .catch(function (err) {
+                  console.log('fetch error: ', err)
                 })
             })
         }
