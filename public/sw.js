@@ -1,5 +1,5 @@
-const CACHE_STATIC = 'static-00'
-const CACHE_DYNAMIC = 'dynamic-00'
+const CACHE_STATIC = 'static-01'
+const CACHE_DYNAMIC = 'dynamic-01'
 
 self.addEventListener('install', function (event) {
   console.log('[Service worker] Installing Service Worker...', event);
