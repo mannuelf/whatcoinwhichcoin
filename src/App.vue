@@ -64,7 +64,8 @@ body
   background-color: $maize
   color: $brightCerulean
   grid-area: header
-  padding: 0.5em
+  padding: 0.6em
+  z-index: 100
 
 .block
   border: none

@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
 h1
     font-size: 1.6em
     @media(min-width: 640px)
@@ -37,8 +38,8 @@ h1
     overflow: hidden
     padding: 10px
     position: absolute
-    right: 0
-    top: 17px
+    right: 10px
+    top: 19px
     width: 100px
-
+    border-radius: 8px 8px 0 0
 </style>
