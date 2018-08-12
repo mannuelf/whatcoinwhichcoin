@@ -24,12 +24,12 @@ export default {
 <style lang="sass" scoped>
 
 h1
-    font-size: 1.6em
+    font-size: 1.2em
     @media(min-width: 640px)
-        font-size: 2em
+        font-size: 1.6em
     margin: 0
     padding: 0.2em 0.5em
-
+    
 .coin-logo
     background-color: #fdfff7
     display: inline-block
