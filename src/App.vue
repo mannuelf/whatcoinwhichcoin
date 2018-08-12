@@ -65,6 +65,7 @@ body
   color: $brightCerulean
   grid-area: header
   padding: 0.6em
+  min-height: 40px
   z-index: 100
 
 .block
@@ -115,7 +116,7 @@ a
     align-self: end
     font-family: $robotoMono, $defaultFont
     font-weight: $fontThin
-    font-size: 1.3em
+    font-size: 1.2em
     @media(min-width: 460px)
       font-size: 2em
 </style>
