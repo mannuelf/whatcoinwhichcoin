@@ -43,6 +43,7 @@ $maize: #FFED65
 $maximumBluePurple: #B4ADEA
 $mediumAquamarine: #59FFA0
 $richBlack: #001021
+$white: #FFF
 
 body
   background: $babyPowder
@@ -61,8 +62,8 @@ body
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
 
 .site-header
-  background-color: $maize
-  color: $brightCerulean
+  background-color: $brightCerulean
+  color: $white
   grid-area: header
   padding: 0.6em
   min-height: 40px
