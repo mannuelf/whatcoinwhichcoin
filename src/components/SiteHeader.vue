@@ -3,7 +3,7 @@
         <header class="site-header">
             <h1>
                 <router-link to="/">
-                    <strong>WHATCoin</strong> WHICHCoin
+                   <span style="color:#FFED65;">WHAT</span>Coin WhichCoin
                 </router-link>
             </h1>
             <figure class="coin-logo">
@@ -24,22 +24,26 @@ export default {
 <style lang="sass" scoped>
 
 h1
-    font-size: 1.2em
-    @media(min-width: 640px)
-        font-size: 1.6em
-    margin: 0
-    padding: 0.2em 0.5em
-    
+  font-family: VT323
+  font-size: 1.8em
+  margin: 0
+  width: fit-content
+  a
+    color: #FFF
+  @media(min-width: 640px)
+    font-size: 2.1em
+
+
 .coin-logo
-    background-color: #fdfff7
-    display: inline-block
-    height: 40px
-    margin: 0
-    overflow: hidden
-    padding: 10px
-    position: absolute
-    right: 10px
-    top: 19px
-    width: 100px
-    border-radius: 8px 8px 0 0
+  background-color: #fdfff7
+  display: inline-block
+  height: 40px
+  margin: 0
+  overflow: hidden
+  padding: 10px
+  position: absolute
+  right: 10px
+  top: 19px
+  width: 100px
+  border-radius: 8px 8px 0 0
 </style>
