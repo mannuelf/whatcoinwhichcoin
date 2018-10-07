@@ -21,7 +21,7 @@
 <script>
 import axios from "axios"
 export default {
-  name: "BitstampBtc",
+  name: "BitStampBtc",
   data() {
     return {
       results: null,

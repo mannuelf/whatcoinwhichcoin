@@ -12,7 +12,7 @@
               <span class="block__btn--coin">ETH</span>
               <span class="block__btn--currency">$</span>
               <span class="block__btn--price">{{ results.high }}</span>
-            </a> 
+            </a>
           </div>
         </section>
     </div>
@@ -21,7 +21,7 @@
 <script>
 import axios from "axios"
 export default {
-  name: "BitstampEth",
+  name: "BitStampEth",
   data() {
     return {
       results: null,
