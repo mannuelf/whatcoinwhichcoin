@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import router from '@/router'
 import store from './store/index.js'
-import 'whatwg-fetch'
 
 Vue.config.productionTip = false
 Vue.prototype.$appName = 'WHATCoinWhichCoin'
@@ -15,6 +14,7 @@ Vue.prototype.$appName = 'WHATCoinWhichCoin'
 //   deferredPrompt = event
 //   return false
 // })
+
 let deferredPrompt
 
 if (!window.Promise) {
@@ -23,7 +23,7 @@ if (!window.Promise) {
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('/sw.js')
+    .register('/service-worker.js')
     // .register('/sw.js', { scope: '/someDir'})
     .then(function() {
       console.log('serviceWorker Registered');
