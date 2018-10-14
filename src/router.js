@@ -7,14 +7,8 @@ import BitcoinCash from '@/views/BitcoinCash.vue'
 import Etherium from '@/views/Etherium.vue'
 import LiteCoin from '@/views/LiteCoin.vue'
 import Xrp from '@/views/Xrp.vue'
-import VueAnalytics from 'vue-analytics'
 
 Vue.use(Router)
-
-Vue.use(VueAnalytics, {
-  id: 'UA-19677147-2',
-  router
-})
 
 export default new Router({
   mode: 'history',

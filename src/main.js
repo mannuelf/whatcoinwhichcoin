@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from '@/App.vue'
 import router from '@/router'
 import store from './store/index.js'
+import VueAnalytics from 'vue-analytics'
 
 Vue.config.productionTip = false
 Vue.prototype.$appName = 'WHATCoinWhichCoin'
@@ -44,6 +45,10 @@ if (deferredPrompt) {
   deferredPrompt = null
 }
 
+Vue.use(VueAnalytics, {
+  id: 'UA-19677147-2',
+  router
+})
 
 new Vue({
   router,
