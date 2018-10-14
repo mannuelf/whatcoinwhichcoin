@@ -2,6 +2,7 @@
   "name": "WHATCoinWHICHCoin",
   "version": "0.0.1",
   "private": true,
+  "main": "server.js",
   "scripts": {
     "start": "node /src/config/server.js",
     "serve": "vue-cli-service serve",
@@ -71,5 +72,6 @@
   "engines": {
     "node": "10.11.0",
     "npm": "6.4.1"
-  }
+  },
+  "license": "MIT"
 }

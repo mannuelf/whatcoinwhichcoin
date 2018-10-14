@@ -5,11 +5,15 @@ Crypto currency price viewing dashboard.
 ## Local dev
 
 ```bash
-yarn
+npm i
 
-yarn serve
+npm run serve
+```
 
-yarn build
+## build for production
+
+```
+npm run build
 ```
 
 ### Why another crypto currency price dashboard/ticker
