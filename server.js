@@ -1,10 +1,8 @@
 const express = require('express')
-const app = express()
 const path = require('path')
-const port = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000
 
-app.use(express.static(path.join(__dirname, 'dist')))
-app.get('/', (req, res) => res.render('index.html'))
-app.set('view engine', 'html');
-app.listen(port, () => console.log(`app started on port number: ${port}`))
-
+express()
+  .use(express.static(path.join(__dirname, 'dist')))
+  .get('/', (req, res) => res.render(index))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
