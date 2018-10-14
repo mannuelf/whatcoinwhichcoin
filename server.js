@@ -5,5 +5,6 @@ const port = process.env.PORT || 5000
 
 app.use(express.static(path.join(__dirname, 'dist')))
 app.get('/', (req, res) => res.render('index.html'))
+app.set('view engine', 'html');
 app.listen(port, () => console.log(`app started on port number: ${port}`))
 
