@@ -12,7 +12,7 @@ npm run serve
 
 ## build for production
 
-```
+```bash
 npm run build
 ```
 
