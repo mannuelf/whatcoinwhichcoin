@@ -57,7 +57,7 @@ body
   color: $darkLiver
 
 .container
-  display: grid;
+  display: grid
   grid-gap: 0
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
   max-width: 100%

@@ -43,7 +43,7 @@
   "display": "fullscreen",
   "orientation": "portrait-primary",
   "background_color": "#ffed65",
-  "theme_color": "#ffed65",
+  "theme_color": "#1B98E0",
   "description": "Crypto currency price dashboard",
   "dir": "ltr",
   "lang": "en-US"
