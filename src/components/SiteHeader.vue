@@ -3,7 +3,7 @@
         <header class="site-header">
             <h1>
                 <router-link to="/">
-                   <span style="color:#FFED65;">WHAT</span>Coin WhichCoin
+                   <span style="color:#FFED65;">WHAT</span>Coin <span style="color:#FFED65;">WHICH</span>Coin
                 </router-link>
             </h1>
             <figure class="coin-logo">
