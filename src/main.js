@@ -5,7 +5,7 @@ import store from './store/index.js'
 import VueAnalytics from 'vue-analytics'
 
 Vue.config.productionTip = false
-Vue.prototype.$appName = 'WHATCoinWhichCoin'
+Vue.prototype.$appName = 'WHATCoin WHICHCoin'
 
 // for later
 // stop the default behaviour of the add to home screen prompt
