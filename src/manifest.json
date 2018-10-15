@@ -3,7 +3,7 @@
   "short_name": "WCWC",
   "icons": [
     {
-      "src": "./assets/app-icon-48x48.png",
+      "src": "/assets/app-icon-48x48.png",
       "type": "image/png",
       "sizes": "48x48"
     },
@@ -44,7 +44,7 @@
   "orientation": "portrait-primary",
   "background_color": "#ffed65",
   "theme_color": "#ffed65",
-  "description": "A simple Instagram Clone, implementing a lot of PWA love.",
+  "description": "Crypto currency price dashboard",
   "dir": "ltr",
   "lang": "en-US"
 }
