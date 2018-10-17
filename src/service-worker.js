@@ -13,6 +13,7 @@ self.addEventListener('install', function (event) {
         'https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300',
         'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css'
       ])
     })
   )
