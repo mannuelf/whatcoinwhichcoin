@@ -3,6 +3,7 @@ import App from '@/App.vue'
 import router from '@/router'
 import store from './store/index.js'
 import VueAnalytics from 'vue-analytics'
+import './registerServiceWorker'
 
 Vue.config.productionTip = false
 Vue.prototype.$appName = 'WHATCoin WHICHCoin'
