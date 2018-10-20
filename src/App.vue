@@ -61,7 +61,7 @@ body
   grid-gap: 0
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
   max-width: 100%
-  padding: 0
+  padding: 10px
   @media(min-width: 640px)
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
 
