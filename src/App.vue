@@ -23,10 +23,10 @@ export default {
 </script>
 
 <style lang="sass">
-@import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css')
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
 
 $defaultFont: Avenir, Helvetica, Arial, sans-serif
 $rajdHani: Rajdhani, sans-serif
