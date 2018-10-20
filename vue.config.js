@@ -14,8 +14,8 @@ module.exports = {
 
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      swSrc: '/src/service-worker.js'
+      swSrc: './service-worker.js'
     },
-    manifestPath: '/src/manifest.json'
+    manifestPath: './manifest.json'
   }
 }
