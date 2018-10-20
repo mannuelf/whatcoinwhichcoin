@@ -5,14 +5,14 @@
         </section>
         <section v-else>
           <div v-if="loading">
-            Loading...
+            <LoadingSpinner/>
           </div>
           <div v-else>
             <a href="#" class="block__btn--std animated flipInX">
               <span class="block__btn--coin">BCH</span>
               <span class="block__btn--currency">$</span>
               <span class="block__btn--price">{{ results.high }}</span>
-            </a> 
+            </a>
           </div>
         </section>
     </div>
@@ -20,8 +20,12 @@
 
 <script>
 import axios from "axios"
+import LoadingSpinner from "@/components/LoadingSpinner.vue"
 export default {
   name: "BitStampBtc",
+  components: {
+    LoadingSpinner
+  },
   data() {
     return {
       results: null,
