@@ -5,7 +5,7 @@
         </section>
         <section v-else>
           <div v-if="loading">
-            Loading...
+            <LoadingSpinner/>
           </div>
           <div v-else>
             <a href="#" class="block__btn--std animated flipInX">
@@ -20,8 +20,12 @@
 
 <script>
 import axios from "axios"
+import LoadingSpinner from "@/components/LoadingSpinner.vue"
 export default {
   name: "BitStampEth",
+  components: {
+    LoadingSpinner
+  },
   data() {
     return {
       results: null,
