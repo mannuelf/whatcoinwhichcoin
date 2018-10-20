@@ -3,14 +3,14 @@
         <section class="site-footer">
             <div>
                 <p>
-                    The Prices are realtime data, sourced from the respective providers public API. 
-                    <router-link to="/about-api">Click here</router-link> to see a list.
+                    The Prices are realtime data, sourced from the respective providers public API.
+                    <router-link to="/about-api"><strong>Click here</strong></router-link> to see a list.
                 </p>
             </div>
             <div>
-                <p>Built with VueJs by Mannuel Ferreira 
-                    <a href="https://themwebs.me/about-me/">say hello</a> and 
-                    <a href="https://github.com/mannuelf/whatcoinwhichcoin">fork it.</a>
+                <p>Built with VueJs by Mannuel Ferreira
+                    <a href="https://themwebs.me/about-me/"><strong>say hello</strong></a> and
+                    <a href="https://github.com/mannuelf/whatcoinwhichcoin"><strong>fork it.</strong></a>
                 </p>
             </div>
         </section>
@@ -28,7 +28,7 @@ export default {
     display: grid
     grid-area: footer
     background: #eee
-  
+
     > div
         padding: 0 0.5em
 
@@ -38,7 +38,7 @@ export default {
     p
         margin: 0
         font-size: 0.8em
-      
+
     a
         &:hover
             text-decoration: underline
