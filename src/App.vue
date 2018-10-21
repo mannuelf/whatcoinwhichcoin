@@ -22,7 +22,7 @@ export default {
   methods: {},
   metaInfo: {
     title: 'WHATCoin WHICHCoin',
-    titleTemplate: 'Main',
+    titleTemplate: 'WHATCoin WHICHCoin',
     meta: [
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {name: 'description', content: 'WHATCoin WHICHCoin is crypto currency price dashboard, designed view prices at a glance'},
