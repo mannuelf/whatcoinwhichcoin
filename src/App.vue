@@ -11,6 +11,7 @@
 <script>
 import SiteHeader from '@/components/SiteHeader.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
+import Meta from 'vue-meta'
 
 export default {
   name: "App",
@@ -18,7 +19,17 @@ export default {
     SiteHeader,
     SiteFooter
   },
-  methods: {}
+  methods: {},
+  metaInfo: {
+    title: 'WHATCoin WHICHCoin',
+    titleTemplate: 'Main',
+    meta: [
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {name: 'description', content: 'WHATCoin WHICHCoin is crypto currency price dashboard, designed view prices at a glance'},
+      {name: 'google-site-verification', content: 'nKI88c4xbyXEo5ub25G2-4JqjDiggUKqIZzMF5E4aJk'},
+
+    ]
+  }
 }
 </script>
 
