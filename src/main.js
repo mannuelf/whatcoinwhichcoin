@@ -4,7 +4,9 @@ import router from '@/router'
 import store from './store/index.js'
 import VueAnalytics from 'vue-analytics'
 import './registerServiceWorker'
+import Meta from 'vue-meta'
 
+Vue.use(Meta)
 Vue.config.productionTip = false
 Vue.prototype.$appName = 'WHATCoin WHICHCoin'
 
