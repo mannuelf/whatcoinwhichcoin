@@ -8,8 +8,9 @@
                 </p>
             </div>
             <div>
-                <p>Built with VueJs by Mannuel Ferreira
-                    <a href="https://themwebs.me/about-me/"><strong>say hello</strong></a> and
+                <p>
+                  Built with VueJs by Mannuel Ferreira
+                    <a href="https://mannuelferreira.com"><strong>say hello</strong></a>.
                     <a href="https://github.com/mannuelf/whatcoinwhichcoin"><strong>fork it.</strong></a>
                 </p>
             </div>
