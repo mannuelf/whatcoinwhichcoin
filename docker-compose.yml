@@ -1,0 +1,16 @@
+version: "3"
+services:
+    client:
+        image: node:11.10.0-alpine
+        restart: always
+        ports:
+            - "3080:3080
+        volumes:
+            - ./:./
+            - ./node_modules
+        entrypoint: ["npm", "start"]
+        networks:
+            - webappnetwork
+networks:
+    sparkwebappnetwork:
+        driver: bridge
