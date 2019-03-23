@@ -1,24 +1,25 @@
 <template>
-    <div>
-        <header class="site-header">
-            <h1>
-                <router-link to="/">
-                   <span style="color:#FFED65;">WHAT</span>Coin <span style="color:#FFED65;">WHICH</span>Coin
-                </router-link>
-            </h1>
-            <figure class="coin-logo">
-              <img src="../assets/logos/bitstamp.png" alt="Bitstamp"></figure>
-        </header>
-    </div>
+  <div>
+    <header class="site-header">
+      <h1>
+        <router-link to="/">
+          <span style="color:#FFED65;">WHAT</span>Coin <span style="color:#FFED65;">WHICH</span>Coin
+        </router-link>
+      </h1>
+      <figure class="coin-logo">
+        <img src="../assets/logos/bitstamp.png" alt="Bitstamp">
+      </figure>
+    </header>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "SiteHeader",
-  data () {
+  name: 'SiteHeader',
+  data() {
     return {}
   }
-};
+}
 </script>
 
 <style lang="sass" scoped>

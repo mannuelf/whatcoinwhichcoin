@@ -1,26 +1,28 @@
 <template>
-    <div>
-        <section class="site-footer">
-            <div>
-                <p>
-                    The Prices are realtime data, sourced from the respective providers public API.
-                    <router-link to="/about-api"><strong>Click here</strong></router-link> to see a list.
-                </p>
-            </div>
-            <div>
-                <p>
-                  Built with VueJs by Mannuel Ferreira
-                    <a href="https://mannuelferreira.com"><strong>say hello</strong></a>.
-                    <a href="https://github.com/mannuelf/whatcoinwhichcoin"><strong>fork it.</strong></a>
-                </p>
-            </div>
-        </section>
-    </div>
+  <div>
+    <section class="site-footer">
+      <div>
+        <p>
+          The Prices are realtime data, sourced from the respective providers public API.
+          <router-link to="/about-api">
+            <strong>Click here</strong>
+          </router-link> to see a list.
+        </p>
+      </div>
+      <div>
+        <p>
+          Built with VueJs by Mannuel Ferreira
+          <a href="https://mannuelferreira.com"><strong>say hello</strong></a>.
+          <a href="https://github.com/mannuelf/whatcoinwhichcoin"><strong>fork it.</strong></a>
+        </p>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'SiteFooter'
+  name: 'SiteFooter'
 }
 </script>
 
