@@ -1,30 +1,27 @@
 <template>
-    <div>
-        <p>{{ results['btcusd'].high }}</p>
-    </div>
+  <div>
+    <p>{{ results['btcusd'].high }}</p>
+  </div>
 </template>
 <script>
-import axios from "axios"
+import axios from 'axios'
 
 export default {
-  name: "Coinbase",
+  name: 'Coinbase',
   data() {
     return {
       results: {},
       errors: []
-    };
-  },
-  methods: {
-    fetchCoins() {
-      
     }
   },
   mounted() {
     this.fetchCoins()
-    console.log("mounted")
+    console.log('mounted')
+  },
+  methods: {
+    fetchCoins() {}
   }
-};
+}
 </script>
 <style>
-
 </style>
