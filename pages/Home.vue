@@ -18,30 +18,30 @@ import BitStampXrp from '@/components/BitStampXrp.vue'
 import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     BitStampBtc,
     BitStampBch,
     BitStampEth,
     BitStampXrp,
-    BitStampLtCoin,
+    BitStampLtCoin
   },
   methods: {
-    goToBitcoin: function (e) {
+    goToBitcoin: function(e) {
       // this.$router.go('/bitcoin')
-      console.log('next page', e);
+      console.log('next page', e)
     },
-    goToBitcoinCash: function (e) {
-      console.log('next page', e);
+    goToBitcoinCash: function(e) {
+      console.log('next page', e)
     },
-    goToEtherium: function (e) {
-      console.log('next page', e);
+    goToEtherium: function(e) {
+      console.log('next page', e)
     },
-    goToXrp: function (e) {
-      console.log('next page', e);
+    goToXrp: function(e) {
+      console.log('next page', e)
     },
-    goToLtCoin: function (e) {
-      console.log('next page', e);
+    goToLtCoin: function(e) {
+      console.log('next page', e)
     }
   }
 }
