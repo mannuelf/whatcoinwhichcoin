@@ -1,8 +1,22 @@
 <template>
   <div>
+    <site-header />
     <nuxt />
+    <site-footer />
   </div>
 </template>
+<script>
+import SiteHeader from '@/components/SiteHeader'
+import SiteFooter from '@/components/SiteFooter'
+
+export default {
+  name: 'DefaultLayout',
+  components: {
+    'site-header': SiteHeader,
+    'site-footer': SiteFooter
+  }
+}
+</script>
 
 <style lang="sass">
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323')

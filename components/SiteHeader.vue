@@ -7,7 +7,7 @@
         </router-link>
       </h1>
       <figure class="coin-logo">
-        <img src="../assets/logos/bitstamp.png" alt="Bitstamp">
+        <img src="~/static/logos/bitstamp.png" alt="Bitstamp">
       </figure>
     </header>
   </div>
