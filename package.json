@@ -1,7 +1,7 @@
 {
   "name": "whatcoinwhichcoin",
   "version": "1.0.0",
-  "description": "Crypto currency price dashboard for fun.",
+  "description": "WHATCoin WHICHCoin is crypto currency price dashboard, designed to view prices at a glance from various cryto currency exchanges around the world.",
   "author": "Mannuel Ferreira",
   "private": true,
   "scripts": {
