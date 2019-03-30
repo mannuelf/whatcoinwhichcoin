@@ -47,7 +47,8 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Axios module configuration
@@ -55,7 +56,30 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.whatcoinwhichcoin.com/',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false, // Enable me when using nuxt generate
+    exclude: [
+      '/secret',
+      '/admin/**'
+    ],
+    routes: [
+      '/',
+      {
+        url: '/',
+        changefreq: 'daily',
+        priority: 1,
+        lastmodISO: '2017-06-30T13:30:00.000Z'
+      },
+      'about-apis',
+      {
+        url: 'about-apis'
+      }
+    ]
+  },
   /*
   ** Build configuration
   */
