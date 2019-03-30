@@ -1,73 +1,39 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        whatcoinwhichcoinv2
-      </h1>
-      <h2 class="subtitle">
-        Cryptocurrency Price Dashboard for fun.
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
+  <div class="home">
+    <div id="nav">
+      <BitStampBtc @click.native="goToBitcoin" />
+      <BitStampBch @click.native="goToBitcoinCash" />
+      <BitStampEth @click.native="goToEtherium" />
+      <BitStampXrp @click.native="goToXrp" />
+      <BitStampLtCoin @click.native="goToLtCoin" />
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import BitStampBtc from '@/components/BitStampBtc.vue'
+import BitStampBch from '@/components/BitStampBch.vue'
+import BitStampEth from '@/components/BitStampEth.vue'
+import BitStampXrp from '@/components/BitStampXrp.vue'
+import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
 
 export default {
+  name: 'Home',
   components: {
-    Logo
+    BitStampBtc,
+    BitStampBch,
+    BitStampEth,
+    BitStampXrp,
+    BitStampLtCoin
+  },
+  methods: {
+    goToBitcoin: function(e) {
+      // this.$router.go('/bitcoin')
+    },
+    goToBitcoinCash: function(e) {},
+    goToEtherium: function(e) {},
+    goToXrp: function(e) {},
+    goToLtCoin: function(e) {}
   }
 }
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

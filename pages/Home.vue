@@ -29,20 +29,11 @@ export default {
   methods: {
     goToBitcoin: function(e) {
       // this.$router.go('/bitcoin')
-      console.log('next page', e)
     },
-    goToBitcoinCash: function(e) {
-      console.log('next page', e)
-    },
-    goToEtherium: function(e) {
-      console.log('next page', e)
-    },
-    goToXrp: function(e) {
-      console.log('next page', e)
-    },
-    goToLtCoin: function(e) {
-      console.log('next page', e)
-    }
+    goToBitcoinCash: function(e) {},
+    goToEtherium: function(e) {},
+    goToXrp: function(e) {},
+    goToLtCoin: function(e) {}
   }
 }
 </script>
