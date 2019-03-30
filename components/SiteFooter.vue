@@ -4,9 +4,9 @@
       <div>
         <p>
           The Prices are realtime data, sourced from the respective providers public API.
-          <router-link to="/about-api">
+          <nuxt-link to="/about-apis">
             <strong>Click here</strong>
-          </router-link> to see a list.
+          </nuxt-link> to see a list.
         </p>
       </div>
       <div>
