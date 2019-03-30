@@ -2,9 +2,9 @@
   <div>
     <header class="site-header">
       <h1>
-        <router-link to="/">
+        <nuxt-link to="/">
           <span style="color:#FFED65;">WHAT</span>Coin <span style="color:#FFED65;">WHICH</span>Coin
-        </router-link>
+        </nuxt-link>
       </h1>
       <figure class="coin-logo">
         <img src="~/static/logos/bitstamp.png" alt="Bitstamp">
