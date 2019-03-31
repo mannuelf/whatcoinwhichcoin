@@ -72,11 +72,11 @@ module.exports = {
         url: '/',
         changefreq: 'daily',
         priority: 1,
-        lastmodISO: '2017-06-30T13:30:00.000Z'
       },
-      'about-apis',
+      '/about-apis',
       {
-        url: 'about-apis'
+        url: 'about-apis',
+        changefreq: 'daily'
       }
     ]
   },
