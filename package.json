@@ -1,7 +1,7 @@
 {
   "name": "whatcoinwhichcoin",
   "version": "1.0.0",
-  "description": "WHAT Coin WHICH Coin is crypto currency price dashboard, designed to view prices at a glance from various cryto currency exchanges around the world.",
+  "description": "WHAT Coin WHICH Coin is crypto currency price dashboard showing Bitcoin, XRP, Litecoin, Bitcoin Cash. designed to view prices at a glance from various cryto currency exchanges around the world.",
   "author": "Mannuel Ferreira",
   "private": true,
   "scripts": {
