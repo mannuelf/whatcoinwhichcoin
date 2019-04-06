@@ -1,5 +1,6 @@
 import Vue from 'vue'
-const Rollbar = require('vue-rollbar')
+import Rollbar from 'vue-rollbar'
+import Consola from 'consola'
 
 Vue.use(Rollbar, {
   accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
@@ -18,5 +19,5 @@ Vue.use(Rollbar, {
 })
 
 Vue.config.errorHandler = err => {
-  console.log('Exception: ', err)
+  Consola.info('Exception: ', err)
 }
