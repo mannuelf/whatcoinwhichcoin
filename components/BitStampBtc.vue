@@ -54,7 +54,7 @@ export default {
           this.loading = false
         })
     } catch (e) {
-      Vue.rollbar.error(e)
+      this.rollbar.error(e)
     }
   }
 }
