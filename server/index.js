@@ -2,6 +2,13 @@ const express = require('express')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
+const Rollbar = require('rollbar')
+
+const rollbar = new Rollbar({
+  accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
+  captureUncaught: true,
+  captureUnhandledRejections: true
+})
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
@@ -13,7 +20,7 @@ async function start() {
 
   const {
     host = process.env.HOST || '0.0.0.0',
-    port = process.env.PORT || 3000
+    port = process.env.PORT || 3001
   } = nuxt.options.server
 
   // Build only in dev mode
