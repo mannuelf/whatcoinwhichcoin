@@ -1,3 +1,4 @@
+const RollbarSourceMapPlugin = require('rollbar-sourcemap-webpack-plugin')
 const pkg = require('./package')
 
 module.exports = {
@@ -8,15 +9,34 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
-      { name: 'google-site-verification', content: 'nKI88c4xbyXEo5ub25G2-4JqjDiggUKqIZzMF5E4aJk' },
+      {
+        name: 'google-site-verification',
+        content: 'nKI88c4xbyXEo5ub25G2-4JqjDiggUKqIZzMF5E4aJk'
+      },
       { name: 'msvalidate.01', content: 'D37242BCFEACCD5D06A16A1748BF7DA1' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' }
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
+      }
     ]
   },
   loading: { color: '#1B98E0' },
@@ -46,22 +66,28 @@ module.exports = {
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: false,
-    exclude: [
-      '/secret',
-      '/admin/**'
-    ],
+    exclude: ['/secret', '/admin/**'],
     routes: [
       '/',
       {
         url: '/',
         changefreq: 'daily',
-        priority: 1,
+        priority: 1
       },
       '/about-apis',
       {
         url: 'about-apis',
         changefreq: 'daily'
       }
+    ]
+  },
+  configureWebpack: {
+    plugins: [
+      new RollbarSourceMapPlugin({
+        accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
+        version: 'version-1',
+        publicPath: 'https://www.whatcoinwhichcoin.com'
+      })
     ]
   },
   build: {
