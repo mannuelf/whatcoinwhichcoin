@@ -25,9 +25,9 @@
     "express": "^4.16.4",
     "node-sass": "^4.11.0",
     "nuxt": "^2.4.0",
-    "rollbar": "^2.5.4",
     "sass-loader": "^7.1.0",
-    "vue-analytics": "^5.16.4"
+    "vue-analytics": "^5.16.4",
+    "vue-rollbar": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
