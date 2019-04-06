@@ -39,18 +39,23 @@ export default {
     const currency = 'btcusd'
     const conversionUrl = 'https://cors-anywhere.herokuapp.com/'
     const url = 'https://www.bitstamp.net/api/v2/ticker/'
-    axios
-      .get(conversionUrl + url + currency)
-      .then(response => {
-        this.results = response.data
-      })
-      .catch(error => {
-        const errorsNote = error
-        this.errors.push(errorsNote)
-      })
-      .finally(() => {
-        this.loading = false
-      })
+    try {
+      axios
+        .get(conversionUrl + url + currency)
+        .then(response => {
+          this.results = response.data
+        })
+        .catch(error => {
+          const errorsNote = error
+          this.rollbar.debug(errorsNote)
+          this.errors.push(errorsNote)
+        })
+        .finally(() => {
+          this.loading = false
+        })
+    } catch (e) {
+      Vue.rollbar.error(e)
+    }
   }
 }
 </script>

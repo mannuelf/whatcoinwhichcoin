@@ -16,3 +16,7 @@ Vue.use(Rollbar, {
     }
   }
 })
+
+Vue.config.errorHandler = err => {
+  console.log('Exception: ', err)
+}
