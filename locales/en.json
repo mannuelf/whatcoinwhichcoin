@@ -1,0 +1,15 @@
+{
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "english": "English version",
+    "portuguese": "portuguese version"
+  },
+  "home": {
+    "title": "Welcome",
+    "introduction": "This is an introduction in English."
+  },
+  "footer": {
+    "text": "The Prices are realtime data, sourced from the respective providers public API. Click here to see a list."
+  }
+}
