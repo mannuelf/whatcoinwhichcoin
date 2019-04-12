@@ -3,6 +3,9 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  router: {
+    middleware: 'i18n'
+  },
   head: {
     title: pkg.name,
     meta: [
@@ -52,7 +55,7 @@ module.exports = {
     },
     {
       src: '~/plugins/vue-i18n.js',
-      ssr: false
+      ssr: true
     }
   ],
   generate: {
