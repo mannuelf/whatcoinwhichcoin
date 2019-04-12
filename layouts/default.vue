@@ -50,7 +50,7 @@ body
 
 #app
   font-family: $defaultFont
-  color: $darkLiver
+  color: $richBlack
 
 .container
   display: grid
@@ -120,4 +120,12 @@ a
     font-size: 1.2em
     @media(min-width: 460px)
       font-size: 2em
+
+.about-site, .footer-note
+  padding: 1em
+  background-color: $mediumAquamarine
+  p
+    margin-bottom: 0
+    color: $richBlack
+
 </style>

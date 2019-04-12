@@ -1,15 +1,14 @@
 {
   "links": {
     "home": "Home",
-    "about": "About",
     "english": "English version",
     "portuguese": "portuguese version"
   },
   "home": {
-    "title": "Welcome",
-    "introduction": "WHAT Coin WHICH Coin is crypto currency price dashboard showing Bitcoin, XRP, Litecoin, Bitcoin Cash. designed to view prices at a glance from various cryto currency exchanges around the world."
-  },
-  "footer": {
-    "text": "The Prices are realtime data, sourced from the respective providers public API. Click here to see a list."
+    "title": "What Coin Which Coin",
+    "introduction": "The Prices are real-time data, sourced from the respective providers public API.",
+    "built-with": "Built with VueJs by Mannuel Ferreira",
+    "say-hello": "say hello.",
+    "fork-it": "Fork it."
   }
 }
