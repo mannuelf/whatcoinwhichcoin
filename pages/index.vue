@@ -9,7 +9,7 @@
     </div>
     <div class="about-site">
       <p>
-        {{ $t('home.introduction') }}
+        {{ $t('home.description') }}
       </p>
     </div>
     <div class="footer-note">
@@ -41,7 +41,14 @@ export default {
   name: 'Home',
   head() {
     return {
-      title: this.$t('home.title')
+      title: this.$t('home.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('home.description')
+        }
+      ]
     }
   },
   components: {
