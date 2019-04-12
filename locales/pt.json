@@ -6,7 +6,7 @@
   },
   "home": {
     "title": "What Coin Which Coin",
-    "introduction": "Os preços são dados em tempo real, provenientes da API pública dos respectivos provedores.",
+    "description": "O QUE Coin WHICH Coin é o painel de preço da moeda criptografada mostrando Bitcoin, XRP, Litecoin, Bitcoin Cash. Concebido para ver os preços num piscar de olhos em vários câmbios de moeda em todo o mundo. Os preços são dados em tempo real, provenientes da API pública dos respectivos provedores.",
     "built-with": "Construído com VueJs por Mannuel Ferreira",
     "say-hello": "diga olá.",
     "fork-it": "Copie este."
