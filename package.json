@@ -27,6 +27,7 @@
     "nuxt": "^2.4.0",
     "sass-loader": "^7.1.0",
     "vue-analytics": "^5.16.4",
+    "vue-i18n": "^8.10.0",
     "vue-rollbar": "^1.0.0"
   },
   "devDependencies": {
