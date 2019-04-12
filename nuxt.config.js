@@ -88,6 +88,11 @@ module.exports = {
       {
         url: 'about-apis',
         changefreq: 'daily'
+      },
+      '/pt',
+      {
+        url: '/pt',
+        changefreq: 'daily'
       }
     ]
   },
