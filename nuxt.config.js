@@ -49,8 +49,15 @@ module.exports = {
     {
       src: '~/plugins/vue-analytics.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/vue-i18n.js',
+      ssr: false
     }
   ],
+  generate: {
+    routes: ['/', '/pt']
+  },
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
