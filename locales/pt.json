@@ -6,8 +6,8 @@
     "portuguese": "portuguese version"
   },
   "home": {
-    "title": "Welcome",
-    "introduction": "This is an introduction in English."
+    "title": "Bem vinda",
+    "introduction": "O QUE Coin WHICH Coin é o painel de preço da moeda criptografada mostrando Bitcoin, XRP, Litecoin, Bitcoin Cash. Concebido para ver os preços de uma só vez a partir de várias bolsas de moeda em todo o mundo."
   },
   "footer": {
     "text": "Os preços são dados em tempo real, provenientes da API pública dos respectivos provedores. Clique aqui para ver uma lista."
