@@ -2,19 +2,20 @@
   <div>
     <section class="site-footer">
       <div>
-        <p>
-          The Prices are realtime data, sourced from the respective providers public API.
-          <nuxt-link to="/about-apis">
-            <strong>Click here</strong>
-          </nuxt-link> to see a list.
-        </p>
-      </div>
-      <div>
-        <p>
-          Built with VueJs by Mannuel Ferreira
-          <a href="https://mannuelferreira.com"><strong>say hello</strong></a>.
-          <a href="https://github.com/mannuelf/whatcoinwhichcoin"><strong>fork it.</strong></a>
-        </p>
+        <nuxt-link
+          v-if="$i18n.locale === 'en'"
+          :to="`/pt` + $route.fullPath"
+          exact
+        >
+          Portuguese
+        </nuxt-link>
+        <nuxt-link
+          v-else
+          :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
+          exact
+        >
+          English
+        </nuxt-link>
       </div>
     </section>
   </div>
