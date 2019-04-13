@@ -4,6 +4,11 @@
     "english": "English version",
     "portuguese": "portuguese version"
   },
+  "site-name": {
+    "p1": "Que",
+    "p2": "Que",
+    "p3": "Moeda"
+  },
   "home": {
     "title": "Que moeda Que moeda",
     "description": "O QUE Coin WHICH Coin é o painel de preço da moeda criptografada mostrando Bitcoin, XRP, Litecoin, Bitcoin Cash. Concebido para ver os preços num piscar de olhos em vários câmbios de moeda em todo o mundo. Os preços são dados em tempo real, provenientes da API pública dos respectivos provedores.",
