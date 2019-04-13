@@ -3,7 +3,8 @@
     <header class="site-header">
       <h1>
         <nuxt-link to="/">
-          <span style="color:#FFED65;">WHAT</span>Coin <span style="color:#FFED65;">WHICH</span>Coin
+          <span style="color:#FFED65;">{{ $t('site-name.p1') }}</span>{{ $t('site-name.p3') }}
+          <span style="color:#FFED65;">{{ $t('site-name.p2') }}</span>{{ $t('site-name.p3') }}
         </nuxt-link>
       </h1>
       <figure class="coin-logo">
