@@ -1,4 +1,4 @@
-# whatcoinwhichcoinv2
+# What Coin Which Coin
 
 > Cryptocurrency Price Dashboard for fun.
 
