@@ -23,7 +23,7 @@ $ npm run dev
 
 ```
 
-## build for production
+## Build for production
 
 ```bash
 # build for production and launch server
@@ -42,6 +42,12 @@ I love technology, I love design, typography and I love Vue Js. This project is 
 Join in the fun. If you like fork it, or just enjoy using it, [Click here](https://whatcoinwhichcoin.com)
 
 <img src="_design/screenshot.png" alt="drawing" width="320px" />
+
+### Technology
+
+- VueJs
+- NuxtJs
+- Progressive Web Application
 
 #### NUXTJS
 
