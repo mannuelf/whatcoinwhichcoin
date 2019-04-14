@@ -8,6 +8,12 @@ Crypto currency price viewing dashboard.
 
 ## Local dev
 
+To get started fork and clone the repo to your development machine:
+
+```bash
+git clone https://github.com/mannuelf/whatcoinwhichcoin
+```
+
 ```bash
 # install dependencies
 $ npm install
@@ -29,12 +35,11 @@ $ npm run generate
 
 ### Why another crypto currency price dashboard/ticker
 
-I love technology, I love design & typography and I love Vue Js. This project is an opportunity to play with all of the above.
+I love technology, I love design, typography and I love Vue Js. This project is an opportunity to play with all of the above.
 
 Join in the fun. If you like fork it, or just enjoy using it, [Click here](https://whatcoinwhichcoin.com)
 
-<img src="_design/screenshot.jpg" alt="drawing" width="320px"/>
-
+<img src="_design/screenshot.jpg" alt="drawing" width="320px" />
 
 #### NUXTJS
 
