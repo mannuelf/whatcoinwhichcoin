@@ -8,9 +8,21 @@
 
 <script>
 import LunoTicker from '@/components/LunoTicker.vue'
-
+import { mapState } from 'vuex'
+import Consola from 'consola'
 export default {
   name: 'Home',
+  components: {
+    LunoTicker
+  },
+  computed: {
+    ...mapState({
+      coins: state => state.luno.list
+    })
+  },
+  async fetch({ store }) {
+    await store.dispatch('luno/get')
+  },
   head() {
     return {
       title: this.$t('home.title'),
@@ -23,8 +35,10 @@ export default {
       ]
     }
   },
-  components: {
-    LunoTicker
+  mounted() {
+    this.$nextTick(state => {
+      Consola.info('ticking....')
+    })
   },
   methods: {
     goToBitcoin: function(e) {
