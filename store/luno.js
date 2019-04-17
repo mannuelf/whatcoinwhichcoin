@@ -27,4 +27,4 @@ export const actions = {
   }
 }
 
-Consola.info('state', state.list)
+Consola.info('state', state)

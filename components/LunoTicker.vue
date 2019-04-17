@@ -9,9 +9,9 @@
       </div>
       <div v-else>
         <a href="#" class="block__btn--std animated flipInX">
-          <span class="block__btn--coin">BCH</span>
+          <span class="block__btn--coin">{{ this.pair }}</span>
           <span class="block__btn--currency">$</span>
-          <span class="block__btn--price">{{ results.high }}</span>
+          <span class="block__btn--price">{{ this.price }}</span>
         </a>
       </div>
     </section>
@@ -19,12 +19,21 @@
 </template>
 
 <script>
-import axios from 'axios'
 import LoadingSpinner from '@/components/LoadingSpinner.vue'
 export default {
-  name: 'Luno',
+  name: 'Lunoticker',
   components: {
     LoadingSpinner
+  },
+  props: {
+    pair: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {
@@ -34,23 +43,7 @@ export default {
       loading: true
     }
   },
-  mounted() {
-    const currency = 'bchusd'
-    const conversionUrl = 'https://cors-anywhere.herokuapp.com/'
-    const url = 'https://www.bitstamp.net/api/v2/ticker/'
-    axios
-      .get(conversionUrl + url + currency)
-      .then(response => {
-        this.results = response.data
-      })
-      .catch(error => {
-        const errorsNote = error
-        this.errors.push(errorsNote)
-      })
-      .finally(() => {
-        this.loading = false
-      })
-  }
+  mounted() {}
 }
 </script>
 

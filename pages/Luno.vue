@@ -1,11 +1,14 @@
 <template>
   <div class="home">
     <div id="nav">
-      <LunoTicker @click.native="goToBitcoin" />
+      <LunoTicker
+        :pair="coins.tickers[0].pair"
+        :price="coins.tickers[0].ask"
+      />
     </div>
   </div>
 </template>
-
+.pair
 <script>
 import LunoTicker from '@/components/LunoTicker.vue'
 import { mapState } from 'vuex'
@@ -40,14 +43,6 @@ export default {
       Consola.info('ticking....')
     })
   },
-  methods: {
-    goToBitcoin: function(e) {
-      // this.$router.go('/bitcoin')
-    },
-    goToBitcoinCash: function(e) {},
-    goToEtherium: function(e) {},
-    goToXrp: function(e) {},
-    goToLtCoin: function(e) {}
-  }
+  methods: {}
 }
 </script>

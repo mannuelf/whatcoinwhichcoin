@@ -20,7 +20,7 @@ export default {
   position: relative
   width: 64px
   height: 64px
-  margin: 0 50%
+  margin: 0 40%
 
 .lds-ellipsis div
   position: absolute
