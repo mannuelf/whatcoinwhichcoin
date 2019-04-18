@@ -1,6 +1,6 @@
 # What Coin Which Coin
 
-> Cryptocurrency Price Dashboard for fun.
+> Crypto currency Price Dashboard for fun.
 
 ## Build Setup
 
@@ -11,7 +11,7 @@ Crypto currency price viewing dashboard.
 To get started fork and clone the repo to your development machine:
 
 ```bash
-git clone https://github.com/mannuelf/whatcoinwhichcoin
+git clone https://github.com/{YOUR-NAME}/whatcoinwhichcoin
 ```
 
 ```bash
@@ -22,6 +22,10 @@ $ npm install
 $ npm run dev
 
 ```
+
+## Contributing
+
+If you would like to contribute form repo and go wild and submit a pull request. There is list of hopes and dreams found here: [https://github.com/mannuelf/whatcoinwhichcoin/projects/1](https://github.com/mannuelf/whatcoinwhichcoin/projects/1)
 
 ## Build for production
 
