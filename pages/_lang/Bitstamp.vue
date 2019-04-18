@@ -21,6 +21,9 @@ export default {
   name: 'Home',
   head() {
     return {
+      bodyAttr: {
+        class: 'bitstamp'
+      },
       title: this.$t('home.title'),
       meta: [
         {

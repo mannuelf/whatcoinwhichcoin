@@ -1,24 +1,26 @@
 <template>
-  <div>
-    <header class="site-header">
-      <h1>
-        <nuxt-link to="/">
-          <span style="color:#FFED65;">{{ $t('site-name.p1') }}</span>{{ $t('site-name.p3') }}
-          <span style="color:#FFED65;">{{ $t('site-name.p2') }}</span>{{ $t('site-name.p3') }}
-        </nuxt-link>
-      </h1>
-      <figure class="coin-logo">
-        <img src="~/static/logos/bitstamp.png" alt="Bitstamp">
-      </figure>
-    </header>
-  </div>
+  <header class="site-header">
+    <h1>
+      <nuxt-link to="/">
+        <span style="color:#FFED65;">{{ $t('site-name.p1') }}</span>{{ $t('site-name.p3') }}
+        <span style="color:#FFED65;">{{ $t('site-name.p2') }}</span>{{ $t('site-name.p3') }}
+      </nuxt-link>
+    </h1>
+    <app-logo />
+  </header>
 </template>
 
 <script>
+import Logo from '@/components/Logo'
 export default {
   name: 'SiteHeader',
+  components: {
+    'app-logo': Logo
+  },
   data() {
-    return {}
+    return {
+      exchange: ''
+    }
   }
 }
 </script>

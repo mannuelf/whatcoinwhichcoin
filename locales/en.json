@@ -15,5 +15,9 @@
     "built-with": "Built with VueJs by Mannuel Ferreira",
     "say-hello": "say hello.",
     "fork-it": "Fork it."
+  },
+  "luno": {
+    "title": "Luno | What Coin Which Coin",
+    "description": "Luno is a crypto currency exchange headquartered in London with offices in Cape Town and Singapore. You can buy and trade Bitcoin, Bitcoin Cash and Etherium"
   }
 }

@@ -15,5 +15,9 @@
     "built-with": "Construído com VueJs por Mannuel Ferreira",
     "say-hello": "diga olá.",
     "fork-it": "Copie este."
+  },
+  "luno": {
+    "title": "Luno | Que moeda Que moeda",
+    "description": "A Luno é uma agência de câmbio criptografada sediada em Londres com escritórios na Cidade do Cabo e em Cingapura. Você pode comprar e negociar Bitcoin, Bitcoin Cash e Etherium"
   }
 }
