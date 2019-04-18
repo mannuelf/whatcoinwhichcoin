@@ -17,6 +17,11 @@ import { mapState } from 'vuex'
 export default {
   name: 'Luno',
   components: {},
+  data() {
+    return {
+      exchange: ''
+    }
+  },
   computed: {
     ...mapState({
       coins: state => state.luno.list
@@ -52,6 +57,9 @@ export default {
         XBTEUR: 'EURO'
       }
       return currencies
+    },
+    setExchange() {
+      this.exchange = 'luno'
     }
   }
 }

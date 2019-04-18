@@ -20,7 +20,7 @@ export default {
       if (this.$route.path === '/') {
         this.exchange = 'bitstamp'
       }
-      if (this.$route.path === '/luno') {
+      if (this.$route.path === '/luno' || this.$route.path === '/pt/luno') {
         this.exchange = 'luno'
       }
     }
