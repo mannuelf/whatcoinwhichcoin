@@ -1,0 +1,66 @@
+<template>
+  <div class="home">
+    <div id="nav">
+      <section
+        v-for="coin in coins.tickers"
+        :key="coin.id"
+        class="block__btn--std animated flipInX"
+      >
+        <span class="block__btn--coin">{{ coin.pair }}</span>
+        <span class="block__btn--price">{{ coin.ask }}</span>
+      </section>
+    </div>
+  </div>
+</template>
+<script>
+import { mapState } from 'vuex'
+export default {
+  name: 'Luno',
+  components: {},
+  data() {
+    return {
+      exchange: ''
+    }
+  },
+  computed: {
+    ...mapState({
+      coins: state => state.luno.list
+    })
+  },
+  async fetch({ store }) {
+    await store.dispatch('luno/GET_ALL')
+  },
+  head() {
+    return {
+      bodyAttr: {
+        class: 'luno'
+      },
+      title: this.$t('luno.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('luno.description')
+        }
+      ]
+    }
+  },
+  mounted() {},
+  methods: {
+    setCurrency() {
+      const currencies = {
+        XBTIDR: 'Indonesian Rupiah',
+        XBTMYR: 'Malaysian Ringgit',
+        XBTNGN: 'Nigerian Naira',
+        XBTZAR: 'ZAR',
+        ETHXBT: 'BTC',
+        XBTEUR: 'EURO'
+      }
+      return currencies
+    },
+    setExchange() {
+      this.exchange = 'luno'
+    }
+  }
+}
+</script>

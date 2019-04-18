@@ -21,12 +21,14 @@
     "@nuxtjs/sitemap": "^0.2.2",
     "@nuxtjs/style-resources": "^0.1.2",
     "animate.css": "^3.7.0",
+    "consola": "^2.6.0",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "node-sass": "^4.11.0",
     "nuxt": "^2.4.0",
     "sass-loader": "^7.1.0",
     "vue-i18n": "^8.10.0",
+    "vue-native-websocket": "^2.0.13",
     "vue-rollbar": "^1.0.0"
   },
   "devDependencies": {
