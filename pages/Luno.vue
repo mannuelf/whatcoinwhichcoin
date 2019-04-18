@@ -1,22 +1,26 @@
 <template>
   <div class="home">
     <div id="nav">
-      <LunoTicker
-        :pair="coins.tickers[0].pair"
-        :price="coins.tickers[0].ask"
-      />
+      <section
+        v-for="coin in coins.tickers"
+        :key="coin.id"
+        class="block__btn--std animated flipInX"
+      >
+        <span class="block__btn--coin">{{ coin.pair }}</span>
+        <span class="block__btn--price">{{ coin.ask }}</span>
+      </section>
     </div>
   </div>
 </template>
-.pair
 <script>
-import LunoTicker from '@/components/LunoTicker.vue'
 import { mapState } from 'vuex'
-import Consola from 'consola'
 export default {
-  name: 'Home',
-  components: {
-    LunoTicker
+  name: 'Luno',
+  components: {},
+  data() {
+    return {
+      exchange: ''
+    }
   },
   computed: {
     ...mapState({
@@ -24,25 +28,39 @@ export default {
     })
   },
   async fetch({ store }) {
-    await store.dispatch('luno/get')
+    await store.dispatch('luno/GET_ALL')
   },
   head() {
     return {
-      title: this.$t('home.title'),
+      bodyAttr: {
+        class: 'luno'
+      },
+      title: this.$t('luno.title'),
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.$t('home.description')
+          content: this.$t('luno.description')
         }
       ]
     }
   },
-  mounted() {
-    this.$nextTick(state => {
-      Consola.info('ticking....')
-    })
-  },
-  methods: {}
+  mounted() {},
+  methods: {
+    setCurrency() {
+      const currencies = {
+        XBTIDR: 'Indonesian Rupiah',
+        XBTMYR: 'Malaysian Ringgit',
+        XBTNGN: 'Nigerian Naira',
+        XBTZAR: 'ZAR',
+        ETHXBT: 'BTC',
+        XBTEUR: 'EURO'
+      }
+      return currencies
+    },
+    setExchange() {
+      this.exchange = 'luno'
+    }
+  }
 }
 </script>

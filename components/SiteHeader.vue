@@ -7,18 +7,22 @@
           <span style="color:#FFED65;">{{ $t('site-name.p2') }}</span>{{ $t('site-name.p3') }}
         </nuxt-link>
       </h1>
-      <figure class="coin-logo">
-        <img src="~/static/logos/bitstamp.png" alt="Bitstamp">
-      </figure>
+      <app-logo :exchange="{exchange}" />
     </header>
   </div>
 </template>
 
 <script>
+import Logo from '@/components/Logo'
 export default {
   name: 'SiteHeader',
+  components: {
+    'app-logo': Logo
+  },
   data() {
-    return {}
+    return {
+      exchange: ''
+    }
   }
 }
 </script>

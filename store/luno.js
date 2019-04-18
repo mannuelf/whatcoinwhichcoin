@@ -1,4 +1,3 @@
-import Consola from 'consola'
 import axios from 'axios'
 
 export const state = () => ({
@@ -6,25 +5,55 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_COINS(state, coins) {
+  SET_ALL(state, coins) {
     state.list = coins
   },
-  add(state, value) {
-    state.list = value
+  SET_BTC(state, coins) {
+    state.list = coins
+  },
+  SET_ETH(state, coins) {
+    state.eth = coins
   }
 }
 
 export const actions = {
-  set(state, list) {
-    state.list = list
+  async GET_ALL({ commit }) {
+    await axios
+      .get('https://api.mybitx.com/api/1/tickers')
+      .then(response => {
+        if (response.status === 200) {
+          commit('SET_ALL', response.data)
+        }
+      })
+      .catch(err => {
+        // eslint-disable-next-line no-console
+        console.log(err)
+      })
   },
-  async get({ commit }) {
-    await axios.get('https://api.mybitx.com/api/1/tickers').then(response => {
-      if (response.status === 200) {
-        commit('SET_COINS', response.data)
-      }
-    })
+  async GET_BTC({ commit }) {
+    await axios
+      .get('https://api.mybitx.com/api/1/tickers?pair=XBTZAR')
+      .then(response => {
+        if (response.status === 200) {
+          commit('SET_BTC', response.data)
+        }
+      })
+      .catch(err => {
+        // eslint-disable-next-line no-console
+        console.log(err)
+      })
+  },
+  async GET_ETH({ commit }) {
+    await axios
+      .get('https://api.mybitx.com/api/1/tickers?pair=ETHZAR')
+      .then(response => {
+        if (response.status === 200) {
+          commit('SET_ETH', response.data)
+        }
+      })
+      .catch(err => {
+        // eslint-disable-next-line no-console
+        console.log(err)
+      })
   }
 }
-
-Consola.info('state', state)

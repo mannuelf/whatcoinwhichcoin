@@ -42,7 +42,7 @@ module.exports = {
     ]
   },
   loading: { color: '#1B98E0' },
-  css: ['~/assets/css/tailwind.css'],
+  css: [],
   plugins: [
     {
       src: '~/plugins/vue-rollbar.js',
@@ -58,7 +58,7 @@ module.exports = {
     }
   ],
   generate: {
-    routes: ['/', '/pt']
+    routes: ['/', '/pt', '/luno', '/pt/luno']
   },
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
