@@ -16,6 +16,10 @@
     "say-hello": "diga olá.",
     "fork-it": "Copie este."
   },
+  "bitstamp": {
+    "title": "Bitstamp | What Coin Which Coin",
+    "description": "Bitstamp é uma troca de moeda criptografada com sede em Luxemburgo, com escritórios em Londres. USD, EUR, bitcoin, litecoin, ethereum, ripple ou bitcoin cash depósitos e levantamentos são permitidos nesta plataforma.."
+  },
   "luno": {
     "title": "Luno | Que moeda Que moeda",
     "description": "A Luno é uma agência de câmbio criptografada sediada em Londres com escritórios na Cidade do Cabo e em Cingapura. Você pode comprar e negociar Bitcoin, Bitcoin Cash e Etherium"

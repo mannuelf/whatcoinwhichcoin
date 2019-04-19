@@ -24,12 +24,12 @@ export default {
       bodyAttr: {
         class: 'bitstamp'
       },
-      title: this.$t('home.title'),
+      title: this.$t('bitstamp.title'),
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.$t('home.description')
+          content: this.$t('bitstamp.description')
         }
       ]
     }

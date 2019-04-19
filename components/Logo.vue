@@ -17,7 +17,11 @@ export default {
   },
   methods: {
     getExchange() {
-      if (this.$route.path === '/') {
+      if (
+        this.$route.path === '/' ||
+        this.$route.path === '/pt/bitstamp' ||
+        this.$route.path === '/bitstamp'
+      ) {
         this.exchange = 'bitstamp'
       }
       if (this.$route.path === '/luno' || this.$route.path === '/pt/luno') {

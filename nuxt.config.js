@@ -92,6 +92,26 @@ module.exports = {
       {
         url: '/pt',
         changefreq: 'daily'
+      },
+      '/pt/luno',
+      {
+        url: '/pt/luno',
+        changefreq: 'daily'
+      },
+      '/luno',
+      {
+        url: '/luno',
+        changefreq: 'daily'
+      },
+      '/pt/bitstamp',
+      {
+        url: '/pt/bitstamp',
+        changefreq: 'daily'
+      },
+      '/bitstamp',
+      {
+        url: '/bitstamp',
+        changefreq: 'daily'
       }
     ]
   },
