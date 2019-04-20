@@ -29,7 +29,7 @@ export default {
 
 h1
   font-family: VT323
-  font-size: 1.8em
+  font-size: 2em
   margin: 0
   width: fit-content
   a
@@ -39,6 +39,7 @@ h1
 
 
 .coin-logo
+  z-index: 10
   background-color: #fdfff7
   display: inline-block
   height: 40px
@@ -46,8 +47,8 @@ h1
   overflow: hidden
   padding: 10px
   position: absolute
-  right: 10px
-  top: 19px
+  right: 2em
+  top: 2.9em
   width: 100px
-  border-radius: 8px 8px 0 0
+  border-radius: 4px 4px
 </style>
