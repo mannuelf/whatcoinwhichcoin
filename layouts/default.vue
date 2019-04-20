@@ -81,7 +81,7 @@ body
 
 a
   color: $darkLiver
-
+  text-decoration: none
   &:hover
     color: $richBlack
 
@@ -97,7 +97,7 @@ a
     font-size: 2em
     grid-gap: 0
     grid-template-columns: 0.5fr 20px 1fr
-    padding: 0.5em
+    padding: 1em 0.5em
     transition: all 0.5s ease-out
 
     &:hover
