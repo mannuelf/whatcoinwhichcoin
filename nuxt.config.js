@@ -15,7 +15,8 @@ module.exports = {
         name: 'google-site-verification',
         content: 'nKI88c4xbyXEo5ub25G2-4JqjDiggUKqIZzMF5E4aJk'
       },
-      { name: 'msvalidate.01', content: 'D37242BCFEACCD5D06A16A1748BF7DA1' }
+      { name: 'msvalidate.01', content: 'D37242BCFEACCD5D06A16A1748BF7DA1' },
+      { name: 'yandex-verification', content: '026fe23883783f5c' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
