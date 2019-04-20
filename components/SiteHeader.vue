@@ -26,12 +26,12 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
 h1
   font-family: VT323
   font-size: 2em
   margin: 0
   width: fit-content
+  font-weight: 400
   a
     color: #FFF
   @media(min-width: 640px)
