@@ -68,7 +68,7 @@ body
   background-color: $brightCerulean
   color: $white
   grid-area: header
-  padding: 0.6em
+  padding: .9em
   min-height: 40px
   z-index: 100
 

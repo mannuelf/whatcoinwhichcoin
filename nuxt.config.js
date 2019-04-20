@@ -22,17 +22,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'
-      },
-      {
-        rel: 'stylesheet',
-        href:
           'https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css'
       },
       {
         rel: 'stylesheet',
@@ -42,7 +32,7 @@ module.exports = {
     ]
   },
   loading: { color: '#1B98E0' },
-  css: [],
+  css: ['~/assets/css/tailwind.css'],
   plugins: [
     {
       src: '~/plugins/vue-rollbar.js',
@@ -58,7 +48,7 @@ module.exports = {
     }
   ],
   generate: {
-    routes: ['/', '/pt', '/luno', '/pt/luno']
+    routes: ['/', '/pt', '/luno', '/pt/luno', '/bitstamp' , '/pt/bitstamp']
   },
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
