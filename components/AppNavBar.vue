@@ -43,15 +43,15 @@ export default {
   justify-content: center
   align-items: center
   background: #3a98e0
-  border-radius: 6px
-  bottom: 10px
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, .1)
-  height: 60px
-  left: 50%
+  border-radius: 0px
+  bottom: 0px
+  // box-shadow: 0px 0px 4px rgba(0, 0, 0, .1)
+  height: 50px
+  // left: 50%
   margin: 0 auto
   position: fixed
-  transform: translate(-50%, -50%)
-  width: 95vw
+  // transform: translate(-50%, -50%)
+  width: 100%
   z-index: 10000
 
   &__item--language
