@@ -47,7 +47,7 @@ h1
   overflow: hidden
   padding: 10px
   position: absolute
-  right: 2em
+  right: 1em
   top: 2.9em
   width: 100px
   border-radius: 4px 4px

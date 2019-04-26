@@ -1,8 +1,10 @@
 {
   "links": {
     "home": "Home",
-    "english": "English version",
-    "portuguese": "portuguese version"
+    "english": "EN",
+    "portuguese": "PT",
+    "luno": "luno",
+    "bitstamp": "bitstamp"
   },
   "site-name": {
     "p1": "Que",

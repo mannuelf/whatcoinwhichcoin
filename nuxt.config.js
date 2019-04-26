@@ -49,7 +49,7 @@ module.exports = {
     }
   ],
   generate: {
-    routes: ['/', '/pt', '/luno', '/pt/luno', '/bitstamp' , '/pt/bitstamp']
+    routes: ['/', '/pt', '/luno', '/pt/luno', '/bitstamp', '/pt/bitstamp']
   },
   modules: [
     // Doc: https://axios.nuxtjs.org/usage

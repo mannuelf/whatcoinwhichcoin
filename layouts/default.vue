@@ -4,29 +4,27 @@
     <nuxt />
     <site-about />
     <site-footer />
+    <app-nav-bar />
   </div>
 </template>
 <script>
 import SiteHeader from '@/components/SiteHeader'
 import SiteAbout from '@/components/SiteAbout'
 import SiteFooter from '@/components/SiteFooter'
+import AppNavBar from '@/components/AppNavBar'
 
 export default {
   name: 'DefaultLayout',
   components: {
     'site-header': SiteHeader,
     'site-about': SiteAbout,
-    'site-footer': SiteFooter
+    'site-footer': SiteFooter,
+    'app-nav-bar': AppNavBar
   }
 }
 </script>
 
 <style lang="sass">
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323')
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css')
-@import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css')
-@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
-
 $defaultFont: Avenir, Helvetica, Arial, sans-serif
 $rajdHani: Rajdhani, sans-serif
 $robotoMono: Roboto Mono, monospace
@@ -130,5 +128,6 @@ a
   p
     margin-bottom: 0
     color: $richBlack
-
+.footer-note
+  padding-bottom: 2em
 </style>
