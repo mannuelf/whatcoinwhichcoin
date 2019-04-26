@@ -2,20 +2,7 @@
   <div>
     <section class="site-footer">
       <div>
-        <nuxt-link
-          v-if="$i18n.locale === 'en'"
-          :to="`/pt` + $route.fullPath"
-          exact
-        >
-          Portuguese
-        </nuxt-link>
-        <nuxt-link
-          v-else
-          :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
-          exact
-        >
-          English
-        </nuxt-link>
+        .
       </div>
     </section>
   </div>
@@ -31,8 +18,8 @@ export default {
 .site-footer
     display: grid
     grid-area: footer
-    background: #eee
-
+    background: #59ffa0
+    color: #59ffa0
     > div
         padding: 0 0.5em
 
