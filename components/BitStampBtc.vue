@@ -46,7 +46,7 @@ export default {
           this.results = response.data
         })
         .catch(error => {
-          const errorsNote = error
+          console.log(error)
         })
         .finally(() => {
           this.loading = false

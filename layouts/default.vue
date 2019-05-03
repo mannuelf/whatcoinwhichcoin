@@ -20,32 +20,20 @@ export default {
     'site-about': SiteAbout,
     'site-footer': SiteFooter,
     'app-nav-bar': AppNavBar
+  },
+  data() {
+    return {}
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.start())
+    })
   }
 }
 </script>
 
 <style lang="sass">
-$defaultFont: Avenir, Helvetica, Arial, sans-serif
-$rajdHani: Rajdhani, sans-serif
-$robotoMono: Roboto Mono, monospace
-
-$fontThin: 100
-$fontLight: 300
-$fontRegular: 500
-$fontBold: 700
-
-$babyPowder: #FDFFF7
-$blockBtnHover: #EDEDED
-$brightCerulean: #1B98E0
-$burntOrange: #FF5E5B
-$charcoal: #373F51
-$darkLiver: #50514F
-$maize: #FFED65
-$maximumBluePurple: #B4ADEA
-$mediumAquamarine: #59FFA0
-$richBlack: #001021
-$white: #FFF
-
 body
   background: $babyPowder
 
@@ -118,7 +106,7 @@ a
     align-self: end
     font-family: $robotoMono, $defaultFont
     font-weight: $fontThin
-    font-size: 1.2em
+    font-size: 1.1em
     @media(min-width: 460px)
       font-size: 2em
 
@@ -128,6 +116,7 @@ a
   p
     margin-bottom: 0
     color: $richBlack
+
 .footer-note
   padding-bottom: 2em
 </style>

@@ -29,31 +29,5 @@ export const actions = {
         // eslint-disable-next-line no-console
         console.log(err)
       })
-  },
-  async GET_BTC({ commit }) {
-    await axios
-      .get('https://api.mybitx.com/api/1/tickers?pair=XBTZAR')
-      .then(response => {
-        if (response.status === 200) {
-          commit('SET_BTC', response.data)
-        }
-      })
-      .catch(err => {
-        // eslint-disable-next-line no-console
-        console.log(err)
-      })
-  },
-  async GET_ETH({ commit }) {
-    await axios
-      .get('https://api.mybitx.com/api/1/tickers?pair=ETHZAR')
-      .then(response => {
-        if (response.status === 200) {
-          commit('SET_ETH', response.data)
-        }
-      })
-      .catch(err => {
-        // eslint-disable-next-line no-console
-        console.log(err)
-      })
   }
 }

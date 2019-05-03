@@ -32,7 +32,7 @@ module.exports = {
       }
     ]
   },
-  loading: { color: '#1B98E0' },
+  loading: { loading: true, color: '#1B98E0' },
   styleResources: {
     scss: ['./assets/sass/*.sass']
   },
@@ -120,7 +120,8 @@ module.exports = {
     cssSourceMap: true,
     build: ['vue-i18n'],
     extend(config, ctx) {
-      if (ctx.isDev && ctx.isClient) {  // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        // Run ESLint on save
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

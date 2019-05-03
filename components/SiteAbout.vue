@@ -8,12 +8,12 @@
     <div class="footer-note">
       <p>
         {{ $t('home.built-with') }}
-        <a href="https://mannuelferreira.com">
+        <a href="https://mannuelferreira.com" target="_blank">
           <strong>
             {{ $t('home.say-hello') }}
           </strong>
         </a>
-        <a href="https://github.com/mannuelf/whatcoinwhichcoin">
+        <a href="https://github.com/mannuelf/whatcoinwhichcoin" target="_blank">
           <strong>
             {{ $t('home.fork-it') }}
           </strong>
