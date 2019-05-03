@@ -62,9 +62,7 @@ export default {
       return this.language === 'en' ? 'EN' : 'PT'
     }
   },
-  mounted() {
-    console.log('mounted: ', this.locale)
-  },
+  mounted() {},
   methods: {}
 }
 </script>

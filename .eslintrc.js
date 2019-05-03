@@ -14,8 +14,8 @@ module.exports = {
   plugins: [
     'prettier'
   ],
-  // add your custom rules here
   rules: {
-    "no-useless-escape": 0
+    "no-useless-escape": 0,
+    "no-console": 0
   }
 }
