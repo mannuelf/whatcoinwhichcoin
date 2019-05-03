@@ -11,7 +11,7 @@ Crypto currency price viewing dashboard.
 To get started fork and clone the repo to your development machine:
 
 ```bash
-git clone https://github.com/{YOUR-NAME}/whatcoinwhichcoin
+git clone https://github.com/mannuelf/whatcoinwhichcoin
 ```
 
 ```bash
