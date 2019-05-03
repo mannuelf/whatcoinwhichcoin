@@ -47,14 +47,12 @@ export default {
         })
         .catch(error => {
           const errorsNote = error
-          this.rollbar.debug(errorsNote)
-          this.errors.push(errorsNote)
         })
         .finally(() => {
           this.loading = false
         })
-    } catch (e) {
-      this.rollbar.error(e)
+    } catch (err) {
+      console.log(err)
     }
   }
 }
