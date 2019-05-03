@@ -1,6 +1,6 @@
 <template>
   <div class="app-nav-bar">
-    <nuxt-link
+    <!-- <nuxt-link
       v-for="nav in navbar"
       :key="nav.id"
       :to="{ name: '' }"
@@ -8,7 +8,13 @@
       exact
     >
       {{ nav.text }}
-    </nuxt-link>
+    </nuxt-link> -->
+    <!-- <nuxt-link
+      :to="path"
+      class="app-nav-bar__item--language"
+    >
+      {{ label }}
+    </nuxt-link> -->
     <nuxt-link
       v-if="$i18n.locale === 'en'"
       :to="`/pt` + $route.fullPath"
@@ -28,12 +34,31 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'AppNavBar',
   data() {
     return {}
   },
-  mounted() {},
+  computed: {
+    ...mapState({
+      locale: state => state.locale
+    }),
+    language() {
+      return this.$i18n.locale === 'en'
+    },
+    path() {
+      return this.locale
+        ? `/pt/${this.$route.fullPath}`
+        : this.$route.fullPath.replace(/^\/[^\/]+/, '')
+    },
+    label() {
+      return this.language === 'en' ? 'EN' : 'PT'
+    }
+  },
+  mounted() {
+    console.log('mounted: ', this.locale)
+  },
   methods: {}
 }
 </script>
