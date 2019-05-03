@@ -1,20 +1,26 @@
 <template>
   <div class="app-nav-bar">
-    <!-- <nuxt-link
-      v-for="nav in navbar"
-      :key="nav.id"
-      :to="{ name: '' }"
+    <nuxt-link
+      :to="$i18n.path('')"
       class="app-nav-bar__item"
       exact
     >
-      {{ nav.text }}
-    </nuxt-link> -->
-    <!-- <nuxt-link
-      :to="path"
-      class="app-nav-bar__item--language"
+      {{ $t('links.home') }}
+    </nuxt-link>
+    <nuxt-link
+      :to="$i18n.path('luno')"
+      class="app-nav-bar__item"
+      exact
     >
-      {{ label }}
-    </nuxt-link> -->
+      {{ $t('links.luno') }}
+    </nuxt-link>
+    <nuxt-link
+      :to="$i18n.path('bitstamp')"
+      class="app-nav-bar__item"
+      exact
+    >
+      {{ $t('links.bitstamp') }}
+    </nuxt-link>
     <nuxt-link
       v-if="$i18n.locale === 'en'"
       :to="`/pt` + $route.fullPath"
@@ -79,7 +85,13 @@ export default {
   width: 100%
   z-index: 10000
 
+  &__item
+    color: $white
+    border-right: 1px solid $white
+    padding: 1em
+
   &__item--language
+    margin-left: auto
     text-transform: uppercase
     padding: 0.5em
     line-height: 60px

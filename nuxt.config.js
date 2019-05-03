@@ -1,4 +1,4 @@
-const RollbarSourceMapPlugin = require('rollbar-sourcemap-webpack-plugin')
+// const RollbarSourceMapPlugin = require('rollbar-sourcemap-webpack-plugin')
 const pkg = require('./package')
 
 module.exports = {
@@ -33,12 +33,11 @@ module.exports = {
     ]
   },
   loading: { color: '#1B98E0' },
-  css: ['~/assets/css/tailwind.css'],
+  styleResources: {
+    scss: ['./assets/sass/*.sass']
+  },
+  css: ['~/assets/sass/app.sass', '~/assets/css/tailwind.css'],
   plugins: [
-    {
-      src: '~/plugins/vue-rollbar.js',
-      ssr: true
-    },
     {
       src: '~/plugins/vue-analytics.js',
       ssr: false
@@ -55,7 +54,8 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/style-resources'
   ],
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
@@ -107,18 +107,20 @@ module.exports = {
     ]
   },
   configureWebpack: {
+    devtool: 'source-map',
     plugins: [
-      new RollbarSourceMapPlugin({
-        accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
-        version: 'version-1',
-        publicPath: 'https://www.whatcoinwhichcoin.com'
-      })
+      // new RollbarSourceMapPlugin({
+      //   accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
+      //   version: 'version-1',
+      //   publicPath: 'https://www.whatcoinwhichcoin.com'
+      // })
     ]
   },
   build: {
+    cssSourceMap: true,
+    build: ['vue-i18n'],
     extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
+      if (ctx.isDev && ctx.isClient) {  // Run ESLint on save
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
