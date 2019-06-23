@@ -1,18 +1,16 @@
 import axios from 'axios'
 
 export const state = () => ({
-  list: []
+  list: [],
+  error: ''
 })
 
 export const mutations = {
   SET_ALL(state, coins) {
     state.list = coins
   },
-  SET_BTC(state, coins) {
-    state.list = coins
-  },
-  SET_ETH(state, coins) {
-    state.eth = coins
+  ERROR(state, error) {
+    state.error = error
   }
 }
 
@@ -27,6 +25,7 @@ export const actions = {
       })
       .catch(err => {
         // eslint-disable-next-line no-console
+        commit('ERROR', err)
         console.log(err)
       })
   }
