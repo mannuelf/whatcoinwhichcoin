@@ -24,7 +24,8 @@ export default {
   },
   computed: {
     ...mapState({
-      coins: state => state.luno.list
+      coins: state => state.luno.list,
+      error: state => state.luno.error
     })
   },
   async fetch({ store }) {
