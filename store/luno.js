@@ -17,7 +17,7 @@ export const mutations = {
 export const actions = {
   async GET_ALL({ commit }) {
     await axios
-      .get('https://api.mybitx.com/api/1/tickers')
+      .get('https://cors-anywhere.herokuapp.com/https://api.mybitx.com/api/1/tickers')
       .then(response => {
         if (response.status === 200) {
           commit('SET_ALL', response.data)
