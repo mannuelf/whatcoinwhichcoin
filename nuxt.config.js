@@ -51,7 +51,6 @@ module.exports = {
     routes: ['/', '/pt', '/luno', '/pt/luno', '/bitstamp', '/pt/bitstamp']
   },
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
@@ -108,13 +107,7 @@ module.exports = {
   },
   configureWebpack: {
     devtool: 'source-map',
-    plugins: [
-      // new RollbarSourceMapPlugin({
-      //   accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
-      //   version: 'version-1',
-      //   publicPath: 'https://www.whatcoinwhichcoin.com'
-      // })
-    ]
+    plugins: []
   },
   build: {
     cssSourceMap: true,
