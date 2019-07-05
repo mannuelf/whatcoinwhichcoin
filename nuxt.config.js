@@ -124,11 +124,38 @@ module.exports = {
       }
     }
   },
+  workbox: {
+    prefix: 'wcwc',
+    suffix: 'v0.1',
+    runtimeCaching: [
+      {
+        urlPattern: ['/static/'],
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: {
+          cacheName: 'images',
+          cacheableResponse: { statuses: [0, 200] }
+        }
+      },
+      {
+        urlPattern: 'https://fonts.googleapis.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      },
+      {
+        urlPattern: 'https://fonts.gstatic.com/.*',
+        handler: 'cacheFirst',
+        method: 'GET',
+        strategyOptions: { cacheableResponse: { statuses: [0, 200] } }
+      }
+    ]
+  },
   manifest: {
     name: "WHAT Coin WHICH Coin",
     short_name: "WCWC",
     start_url: "/",
-    scope: ".",
+    scope: "/",
     display: "fullscreen",
     orientation: "portrait-primary",
     background_color: "#1B98E0",
@@ -137,37 +164,37 @@ module.exports = {
     dir: "ltr",
     icons: [
       {
-        "src": "/assets/icons/android-icon-48x48.png",
+        "src": "/static/icons/android-icon-48x48.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "/assets/icons/android-icon-96x96.png",
+        "src": "/static/icons/android-icon-96x96.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "/assets/icons/android-icon-144x144.png",
+        "src": "/static/icons/android-icon-144x144.png",
         "type": "image/png",
         "sizes": "144x144"
       },
       {
-        "src": "/assets/icons/android-icon-192x192.png",
+        "src": "/static/icons/android-icon-192x192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/assets/icons/android-icon-256x256.png",
+        "src": "/static/icons/android-icon-256x256.png",
         "type": "image/png",
         "sizes": "256x256"
       },
       {
-        "src": "/assets/icons/android-icon-384x384.png",
+        "src": "/static/icons/android-icon-384x384.png",
         "type": "image/png",
         "sizes": "384x384"
       },
       {
-        "src": "/assets/icons/android-icon-512x512.png",
+        "src": "/static/icons/android-icon-512x512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
