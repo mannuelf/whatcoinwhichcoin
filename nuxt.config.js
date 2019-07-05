@@ -11,25 +11,29 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        name: 'google-site-verification',
-        content: 'nKI88c4xbyXEo5ub25G2-4JqjDiggUKqIZzMF5E4aJk'
-      },
+      { name: 'google-site-verification', content: 'nKI88c4xbyXEo5ub25G2-4JqjDiggUKqIZzMF5E4aJk' },
       { name: 'msvalidate.01', content: 'D37242BCFEACCD5D06A16A1748BF7DA1' },
-      { name: 'yandex-verification', content: '026fe23883783f5c' }
+      { name: 'yandex-verification', content: '026fe23883783f5c' },
+      { name: 'msapplication-TileColor', content: '#1B98E0' },
+      { name: 'msapplication-TileImage', content: '/static/icons/ms-icon-144x144.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/static/icons/favicon.ico' },
+      { rel: "apple-touch-icon", sizes: "57x57", href: "/static/icons/apple-icon-57x57.png" },
+      { rel: "apple-touch-icon", sizes: "60x60", href: "/static/icons/apple-icon-60x60.png" },
+      { rel: "apple-touch-icon", sizes: "72x72", href: "/apple-icon-72x72.png" },
+      { rel: "apple-touch-icon", sizes: "76x76", href: "/static/icons/apple-icon-76x76.png" },
+      { rel: "apple-touch-icon", sizes: "114x114", href: "/static/icons/apple-icon-114x114.png" },
+      { rel: "apple-touch-icon", sizes: "120x120", href: "/static/icons/apple-icon-120x120.png" },
+      { rel: "apple-touch-icon", sizes: "144x144", href: "/static/icons/apple-icon-144x144.png" },
+      { rel: "apple-touch-icon", sizes: "152x152", href: "/static/icons/apple-icon-152x152.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/static/icons/apple-icon-180x180.png" },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/static/icons/android-icon-192x192.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/static/icons/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "96x96", href: "/static/icons/favicon-96x96.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/static/icons/favicon-16x16.png" },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'}
     ]
   },
   loading: { loading: true, color: '#1B98E0' },
