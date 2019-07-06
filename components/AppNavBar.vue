@@ -24,7 +24,7 @@
     <nuxt-link
       v-if="$i18n.locale === 'en'"
       :to="`/pt` + $route.fullPath"
-      class="app-nav-bar__item--language"
+      class="app-nav-bar__item app-nav-bar__item--language"
       exact
     >
       PT
@@ -32,7 +32,7 @@
     <nuxt-link
       v-else
       :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
-      class="app-nav-bar__item--language"
+      class="app-nav-bar__item app-nav-bar__item--language"
       exact
     >
       EN
@@ -74,12 +74,10 @@ export default {
   background: #3a98e0
   border-radius: 0px
   bottom: 0px
-  // box-shadow: 0px 0px 4px rgba(0, 0, 0, .1)
+  overflow: hidden
   height: 50px
-  // left: 50%
   margin: 0 auto
   position: fixed
-  // transform: translate(-50%, -50%)
   width: 100%
   z-index: 10000
 
@@ -91,7 +89,6 @@ export default {
   &__item--language
     margin-left: auto
     text-transform: uppercase
-    padding: 0.5em
     line-height: 60px
     cursor: pointer
     color: #FFF

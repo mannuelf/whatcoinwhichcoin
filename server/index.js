@@ -25,13 +25,16 @@ async function start() {
   }
 
   app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept'
+    )
+    next()
+  })
 
   // Give nuxt middleware to express
-  app.use((nuxt.render))
+  app.use(nuxt.render)
 
   // Listen the server
   app.listen(port, host)
