@@ -18,20 +18,20 @@ module.exports = {
       { name: 'msapplication-TileImage', content: 'icons/ms-icon-144x144.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'icons/favicon.ico' },
-      { rel: "apple-touch-icon", sizes: "57x57", href: "icons/apple-icon-57x57.png" },
-      { rel: "apple-touch-icon", sizes: "60x60", href: "icons/apple-icon-60x60.png" },
-      { rel: "apple-touch-icon", sizes: "72x72", href: "icons/apple-icon-72x72.png" },
-      { rel: "apple-touch-icon", sizes: "76x76", href: "icons/apple-icon-76x76.png" },
-      { rel: "apple-touch-icon", sizes: "114x114", href: "icons/apple-icon-114x114.png" },
-      { rel: "apple-touch-icon", sizes: "120x120", href: "icons/apple-icon-120x120.png" },
-      { rel: "apple-touch-icon", sizes: "144x144", href: "icons/apple-icon-144x144.png" },
-      { rel: "apple-touch-icon", sizes: "152x152", href: "icons/apple-icon-152x152.png" },
-      { rel: "apple-touch-icon", sizes: "180x180", href: "icons/apple-icon-180x180.png" },
-      { rel: "icon", type: "image/png", sizes: "192x192", href: "icons/android-icon-192x192.png" },
-      { rel: "icon", type: "image/png", sizes: "32x32", href: "icons/favicon-32x32.png" },
-      { rel: "icon", type: "image/png", sizes: "96x96", href: "icons/favicon-96x96.png" },
-      { rel: "icon", type: "image/png", sizes: "16x16", href: "icons/favicon-16x16.png" },
+      { rel: 'icon', type: 'image/x-icon', href: '/icons/favicon.ico' },
+      { rel: "apple-touch-icon", sizes: "57x57", href: "/icons/apple-icon-57x57.png" },
+      { rel: "apple-touch-icon", sizes: "60x60", href: "/icons/apple-icon-60x60.png" },
+      { rel: "apple-touch-icon", sizes: "72x72", href: "/icons/apple-icon-72x72.png" },
+      { rel: "apple-touch-icon", sizes: "76x76", href: "/icons/apple-icon-76x76.png" },
+      { rel: "apple-touch-icon", sizes: "114x114", href: "/icons/apple-icon-114x114.png" },
+      { rel: "apple-touch-icon", sizes: "120x120", href: "/icons/apple-icon-120x120.png" },
+      { rel: "apple-touch-icon", sizes: "144x144", href: "/icons/apple-icon-144x144.png" },
+      { rel: "apple-touch-icon", sizes: "152x152", href: "/icons/apple-icon-152x152.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/icons/apple-icon-180x180.png" },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/icons/android-icon-192x192.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/icons/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "96x96", href: "/icons/favicon-96x96.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/icons/favicon-16x16.png" },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Rajdhani:300,600,700|Roboto+Mono:100,300|VT323' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'}
     ]
@@ -168,39 +168,44 @@ module.exports = {
     dir: "ltr",
     icons: [
       {
-        "src": "icons/android-icon-48x48.png",
-        "type": "image/png",
-        "sizes": "48x48"
+        "src": "images/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png"
       },
       {
-        "src": "icons/android-icon-96x96.png",
-        "type": "image/png",
-        "sizes": "96x96"
+        "src": "images/icons/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
       },
       {
-        "src": "icons/android-icon-144x144.png",
-        "type": "image/png",
-        "sizes": "144x144"
+        "src": "images/icons/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
       },
       {
-        "src": "icons/android-icon-192x192.png",
-        "type": "image/png",
-        "sizes": "192x192"
+        "src": "images/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
       },
       {
-        "src": "icons/android-icon-256x256.png",
-        "type": "image/png",
-        "sizes": "256x256"
+        "src": "images/icons/icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png"
       },
       {
-        "src": "icons/android-icon-384x384.png",
-        "type": "image/png",
-        "sizes": "384x384"
+        "src": "images/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
       },
       {
-        "src": "icons/android-icon-512x512.png",
-        "type": "image/png",
-        "sizes": "512x512"
+        "src": "images/icons/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "images/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
       }
     ]
   }
