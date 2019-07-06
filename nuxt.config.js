@@ -14,8 +14,8 @@ module.exports = {
       { name: 'google-site-verification', content: 'nKI88c4xbyXEo5ub25G2-4JqjDiggUKqIZzMF5E4aJk' },
       { name: 'msvalidate.01', content: 'D37242BCFEACCD5D06A16A1748BF7DA1' },
       { name: 'yandex-verification', content: '026fe23883783f5c' },
-      { name: 'msapplication-TileColor', content: '#1B98E0' },
-      { name: 'msapplication-TileImage', content: 'icons/ms-icon-144x144.png' }
+      { name: 'msapplication-TileColor', content: '#0090df' },
+      { name: 'msapplication-TileImage', content: '/layoutsicons/ms-icon-144x144.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icons/favicon.ico' },
@@ -162,48 +162,48 @@ module.exports = {
     scope: "/",
     display: "fullscreen",
     orientation: "portrait-primary",
-    background_color: "#1B98E0",
-    theme_color: "#1B98E0",
+    background_color: "#0090df",
+    theme_color: "#0090df",
     description: "Crypto currency price dashboard",
     dir: "ltr",
     icons: [
       {
-        "src": "images/icons/icon-72x72.png",
+        "src": "/icons/icon-72x72.png",
         "sizes": "72x72",
         "type": "image/png"
       },
       {
-        "src": "images/icons/icon-96x96.png",
+        "src": "/icons/icon-96x96.png",
         "sizes": "96x96",
         "type": "image/png"
       },
       {
-        "src": "images/icons/icon-128x128.png",
+        "src": "/icons/icon-128x128.png",
         "sizes": "128x128",
         "type": "image/png"
       },
       {
-        "src": "images/icons/icon-144x144.png",
+        "src": "/icons/icon-144x144.png",
         "sizes": "144x144",
         "type": "image/png"
       },
       {
-        "src": "images/icons/icon-152x152.png",
+        "src": "/icons/icon-152x152.png",
         "sizes": "152x152",
         "type": "image/png"
       },
       {
-        "src": "images/icons/icon-192x192.png",
+        "src": "/icons/icon-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "images/icons/icon-384x384.png",
+        "src": "/icons/icon-384x384.png",
         "sizes": "384x384",
         "type": "image/png"
       },
       {
-        "src": "images/icons/icon-512x512.png",
+        "src": "/icons/icon-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
       }
