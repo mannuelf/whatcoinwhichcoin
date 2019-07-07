@@ -124,6 +124,10 @@ module.exports = {
     {
       src: '~/plugins/vue-i18n.js',
       ssr: true
+    },
+    {
+      src: '~/plugins/sw.js',
+      ssr: false
     }
   ],
   generate: {
@@ -206,13 +210,14 @@ module.exports = {
   workbox: {
     prefix: 'wcwc',
     suffix: 'v0.1',
+    cachingExtensions: '@/plugins/workbox-range-request.js',
     runtimeCaching: [
       {
-        urlPattern: ['/static/'],
+        urlPattern: ['/'],
         handler: 'cacheFirst',
         method: 'GET',
         strategyOptions: {
-          cacheName: 'images',
+          cacheName: 'site-cache',
           cacheableResponse: { statuses: [0, 200] }
         }
       },
