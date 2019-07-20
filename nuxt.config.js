@@ -125,10 +125,10 @@ module.exports = {
       src: '~/plugins/vue-i18n.js',
       ssr: true
     },
-    {
-      src: '~/plugins/sw.js',
-      ssr: false
-    }
+    // {
+      // src: '~/plugins/sw.js',
+      // ssr: false
+    // }
   ],
   generate: {
     routes: ['/', '/pt', '/luno', '/pt/luno', '/bitstamp', '/pt/bitstamp']
