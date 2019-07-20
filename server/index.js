@@ -27,7 +27,7 @@ async function start() {
   app.use((req, res, next) => {
     res.header(
       'Access-Control-Allow-Origin',
-      'https://www.whatcoinwhichcoin.com'
+      '*'
     )
     res.header(
       'Access-Control-Allow-Headers',
