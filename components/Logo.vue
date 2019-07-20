@@ -40,7 +40,7 @@ export default {
   z-index: 10
   background-color: #fdfff7
   display: inline-block
-  height: 40px
+  height: auto
   margin: 0
   overflow: hidden
   padding: 10px
