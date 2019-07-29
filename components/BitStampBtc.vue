@@ -8,56 +8,42 @@
         <LoadingSpinner />
       </div>
       <div v-else>
-        <a href="#" class="block__btn--std animated flipInX">
-          <span class="block__btn--coin">BTC</span>
-          <span class="block__btn--currency">$</span>
-          <span class="block__btn--price">{{ results.high }}</span>
-        </a>
+        <CoinPriceTicker
+          :coin="coin"
+          :currency="currency"
+          :price="price"
+        />
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import LoadingSpinner from '@/components/LoadingSpinner.vue'
+import { mapState } from 'vuex'
+import CoinPriceTicker from '@/components/CoinPriceTicker'
+import LoadingSpinner from '@/components/LoadingSpinner'
 
 export default {
-  name: 'BitStampBtc',
+  name: 'Bitcoin',
   components: {
+    CoinPriceTicker,
     LoadingSpinner
   },
   data() {
     return {
-      results: null,
       errors: [],
       errored: false,
       loading: true
     }
   },
-  mounted() {
-    const currency = 'btcusd'
-    const conversionUrl = 'https://cors-anywhere.herokuapp.com/'
-    const url = 'https://www.bitstamp.net/api/v2/ticker/'
-    try {
-      axios
-        .get(conversionUrl + url + currency)
-        .then(response => {
-          this.results = response.data
-        })
-        .catch(error => {
-          console.log(error)
-        })
-        .finally(() => {
-          this.loading = false
-        })
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  computed: {
+    ...mapState({
+      coins: state => state.bitstamp.coins.btc
+    })
+  },
+  async fetch({ store }) {
+    await store.dispatch('bitstamp/GET_BTC')
+  },
+  mounted() {}
 }
 </script>
-
-<style lang="sass" scoped>
-
-</style>
