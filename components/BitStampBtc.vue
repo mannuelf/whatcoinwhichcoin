@@ -1,7 +1,7 @@
 <template>
-  <div class="block bitstamp animated fadeIn">
-    <section v-if="errored">
-      <p>Oops, try reloading the page</p>
+  <div class="block animated fadeIn">
+    <section v-if="error">
+      <ErrorNotice error-message="errorMessage" />
     </section>
     <section v-else>
       <div v-if="loading">
@@ -21,28 +21,27 @@
 <script>
 import { mapState } from 'vuex'
 import CoinPriceTicker from '@/components/CoinPriceTicker'
+import ErrorNotice from '@/components/ErrorNotice'
 import LoadingSpinner from '@/components/LoadingSpinner'
 
 export default {
   name: 'Bitcoin',
   components: {
     CoinPriceTicker,
+    ErrorNotice,
     LoadingSpinner
   },
   data() {
     return {
-      errors: [],
-      errored: false,
+      error: false,
       loading: true
     }
   },
   computed: {
     ...mapState({
-      coins: state => state.bitstamp.coins.btc
+      coins: state => state.bitstamp.coins.btc,
+      errorMessage: state => state.bitstamp.errorMessage
     })
-  },
-  async fetch({ store }) {
-    await store.dispatch('bitstamp/GET_BTC')
   },
   mounted() {}
 }
