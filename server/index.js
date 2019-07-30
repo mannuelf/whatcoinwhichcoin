@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
@@ -24,17 +25,8 @@ async function start() {
     await nuxt.ready()
   }
 
-  app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*')
-    res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept'
-    )
-    next()
-  })
-
   // Give nuxt middleware to express
-  app.use(nuxt.render)
+  app.use(nuxt.render, cors())
 
   // Listen the server
   app.listen(port, host)
