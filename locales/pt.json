@@ -18,6 +18,9 @@
     "say-hello": "diga olá.",
     "fork-it": "Copie este."
   },
+  "about": {
+    "text": "Eu adoro tecnologia, adoro design e tipografia e adoro o Vue js que este projeto é uma oportunidade para que eu possa jogar com todos os itens acima."
+  },
   "bitstamp": {
     "title": "Bitstamp | What Coin Which Coin",
     "description": "Bitstamp é uma troca de moeda criptografada com sede em Luxemburgo, com escritórios em Londres. USD, EUR, bitcoin, litecoin, ethereum, ripple ou bitcoin cash depósitos e levantamentos são permitidos nesta plataforma.."
