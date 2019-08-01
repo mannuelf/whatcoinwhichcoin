@@ -6,9 +6,9 @@ export const state = () => ({
     btc: '',
     eth: '',
     ltc: '',
-    xrp: ''
-  },
-  errorMessage: ''
+    xrp: '',
+    errorMessage: ''
+  }
 })
 
 export const mutations = {
@@ -28,26 +28,28 @@ export const mutations = {
     state.coins.xrp = payload
   },
   SET_ERROR_MESSAGE(state, payload) {
-    state.errorMessage = payload
+    state.coins.errorMessage = payload
   }
 }
 
 export const actions = {
   async GET_BTC({ commit }) {
-    console.log('store.bitstamp')
     const currency = 'btcusd'
     const url = 'https://www.bitstamp.net/api/v2/ticker/'
-    const conversionUrl = 'https://cors-anywhere.herokuapp.com/'
-    console.log('trying api call >>')
     await axios
-      .get(conversionUrl + url + currency)
+      .get(url + currency, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Credentials': '*'
+        }
+      })
       .then(response => {
         const data = response.data
         console.log('coin:', data)
         commit('SET_BTC', data)
       })
       .catch(error => {
-        console.log(error)
+        console.log('error', error)
         commit('SET_ERROR_MESSAGE', error)
       })
       .finally(() => {

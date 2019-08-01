@@ -18,6 +18,9 @@
     "say-hello": "say hello.",
     "fork-it": "Fork it."
   },
+  "about": {
+    "text": "I love technology, I love design & typography and I love Vue js this project is an opportunity make sure I get to play with all of the above."
+  },
   "bitstamp": {
     "title": "Bitstamp | What Coin Which Coin",
     "description": "Bitstamp is a crypto currency exchange based in Luxembourg with offices in London. USD, EUR, bitcoin, litecoin, ethereum, ripple or bitcoin cash deposits and withdrawals are allowed on this platform."
