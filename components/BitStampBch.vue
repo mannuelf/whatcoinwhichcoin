@@ -1,59 +1,49 @@
 <template>
-  <div class="block bitstamp animated fadeIn">
-    <section v-if="errored">
-      <p>Oops, try reloading the page</p>
+  <div class="block animated fadeIn">
+    <section v-if="error">
+      <ErrorNotice error="error" />
     </section>
     <section v-else>
       <div v-if="loading">
         <LoadingSpinner />
       </div>
       <div v-else>
-        <a href="#" class="block__btn--std animated flipInX">
-          <span class="block__btn--coin">BCH</span>
-          <span class="block__btn--currency">$</span>
-          <span class="block__btn--price">{{ results.high }}</span>
-        </a>
+        <CoinPriceTicker
+          :fiat="fiat"
+          :name="name"
+          :price="coin.ask"
+        />
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import LoadingSpinner from '@/components/LoadingSpinner.vue'
+import { mapState } from 'vuex'
+import CoinPriceTicker from '@/components/CoinPriceTicker'
+import ErrorNotice from '@/components/ErrorNotice'
+import LoadingSpinner from '@/components/LoadingSpinner'
+
 export default {
-  name: 'BitStampBtc',
+  name: 'BitcoinCash',
   components: {
+    CoinPriceTicker,
+    ErrorNotice,
     LoadingSpinner
   },
   data() {
     return {
-      results: null,
-      errors: [],
-      errored: false,
-      loading: true
+      name: 'LTC',
+      fiat: '$'
     }
   },
-  mounted() {
-    const currency = 'bchusd'
-    const conversionUrl = 'https://cors-anywhere.herokuapp.com/'
-    const url = 'https://www.bitstamp.net/api/v2/ticker/'
-    axios
-      .get(conversionUrl + url + currency)
-      .then(response => {
-        this.results = response.data
-      })
-      .catch(error => {
-        const errorsNote = error
-        this.errors.push(errorsNote)
-      })
-      .finally(() => {
-        this.loading = false
-      })
-  }
+  computed: {
+    ...mapState({
+      coin: state => state.bitstamp.coin.bch,
+      loading: state => state.bitstamp.coin.loading,
+      error: state => state.bitstamp.coin.error
+    })
+  },
+  mounted() {}
 }
 </script>
-
-<style lang="sass" scoped>
-
-</style>

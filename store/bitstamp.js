@@ -1,59 +1,82 @@
 import axios from 'axios'
 
+const url = 'https://www.bitstamp.net/api/v2/ticker/'
+
+const configHeaders = {
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Credentials': '*'
+}
+
 export const state = () => ({
-  coins: {
+  coin: {
+    exchange: 'bitstamp',
     bch: '',
     btc: '',
     eth: '',
     ltc: '',
     xrp: '',
-    errorMessage: ''
+    error: '',
+    loading: true
   }
 })
 
 export const mutations = {
   SET_BCH(state, payload) {
-    state.coins.bch = payload
+    state.coin.bch = payload
   },
   SET_BTC(state, payload) {
-    state.coins.btc = payload
+    state.coin.btc = payload
   },
   SET_ETH(state, payload) {
-    state.coins.eth = payload
+    state.coin.eth = payload
   },
   SET_LTC(state, payload) {
-    state.coins.ltc = payload
+    state.coin.ltc = payload
   },
   SET_XRP(state, payload) {
-    state.coins.xrp = payload
+    state.coin.xrp = payload
   },
   SET_ERROR_MESSAGE(state, payload) {
-    state.coins.errorMessage = payload
+    state.coin.error = payload
+  },
+  SET_END(state, payload) {
+    state.coin.loading = payload
   }
 }
 
 export const actions = {
   async GET_BTC({ commit }) {
     const currency = 'btcusd'
-    const url = 'https://www.bitstamp.net/api/v2/ticker/'
     await axios
       .get(url + currency, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Credentials': '*'
-        }
+        headers: configHeaders
       })
       .then(response => {
-        const data = response.data
-        console.log('coin:', data)
-        commit('SET_BTC', data)
+        if (response.status === 200) {
+          const data = response.data
+          commit('SET_BTC', data)
+          commit('SET_END', false)
+        }
       })
       .catch(error => {
-        console.log('error', error)
         commit('SET_ERROR_MESSAGE', error)
       })
-      .finally(() => {
-        this.loading = false
+  },
+  async GET_BCH({ commit }) {
+    const currency = 'bchbtc'
+    await axios
+      .get(url + currency, {
+        headers: configHeaders
+      })
+      .then(response => {
+        if (response.status === 200) {
+          const data = response.data
+          commit('SET_BCH', data)
+          commit('SET_END', false)
+        }
+      })
+      .catch(error => {
+        commit('SET_ERROR_MESSAGE', error)
       })
   }
 }

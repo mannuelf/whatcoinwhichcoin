@@ -2,17 +2,14 @@
   <div class="home">
     <div id="nav">
       <ticker-bitcoin />
-      <!-- <BitStampBch @click.native="goToBitcoinCash" />
-      <BitStampEth @click.native="goToEtherium" />
-      <BitStampXrp @click.native="goToXrp" />
-      <BitStampLtCoin @click.native="goToLtCoin" /> -->
+      <ticker-bitcoin-cash />
     </div>
   </div>
 </template>
 
 <script>
 import Bitcoin from '@/components/BitStampBtc.vue'
-// import BitStampBch from '@/components/BitStampBch.vue'
+import BitcoinCash from '@/components/BitStampBch.vue'
 // import BitStampEth from '@/components/BitStampEth.vue'
 // import BitStampXrp from '@/components/BitStampXrp.vue'
 // import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
@@ -35,24 +32,13 @@ export default {
     }
   },
   components: {
-    'ticker-bitcoin': Bitcoin
-    // BitStampBch,
-    // BitStampEth,
-    // BitStampXrp,
-    // BitStampLtCoin
+    'ticker-bitcoin': Bitcoin,
+    'ticker-bitcoin-cash': BitcoinCash
   },
   async fetch({ store }) {
     await store.dispatch('bitstamp/GET_BTC')
-    console.log('store.dispatch/GET_BTC')
+    await store.dispatch('bitstamp/GET_BCH')
   },
-  methods: {
-    goToBitcoin: function(e) {
-      // this.$router.go('/bitcoin')
-    },
-    goToBitcoinCash: function(e) {},
-    goToEtherium: function(e) {},
-    goToXrp: function(e) {},
-    goToLtCoin: function(e) {}
-  }
+  methods: {}
 }
 </script>

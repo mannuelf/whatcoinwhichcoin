@@ -1,7 +1,7 @@
 <template>
   <div class="block animated fadeIn">
     <section v-if="error">
-      <ErrorNotice error-message="errorMessage" />
+      <ErrorNotice error="error" />
     </section>
     <section v-else>
       <div v-if="loading">
@@ -9,9 +9,9 @@
       </div>
       <div v-else>
         <CoinPriceTicker
-          :coin="coin"
-          :currency="currency"
-          :price="price"
+          :fiat="fiat"
+          :name="name"
+          :price="coin.ask"
         />
       </div>
     </section>
@@ -33,14 +33,15 @@ export default {
   },
   data() {
     return {
-      error: false,
-      loading: true
+      name: 'BTC',
+      fiat: '$'
     }
   },
   computed: {
     ...mapState({
-      coins: state => state.bitstamp.coins.btc,
-      errorMessage: state => state.bitstamp.errorMessage
+      coin: state => state.bitstamp.coin.btc,
+      loading: state => state.bitstamp.coin.loading,
+      error: state => state.bitstamp.coin.error
     })
   },
   mounted() {}
