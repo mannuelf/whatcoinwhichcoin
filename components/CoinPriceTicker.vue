@@ -1,8 +1,8 @@
 <template>
   <div>
-    <a href="#" class="block__btn--std animated flipInX">
-      <span class="block__btn--coin">{{ coin }}</span>
-      <span class="block__btn--currency">{{ currency }}</span>
+    <a href="#" class="block__btn--std animated slideInRight">
+      <span class="block__btn--coin">{{ name }}</span>
+      <span class="block__btn--currency">{{ fiat }}</span>
       <span class="block__btn--price">{{ price }}</span>
     </a>
   </div>
@@ -11,13 +11,13 @@
 export default {
   name: 'CoinPriceTicker',
   props: {
-    coin: {
+    name: {
       type: String,
       default() {
         return 'BTC'
       }
     },
-    currency: {
+    fiat: {
       type: String,
       default() {
         return '$'
