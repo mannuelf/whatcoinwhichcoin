@@ -3,16 +3,19 @@
     <div id="nav">
       <ticker-bitcoin />
       <ticker-bitcoin-cash />
+      <ticker-etherium />
+      <ticker-litecoin />
+      <ticker-xrp />
     </div>
   </div>
 </template>
 
 <script>
-import Bitcoin from '@/components/BitStampBtc.vue'
-import BitcoinCash from '@/components/BitStampBch.vue'
-// import BitStampEth from '@/components/BitStampEth.vue'
-// import BitStampXrp from '@/components/BitStampXrp.vue'
-// import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
+import Bitcoin from '@/components/BitStampBtc'
+import BitcoinCash from '@/components/BitStampBch'
+import BitStampEth from '@/components/BitStampEth'
+import BitStampLtCoin from '@/components/BitStampLtCoin'
+import BitStampXrp from '@/components/BitStampXrp'
 
 export default {
   name: 'Bitstamp',
@@ -32,13 +35,18 @@ export default {
     }
   },
   components: {
+    'ticker-bitcoin-cash': BitcoinCash,
     'ticker-bitcoin': Bitcoin,
-    'ticker-bitcoin-cash': BitcoinCash
+    'ticker-etherium': BitStampEth,
+    'ticker-litecoin': BitStampLtCoin,
+    'ticker-xrp': BitStampXrp
   },
   async fetch({ store }) {
-    await store.dispatch('bitstamp/GET_BTC')
     await store.dispatch('bitstamp/GET_BCH')
-  },
-  methods: {}
+    await store.dispatch('bitstamp/GET_BTC')
+    await store.dispatch('bitstamp/GET_ETH')
+    await store.dispatch('bitstamp/GET_LTC')
+    await store.dispatch('bitstamp/GET_XRP')
+  }
 }
 </script>

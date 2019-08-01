@@ -8,11 +8,7 @@
         <LoadingSpinner />
       </div>
       <div v-else>
-        <CoinPriceTicker
-          :fiat="fiat"
-          :name="name"
-          :price="coin.ask"
-        />
+        <CoinPriceTicker :fiat="fiat" :name="name" :price="coin.ask" />
       </div>
     </section>
   </div>

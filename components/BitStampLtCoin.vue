@@ -8,9 +8,7 @@
         <LoadingSpinner />
       </div>
       <div v-else>
-        <CoinPriceTicker
-          :price="coin.ask"
-        />
+        <CoinPriceTicker :fiat="fiat" :name="name" :price="coin.ask" />
       </div>
     </section>
   </div>
@@ -31,10 +29,8 @@ export default {
   },
   data() {
     return {
-      coin: {
-        coin: 'LTC',
-        fiat: '$'
-      }
+      name: 'LTC',
+      fiat: '$'
     }
   },
   computed: {
