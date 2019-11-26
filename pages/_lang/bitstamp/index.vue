@@ -42,11 +42,7 @@ export default {
     'ticker-xrp': BitStampXrp
   },
   async fetch({ store }) {
-    await store.dispatch('bitstamp/GET_BCH')
     await store.dispatch('bitstamp/GET_BTC')
-    await store.dispatch('bitstamp/GET_ETH')
-    await store.dispatch('bitstamp/GET_LTC')
-    await store.dispatch('bitstamp/GET_XRP')
   }
 }
 </script>
