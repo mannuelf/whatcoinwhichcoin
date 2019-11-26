@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const url = 'https://www.bitstamp.net/api/v2/ticker/'
-
+const currencyPairs = ['btcusd', 'bchusd', 'ethusd', 'ltcusd', 'xrpusd']
 const configHeaders = {
   'Content-Type': 'application/json',
   'Access-Control-Allow-Credentials': '*'
@@ -46,88 +46,24 @@ export const mutations = {
 
 export const actions = {
   async GET_BTC({ commit }) {
-    const currencyPair = 'btcusd'
-    await axios
-      .get(url + currencyPair, {
-        headers: configHeaders
-      })
-      .then(response => {
-        if (response.status === 200) {
-          const data = response.data
-          commit('SET_BTC', data)
-          commit('SET_END', false)
-        }
-      })
-      .catch(error => {
-        commit('SET_ERROR_MESSAGE', error)
-      })
-  },
-  async GET_BCH({ commit }) {
-    const currencyPair = 'bchusd'
-    await axios
-      .get(url + currencyPair, {
-        headers: configHeaders
-      })
-      .then(response => {
-        if (response.status === 200) {
-          const data = response.data
-          commit('SET_BCH', data)
-          commit('SET_END', false)
-        }
-      })
-      .catch(error => {
-        commit('SET_ERROR_MESSAGE', error)
-      })
-  },
-  async GET_ETH({ commit }) {
-    const currencyPair = 'ethusd'
-    await axios
-      .get(url + currencyPair, {
-        headers: configHeaders
-      })
-      .then(response => {
-        if (response.status === 200) {
-          const data = response.data
-          commit('SET_ETH', data)
-          commit('SET_END', false)
-        }
-      })
-      .catch(error => {
-        commit('SET_ERROR_MESSAGE', error)
-      })
-  },
-  async GET_LTC({ commit }) {
-    const currencyPair = 'ltcusd'
-    await axios
-      .get(url + currencyPair, {
-        headers: configHeaders
-      })
-      .then(response => {
-        if (response.status === 200) {
-          const data = response.data
-          commit('SET_LTC', data)
-          commit('SET_END', false)
-        }
-      })
-      .catch(error => {
-        commit('SET_ERROR_MESSAGE', error)
-      })
-  },
-  async GET_XRP({ commit }) {
-    const currencyPair = 'xrpusd'
-    await axios
-      .get(url + currencyPair, {
-        headers: configHeaders
-      })
-      .then(response => {
-        if (response.status === 200) {
-          const data = response.data
-          commit('SET_XRP', data)
-          commit('SET_END', false)
-        }
-      })
-      .catch(error => {
-        commit('SET_ERROR_MESSAGE', error)
-      })
+    let i
+    for (i = 0; i < currencyPairs.length; i++) {
+      console.log(currencyPairs[i])
+      await axios
+        .get(url + currencyPairs[i], {
+          headers: configHeaders
+        })
+        .then(response => {
+          if (response.status === 200) {
+            const data = response.data
+            console.log(data)
+            commit('SET_BTC', data)
+            commit('SET_END', false)
+          }
+        })
+        .catch(error => {
+          commit('SET_ERROR_MESSAGE', error)
+        })
+    }
   }
 }
