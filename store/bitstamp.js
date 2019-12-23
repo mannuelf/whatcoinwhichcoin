@@ -1,17 +1,18 @@
 import axios from 'axios'
 
-const url = 'https://www.bitstamp.net/api/v2/ticker/'
-const currencyPairs = ['btcusd', 'bchusd', 'ethusd', 'ltcusd', 'xrpusd']
-const configHeaders = {
-  'Content-Type': 'application/json',
-  'Access-Control-Allow-Credentials': '*'
-}
+const urls = [
+  'https://www.bitstamp.net/api/v2/ticker/btcusd',
+  'https://www.bitstamp.net/api/v2/ticker/bchusd',
+  'https://www.bitstamp.net/api/v2/ticker/ethusd',
+  'https://www.bitstamp.net/api/v2/ticker/ltcusd',
+  'https://www.bitstamp.net/api/v2/ticker/xrpusd'
+]
 
 export const state = () => ({
   coin: {
     exchange: 'bitstamp',
-    bch: '',
     btc: '',
+    bch: '',
     eth: '',
     ltc: '',
     xrp: '',
@@ -45,25 +46,19 @@ export const mutations = {
 }
 
 export const actions = {
-  async GET_BTC({ commit }) {
-    let i
-    for (i = 0; i < currencyPairs.length; i++) {
-      console.log(currencyPairs[i])
-      await axios
-        .get(url + currencyPairs[i], {
-          headers: configHeaders
-        })
-        .then(response => {
-          if (response.status === 200) {
-            const data = response.data
-            console.log(data)
-            commit('SET_BTC', data)
-            commit('SET_END', false)
-          }
-        })
-        .catch(error => {
-          commit('SET_ERROR_MESSAGE', error)
-        })
+  async GET_COINS({ commit }) {
+    const coinsData = urls.map(async url => {
+      const response = await axios.get(url)
+      if (response.status === 200) {
+        commit('SET_END', false)
+        return response
+      }
+    })
+
+    for (const coinData of coinsData) {
+      const datum = await coinData
+      commit('SET_BTC', datum.data.ask)
+      console.log('for: ', datum.data)
     }
   }
 }
