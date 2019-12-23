@@ -131,6 +131,7 @@ module.exports = {
     // }
   ],
   generate: {
+    dir: "public",
     routes: ['/', '/pt', '/luno', '/pt/luno', '/bitstamp', '/pt/bitstamp']
   },
   modules: [
