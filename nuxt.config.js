@@ -20,7 +20,7 @@ module.exports = {
       { name: 'msapplication-TileColor', content: '#0090df' },
       {
         name: 'msapplication-TileImage',
-        content: '/layoutsicons/ms-icon-144x144.png'
+        content: '/icons/ms-icon-144x144.png'
       }
     ],
     link: [
