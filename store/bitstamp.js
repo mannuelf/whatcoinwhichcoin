@@ -47,20 +47,33 @@ export const mutations = {
 
 export const actions = {
   async GET_COINS({ commit }) {
-    const coinsData = await urls.map(async url => {
+    await urls.map(async url => {
       const response = await axios.get(url)
       if (response.status === 200) {
         commit('SET_END', false)
         const respData = await response.data
+        const coinName = url.substr(url.length - 6)
         console.log(respData)
-        return respData
+        switch (coinName) {
+          case 'btcusd':
+            commit('SET_BTC', respData)
+            break
+          case 'bchusd':
+            commit('SET_BCH', respData)
+            break
+          case 'ethusd':
+            commit('SET_ETH', respData)
+            break
+          case 'ltcusd':
+            commit('SET_LTC', respData)
+            break
+          case 'xrpusd':
+            commit('SET_XRP', respData)
+            break
+          default:
+            console.log('No coins matched')
+        }
       }
     })
-    console.log('coinsData', coinsData)
-    const resolvedData = coinsData
-    // let myObj = {}
-    // myObj = Object.assign({}, coinsData.data)
-    console.log(resolvedData)
-    return resolvedData
   }
 }
