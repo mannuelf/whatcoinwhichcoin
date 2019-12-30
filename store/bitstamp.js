@@ -11,12 +11,12 @@ const urls = [
 export const state = () => ({
   coin: {
     exchange: 'bitstamp',
-    btc: '',
-    bch: '',
-    eth: '',
-    ltc: '',
-    xrp: '',
-    error: '',
+    btc: {},
+    bch: {},
+    eth: {},
+    ltc: {},
+    xrp: {},
+    error: {},
     loading: true
   }
 })
@@ -47,18 +47,20 @@ export const mutations = {
 
 export const actions = {
   async GET_COINS({ commit }) {
-    const coinsData = urls.map(async url => {
+    const coinsData = await urls.map(async url => {
       const response = await axios.get(url)
       if (response.status === 200) {
         commit('SET_END', false)
-        return response
+        const respData = await response.data
+        console.log(respData)
+        return respData
       }
     })
-
-    for (const coinData of coinsData) {
-      const datum = await coinData
-      commit('SET_BTC', datum.data.ask)
-      console.log('for: ', datum.data)
-    }
+    console.log('coinsData', coinsData)
+    const resolvedData = coinsData
+    // let myObj = {}
+    // myObj = Object.assign({}, coinsData.data)
+    console.log(resolvedData)
+    return resolvedData
   }
 }
