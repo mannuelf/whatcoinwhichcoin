@@ -1,6 +1,7 @@
 <template>
   <div>
     <site-header />
+    <div v-if="$nuxt.isOffline">You are offline</div>
     <nuxt />
     <site-about />
     <site-footer />

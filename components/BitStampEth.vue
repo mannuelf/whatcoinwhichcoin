@@ -1,31 +1,17 @@
 <template>
   <div class="block animated fadeIn">
-    <section v-if="error">
-      <ErrorNotice error="error" />
-    </section>
-    <section v-else>
-      <div v-if="loading">
-        <LoadingSpinner />
-      </div>
-      <div v-else>
-        <CoinPriceTicker :fiat="fiat" :name="name" :price="coin.ask" />
-      </div>
-    </section>
+    <CoinPriceTicker :fiat="fiat" :name="name" :price="coin.ask" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import CoinPriceTicker from '@/components/CoinPriceTicker'
-import ErrorNotice from '@/components/ErrorNotice'
-import LoadingSpinner from '@/components/LoadingSpinner'
 
 export default {
   name: 'Etherium',
   components: {
-    CoinPriceTicker,
-    ErrorNotice,
-    LoadingSpinner
+    CoinPriceTicker
   },
   data() {
     return {
