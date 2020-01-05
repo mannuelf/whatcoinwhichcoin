@@ -10,7 +10,7 @@ export default {
     errorMessage: {
       type: String,
       default() {
-        return 'Oops something bad happened, please reload the page.'
+        return 'Oh dear, please reload the page.'
       }
     }
   }

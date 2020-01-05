@@ -19,7 +19,12 @@ export const actions = {
     try {
       await axios
         .get('https://api.mybitx.com/api/1/tickers', {
-          method: 'get'
+          method: 'get',
+          headers: {
+            'Access-Control-Allow-Headers':
+              'https://whatcoinwhichcoin.com, Origin, Content-Type, X-Auth-Token',
+            'x-url': 'https://whatcoinwhichcoin.com'
+          }
         })
         .then(response => {
           if (response.status === 200) {
