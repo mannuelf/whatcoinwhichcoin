@@ -12,7 +12,6 @@
 </template>
 <script>
 import SiteHeader from '@/components/SiteHeader'
-import SiteAbout from '@/components/SiteAbout'
 import SiteFooter from '@/components/SiteFooter'
 import AppNavBar from '@/components/AppNavBar'
 
@@ -20,7 +19,6 @@ export default {
   name: 'DefaultLayout',
   components: {
     'site-header': SiteHeader,
-    'site-about': SiteAbout,
     'site-footer': SiteFooter,
     'app-nav-bar': AppNavBar
   },
