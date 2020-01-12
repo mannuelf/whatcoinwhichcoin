@@ -1,3 +1,0 @@
-User-agent: *
-Sitemap: https://www.whatcoinwhichcoin.com/sitemap.xml
-Disallow:
