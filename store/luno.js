@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export const state = () => ({
   list: [],
+  exchange: 'luno',
   error: ''
 })
 
@@ -21,9 +22,10 @@ export const actions = {
         .get('https://api.mybitx.com/api/1/tickers', {
           method: 'get',
           headers: {
+            'Access-Control-Allow-Origin': 'https://api.mybitx.com/',
             'Access-Control-Allow-Headers':
-              'https://whatcoinwhichcoin.com, Origin, Content-Type, X-Auth-Token',
-            'x-url': 'https://whatcoinwhichcoin.com'
+              'Origin, Content-Type, X-Auth-Token',
+            'X-custom-url': 'https://whatcoinwhichcoin.com'
           }
         })
         .then(response => {
