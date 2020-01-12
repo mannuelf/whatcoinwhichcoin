@@ -5,15 +5,14 @@
       You are offline
     </div>
     <nuxt />
-    <site-about />
     <site-footer />
     <app-nav-bar />
   </div>
 </template>
 <script>
-import SiteHeader from '@/components/SiteHeader'
-import SiteFooter from '@/components/SiteFooter'
-import AppNavBar from '@/components/AppNavBar'
+import SiteHeader from '@/components/siteHeader'
+import SiteFooter from '@/components/siteFooter'
+import AppNavBar from '@/components/appNavBar'
 
 export default {
   name: 'DefaultLayout',

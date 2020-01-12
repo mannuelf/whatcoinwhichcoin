@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import Bitcoin from '@/components/BitStampBtc'
-import BitcoinCash from '@/components/BitStampBch'
-import BitStampEth from '@/components/BitStampEth'
-import BitStampLtCoin from '@/components/BitStampLtCoin'
-import BitStampXrp from '@/components/BitStampXrp'
+import Bitcoin from '@/components/bitStampBtc'
+import BitcoinCash from '@/components/bitStampBch'
+import BitStampEth from '@/components/bitStampEth'
+import BitStampLtCoin from '@/components/bitStampLtCoin'
+import BitStampXrp from '@/components/bitStampXrp'
 
 export default {
   name: 'Bitstamp',

@@ -6,7 +6,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import CoinPriceTicker from '@/components/CoinPriceTicker'
+import CoinPriceTicker from '@/components/coinPriceTicker'
 
 export default {
   name: 'BitcoinCash',

@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import BitStampBtc from '@/components/BitStampBtc.vue'
-import BitStampBch from '@/components/BitStampBch.vue'
-import BitStampEth from '@/components/BitStampEth.vue'
-import BitStampXrp from '@/components/BitStampXrp.vue'
-import BitStampLtCoin from '@/components/BitStampLtCoin.vue'
+import BitStampBtc from '@/components/bitStampBtc.vue'
+import BitStampBch from '@/components/bitStampBch.vue'
+import BitStampEth from '@/components/bitStampEth.vue'
+import BitStampXrp from '@/components/bitStampXrp.vue'
+import BitStampLtCoin from '@/components/bitStampLtCoin.vue'
 
 export default {
   name: 'Home',
