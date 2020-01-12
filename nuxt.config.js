@@ -6,6 +6,7 @@ module.exports = {
   router: {
     middleware: 'i18n'
   },
+  buildDir: 'public',
   head: {
     title: pkg.name,
     meta: [
@@ -130,7 +131,6 @@ module.exports = {
     // ssr: false
     // }
   ],
-  buildDir: 'public',
   generate: {
     dir: "public",
     routes: ['/', 'about', '/pt', '/luno', '/pt/luno', '/bitstamp', '/pt/bitstamp']
