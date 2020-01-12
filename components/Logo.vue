@@ -1,38 +1,29 @@
 <template>
-  <div class="coin-logo">
+  <div
+    v-if="exchange !== undefined"
+    class="coin-logo"
+  >
     <img
-      :src="'/logos/'+exchange+'.png'"
+      :src="'/logos/' + exchange + '.png'"
       :alt="exchange"
       class="coin-logo__image"
     >
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'AppLogo',
   data() {
-    return {
-      exchange: ''
-    }
+    return {}
   },
-  computed: {},
-  mounted() {
-    this.getExchange()
+  computed: {
+    ...mapState({
+      exchange: state => state.exchange
+    })
   },
-  methods: {
-    getExchange() {
-      if (
-        this.$route.path === '/' ||
-        this.$route.path === '/pt/bitstamp' ||
-        this.$route.path === '/bitstamp'
-      ) {
-        this.exchange = 'bitstamp'
-      }
-      if (this.$route.path === '/luno' || this.$route.path === '/pt/luno') {
-        this.exchange = 'luno'
-      }
-    }
-  }
+  mounted() {},
+  methods: {}
 }
 </script>
 <style lang="sass" scoped>

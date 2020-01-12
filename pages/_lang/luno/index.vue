@@ -18,12 +18,11 @@ export default {
   name: 'Luno',
   components: {},
   data() {
-    return {
-      exchange: ''
-    }
+    return {}
   },
   computed: {
     ...mapState({
+      exchange: state => state.exchange,
       coins: state => state.luno.list,
       error: state => state.luno.error
     })
@@ -58,9 +57,6 @@ export default {
         XBTEUR: 'EURO'
       }
       return currencies
-    },
-    setExchange() {
-      this.exchange = 'luno'
     }
   }
 }

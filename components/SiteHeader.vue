@@ -12,15 +12,19 @@
 
 <script>
 import Logo from '@/components/logo'
+import { mapState } from 'vuex'
 export default {
   name: 'SiteHeader',
   components: {
     'app-logo': Logo
   },
   data() {
-    return {
-      exchange: ''
-    }
+    return {}
+  },
+  computed: {
+    ...mapState({
+      exchange: state => state.exchange
+    })
   }
 }
 </script>
