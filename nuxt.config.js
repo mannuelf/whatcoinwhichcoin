@@ -111,7 +111,7 @@ module.exports = {
       }
     ]
   },
-  loading: { loading: true, color: '#1B98E0' },
+  loading: { loading: true, color: '#59ffa0' },
   styleResources: {
     scss: ['./assets/sass/*.sass']
   },
