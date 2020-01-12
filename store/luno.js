@@ -25,7 +25,7 @@ export const actions = {
             'Access-Control-Allow-Origin': 'https://api.mybitx.com/',
             'Access-Control-Allow-Headers':
               'Origin, Content-Type, X-Auth-Token',
-            'X-custom-url': 'https://whatcoinwhichcoin.com'
+            'X-Custom-Url': 'https://whatcoinwhichcoin.com'
           }
         })
         .then(response => {
