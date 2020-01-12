@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export const state = () => ({
+  exchange: 'bitstamp',
   coin: {
-    exchange: 'bitstamp',
     btc: {},
     bch: {},
     eth: {},
