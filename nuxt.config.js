@@ -157,9 +157,9 @@ module.exports = {
         changefreq: 'daily',
         priority: 1
       },
-      '/about-apis',
+      '/about',
       {
-        url: 'about-apis',
+        url: 'about',
         changefreq: 'daily'
       },
       '/pt',
