@@ -6,7 +6,6 @@ module.exports = {
   router: {
     middleware: 'i18n'
   },
-  buildDir: 'public',
   head: {
     title: pkg.name,
     meta: [
