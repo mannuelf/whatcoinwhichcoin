@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 export const state = () => ({
-  exchange: 'bitstamp',
   coin: {
     btc: {},
     bch: {},
@@ -10,7 +9,8 @@ export const state = () => ({
     xrp: {},
     error: {},
     loading: true
-  }
+  },
+  exchange: ''
 })
 
 export const mutations = {
@@ -31,6 +31,9 @@ export const mutations = {
   },
   SET_ERROR_MESSAGE(state, payload) {
     state.coin.error = payload
+  },
+  SET_EXCHANGE(state, payload) {
+    state.exchange = payload
   },
   SET_END(state, payload) {
     state.coin.loading = payload
@@ -76,6 +79,7 @@ export const actions = {
             default:
               console.log('No coins')
           }
+          commit('SET_EXCHANGE', 'bitstamp')
           commit('SET_END', false)
         }
       })

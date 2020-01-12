@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="luno">
     <div id="nav">
       <section
         v-for="coin in coins.tickers"
@@ -61,3 +61,18 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+.block
+
+  &__btn--coin
+    font-size: 0.6em
+
+  &__btn--currency
+    font-size: 0.6em
+
+  &__btn--price
+    font-size: 1em
+    @media(min-width: 460px)
+      font-size: 1.5em
+</style>

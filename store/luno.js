@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const state = () => ({
   list: [],
-  exchange: 'luno',
+  exchange: '',
   error: ''
 })
 
@@ -12,6 +12,9 @@ export const mutations = {
   },
   ERROR(state, error) {
     state.error = error
+  },
+  SET_EXCHANGE(state, payload) {
+    state.exchange = payload
   }
 }
 
@@ -30,6 +33,7 @@ export const actions = {
         })
         .then(response => {
           if (response.status === 200) {
+            commit('SET_EXCHANGE', 'luno')
             commit('SET_ALL', response.data)
           }
         })

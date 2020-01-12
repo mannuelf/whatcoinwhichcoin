@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="bitstamp">
     <div id="nav">
       <ticker-bitcoin />
       <ticker-bitcoin-cash />
