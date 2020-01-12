@@ -133,7 +133,7 @@ module.exports = {
   buildDir: 'public',
   generate: {
     dir: "public",
-    routes: ['/', '/pt', '/luno', '/pt/luno', '/bitstamp', '/pt/bitstamp']
+    routes: ['/', 'about', '/pt', '/luno', '/pt/luno', '/bitstamp', '/pt/bitstamp']
   },
   modules: [
     '@nuxtjs/axios',
