@@ -74,7 +74,7 @@ export const actions = {
               commit('SET_END', false)
               break
             default:
-              console.log('No coins matched')
+              console.log('No coins')
           }
           commit('SET_END', false)
         }
