@@ -114,7 +114,7 @@ a
     font-weight: $fontThin
     font-size: 1.1em
     @media(min-width: 460px)
-      font-size: 2em
+      font-size: 1.8em
 
 .about-site, .footer-note
   padding: 1em
