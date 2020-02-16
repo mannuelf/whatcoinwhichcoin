@@ -5,17 +5,17 @@
   "author": "Mannuel Ferreira",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "nuxt-ts",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
-    "generate": "nuxt generate",
+    "generate": "nuxt-ts generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint && npm run lintfix",
-    "test": "jest",
-    "heroku-postbuild": "npm run build"
+    "test": "jest"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^0.3.8",
     "@nuxtjs/axios": "^5.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.13",
     "@nuxtjs/sitemap": "^0.2.2",
