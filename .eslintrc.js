@@ -1,21 +1,28 @@
+// https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
+
 module.exports = {
   root: true,
   env: {
     browser: true,
     node: true
   },
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: __dirname,
+    extraFileExtensions: [".vue"],
+    project: ["./tsconfig.json"],
   },
   extends: [
-    '@nuxtjs',
-    'plugin:prettier/recommended'
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    'prettier/@typescript-eslint'
   ],
   plugins: [
-    'prettier'
+    "@typescript-eslint"
   ],
   rules: {
-    "no-useless-escape": 0,
-    "no-console": 0
+    "@typescript-eslint/rule-name": "error"
   }
 }
