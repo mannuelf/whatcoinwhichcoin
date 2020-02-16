@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import BitStampBtc from '@/components/bitStampBtc.vue'
 import BitStampBch from '@/components/bitStampBch.vue'
 import BitStampEth from '@/components/bitStampEth.vue'
@@ -39,13 +39,13 @@ export default {
     BitStampLtCoin
   },
   methods: {
-    goToBitcoin: function(e) {
+    goToBitcoin: function() {
       // this.$router.go('/bitcoin')
     },
-    goToBitcoinCash: function(e) {},
-    goToEtherium: function(e) {},
-    goToXrp: function(e) {},
-    goToLtCoin: function(e) {}
+    goToBitcoinCash: function() {},
+    goToEtherium: function() {},
+    goToXrp: function() {},
+    goToLtCoin: function() {}
   }
 }
 </script>

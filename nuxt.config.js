@@ -4,6 +4,11 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
   buildModules: ['@nuxt/typescript-build'],
+  typescript: {
+    typeCheck: {
+      eslint: true
+    }
+  },
   router: {
     middleware: 'i18n'
   },
