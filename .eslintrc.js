@@ -8,7 +8,7 @@ module.exports = {
     parser: 'babel-eslint'
   },
   extends: [
-    '@nuxtjs',
+    '@nuxtjs/eslint-config-typescript',
     'plugin:prettier/recommended'
   ],
   plugins: [

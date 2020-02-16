@@ -3,6 +3,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  buildModules: ['@nuxt/typescript-build'],
   router: {
     middleware: 'i18n'
   },
