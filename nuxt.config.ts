@@ -3,7 +3,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', 'nuxt-typed-vuex'],
   typescript: {
     typeCheck: {
       eslint: true
@@ -128,7 +128,7 @@ module.exports = {
       ssr: false
     },
     {
-      src: '~/plugins/vue-i18n.js',
+      src: '~/plugins/vue-i18n.ts',
       ssr: true
     }
     // {

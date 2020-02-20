@@ -1,5 +1,7 @@
+import { GetterTree, ActionTree, MutationTree } from 'vuex'
+
 export const state = () => ({
-  locales: ['en', 'pt'],
+  locales: ['en', 'pt'] as string[],
   locale: 'en'
 })
 
