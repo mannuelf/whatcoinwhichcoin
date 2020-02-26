@@ -124,7 +124,7 @@ module.exports = {
   css: ['~/assets/sass/app.sass'],
   plugins: [
     {
-      src: '~/plugins/vue-analytics.js',
+      src: '~/plugins/vue-analytics.ts',
       ssr: false
     },
     {
@@ -217,7 +217,7 @@ module.exports = {
   workbox: {
     prefix: 'wcwc',
     suffix: 'v0.1',
-    cachingExtensions: '@/plugins/workbox-range-request.js',
+    cachingExtensions: '@/plugins/workbox-range-request.ts',
     runtimeCaching: [
       {
         urlPattern: ['/'],
