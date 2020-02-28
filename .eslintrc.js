@@ -13,6 +13,7 @@ module.exports = {
     project: ["./tsconfig.json"],
   },
   extends: [
+    "plugin:vue/base",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
