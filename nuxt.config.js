@@ -1,4 +1,3 @@
-// const RollbarSourceMapPlugin = require('rollbar-sourcemap-webpack-plugin')
 const pkg = require('./package')
 
 module.exports = {
@@ -207,7 +206,7 @@ module.exports = {
         // Run ESLint on save
         config.module.rules.push({
           enforce: 'pre',
-          test: /\.(js|vue)$/,
+          test: /\.(ts|js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
@@ -243,7 +242,7 @@ module.exports = {
     ]
   },
   manifest: {
-    name: 'WHAT Coin WHICH Coin',
+    name: 'What Coin Whic Coin',
     short_name: 'WCWC',
     start_url: '/',
     scope: '/',
