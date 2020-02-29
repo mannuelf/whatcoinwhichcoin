@@ -123,11 +123,11 @@ module.exports = {
   css: ['~/assets/sass/app.sass'],
   plugins: [
     {
-      src: '~/plugins/vue-analytics.ts',
+      src: '~/plugins/vue-analytics.js',
       ssr: false
     },
     {
-      src: '~/plugins/vue-i18n.ts',
+      src: '~/plugins/vue-i18n.js',
       ssr: true
     }
     // {
@@ -216,7 +216,7 @@ module.exports = {
   workbox: {
     prefix: 'wcwc',
     suffix: 'v0.1',
-    cachingExtensions: '@/plugins/workbox-range-request.ts',
+    cachingExtensions: '@/plugins/workbox-range-request.js',
     runtimeCaching: [
       {
         urlPattern: ['/'],

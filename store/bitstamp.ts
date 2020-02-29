@@ -11,12 +11,12 @@ const API_URLS: string[] = [
 
 export const state = () => ({
   coin: {
-    btc: {},
-    bch: {},
-    eth: {},
-    ltc: {},
-    xrp: {},
-    error: {},
+    btc: {} as object,
+    bch: {} as object,
+    eth: {} as object,
+    ltc: {} as object,
+    xrp: {} as object,
+    error: {} as object,
     loading: true
   } as object,
   exchange: '' as string
@@ -33,7 +33,7 @@ export const getters: GetterTree<RootState, RootState> = {
     'xrp': state => state.xrp,
     'error': state => state.error,
     'loading': state => state.loading
-  } ,
+  },
   'exchange': state => state.exchange
 }
 
@@ -72,6 +72,7 @@ export const actions: ActionTree<RootState, RootState> = {
           .then((response) => {
             const respData: object = response.data
             const coinName: string = url.substr(url.length - 6)
+
             switch (coinName) {
               case 'btcusd':
                 commit('SET_BTC', respData)
