@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Bitcoin from '@/components/bitStampBtc'
 import BitcoinCash from '@/components/bitStampBch'
 import BitStampEth from '@/components/bitStampEth'

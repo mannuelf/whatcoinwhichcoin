@@ -10,7 +10,7 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
 import Logo from '@/components/logo'
 import { mapState } from 'vuex'
 export default {

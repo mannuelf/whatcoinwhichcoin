@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import SiteAbout from '@/components/siteAbout'
 export default {
   name: 'About',

@@ -11,41 +11,41 @@
 </template>
 
 <script lang="ts">
-import BitStampBtc from '@/components/bitStampBtc.vue'
-import BitStampBch from '@/components/bitStampBch.vue'
-import BitStampEth from '@/components/bitStampEth.vue'
-import BitStampXrp from '@/components/bitStampXrp.vue'
-import BitStampLtCoin from '@/components/bitStampLtCoin.vue'
+  import BitStampBtc from '@/components/bitStampBtc.vue'
+  import BitStampBch from '@/components/bitStampBch.vue'
+  import BitStampEth from '@/components/bitStampEth.vue'
+  import BitStampXrp from '@/components/bitStampXrp.vue'
+  import BitStampLtCoin from '@/components/bitStampLtCoin.vue'
 
-export default {
-  name: 'Home',
-  head() {
-    return {
-      title: this.$t('home.title'),
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.$t('home.description')
-        }
-      ]
-    }
-  },
-  components: {
-    BitStampBtc,
-    BitStampBch,
-    BitStampEth,
-    BitStampXrp,
-    BitStampLtCoin
-  },
-  methods: {
-    goToBitcoin: function() {
-      // this.$router.go('/bitcoin')
+  export default {
+    name: 'Home',
+    head() {
+      return {
+        title: this.$t('home.title'),
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.$t('home.description')
+          }
+        ]
+      }
     },
-    goToBitcoinCash: function() {},
-    goToEtherium: function() {},
-    goToXrp: function() {},
-    goToLtCoin: function() {}
+    components: {
+      BitStampBtc,
+      BitStampBch,
+      BitStampEth,
+      BitStampXrp,
+      BitStampLtCoin
+    },
+    methods: {
+      goToBitcoin: function() {
+        // this.$router.go('/bitcoin')
+      },
+      goToBitcoinCash: function() {},
+      goToEtherium: function() {},
+      goToXrp: function() {},
+      goToLtCoin: function() {}
+    }
   }
-}
 </script>

@@ -9,8 +9,8 @@
       class="coin-logo__image"
     >
   </div>
-</template>n
-<script>
+</template>
+<script lang="ts">
 import { mapState } from 'vuex'
 export default {
   name: 'AppLogo',

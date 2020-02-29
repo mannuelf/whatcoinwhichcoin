@@ -53,7 +53,7 @@ export const actions: ActionTree<RootState, RootState> = {
           commit('ERROR', err)
         })
     } catch (err) {
-      console.log(err)
+      commit('ERROR', err)
     }
   }
 }

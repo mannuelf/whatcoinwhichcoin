@@ -17,7 +17,7 @@ export const state = () => ({
     ltc: {} as object,
     xrp: {} as object,
     error: {} as object,
-    loading: true
+    loading: true as boolean
   } as object,
   exchange: '' as string
 })
@@ -95,12 +95,12 @@ export const actions: ActionTree<RootState, RootState> = {
                 commit('SET_END', false)
                 break
               default:
-                console.log('No coins')
+                commit('SET_ERROR_MESSAGE', 'no coins')
             }
             commit('SET_EXCHANGE', 'bitstamp')
             commit('SET_END', false)
           }).catch((error) => {
-            console.log(error)
+            commit('SET_ERROR_MESSAGE', error)
         })
       })
     } catch (error) {

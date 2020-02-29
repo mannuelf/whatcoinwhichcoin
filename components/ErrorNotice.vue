@@ -3,7 +3,7 @@
     <p>{{ errorMessage }}</p>
   </div>
 </template>
-<script>
+<<script lang="ts">
 export default {
   name: 'ErrorNotice',
   props: {

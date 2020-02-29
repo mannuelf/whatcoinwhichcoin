@@ -23,7 +23,7 @@ async function start() {
     await builder.build()
   } else {
     await nuxt.ready()
-  }
+  }o
 
   // Give nuxt middleware to express
   app.use(nuxt.render, cors())

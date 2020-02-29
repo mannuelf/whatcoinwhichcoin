@@ -11,9 +11,13 @@ module.exports = {
     parser: __dirname,
     extraFileExtensions: [".vue"],
     project: ["./tsconfig.json"],
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   extends: [
     "plugin:vue/base",
+    "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",

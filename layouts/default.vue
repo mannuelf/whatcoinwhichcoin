@@ -9,7 +9,7 @@
     <app-nav-bar />
   </div>
 </template>
-<script>
+<script lang="ts">
 import SiteHeader from '@/components/siteHeader'
 import SiteFooter from '@/components/siteFooter'
 import AppNavBar from '@/components/appNavBar'
