@@ -38,7 +38,6 @@ export const actions = {
           }
         })
         .catch(err => {
-          // eslint-disable-next-line no-console
           commit('ERROR', err)
         })
     } catch (err) {

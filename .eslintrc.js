@@ -14,7 +14,6 @@ module.exports = {
   },
   extends: [
     "plugin:vue/base",
-    "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -23,7 +22,5 @@ module.exports = {
   plugins: [
     "@typescript-eslint"
   ],
-  rules: {
-    "@typescript-eslint/rule-name": "error"
-  }
+  rules: {}
 }
