@@ -1,8 +1,19 @@
 import { GetterTree, ActionTree, MutationTree } from "vuex"
 import Axios from 'axios'
 
+const API_URL = "https://api.mybitx.com/api/1/tickers";
+const CONFIG: object = {
+  method: 'get',
+  headers: {
+    'Access-Control-Allow-Origin': 'https://api.mybitx.com/',
+    'Access-Control-Allow-Headers':
+      'Origin, Content-Type, X-Auth-Token',
+    'X-Custom-Url': 'https://whatcoinwhichcoin.com'
+  }
+}
+
 export const state = () => ({
-  list: [] as string [],
+  list: [] as string[],
   exchange: '' as string,
   error: '' as string
 })
@@ -31,15 +42,7 @@ export const actions: ActionTree<RootState, RootState> = {
   async GET_ALL({ commit }) {
     try {
       await Axios
-        .get('https://api.mybitx.com/api/1/tickers', {
-          method: 'get',
-          headers: {
-            'Access-Control-Allow-Origin': 'https://api.mybitx.com/',
-            'Access-Control-Allow-Headers':
-              'Origin, Content-Type, X-Auth-Token',
-            'X-Custom-Url': 'https://whatcoinwhichcoin.com'
-          }
-        })
+        .get(API_URL, CONFIG)
         .then(response => {
           if (response.status === 200) {
             commit('SET_EXCHANGE', 'luno')
