@@ -1,5 +1,5 @@
 import { GetterTree, ActionTree, MutationTree } from "vuex"
-import axios from 'axios'
+import Axios from 'axios'
 
 export const state = () => ({
   list: [] as string [],
@@ -30,7 +30,7 @@ export const mutations: MutationTree<RootState> = {
 export const actions: ActionTree<RootState, RootState> = {
   async GET_ALL({ commit }) {
     try {
-      await axios
+      await Axios
         .get('https://api.mybitx.com/api/1/tickers', {
           method: 'get',
           headers: {
