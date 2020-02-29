@@ -1,4 +1,13 @@
-import axios from 'axios'
+import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import Axios from 'axios'
+
+const API_URLS: string[] = [
+  'https://www.bitstamp.net/api/v2/ticker/btcusd',
+  'https://www.bitstamp.net/api/v2/ticker/bchusd',
+  'https://www.bitstamp.net/api/v2/ticker/ethusd',
+  'https://www.bitstamp.net/api/v2/ticker/ltcusd',
+  'https://www.bitstamp.net/api/v2/ticker/xrpusd'
+]
 
 export const state = () => ({
   coin: {
@@ -9,11 +18,26 @@ export const state = () => ({
     xrp: {},
     error: {},
     loading: true
-  },
-  exchange: ''
+  } as object,
+  exchange: '' as string
 })
 
-export const mutations = {
+export type RootState = ReturnType<typeof state>
+
+export const getters: GetterTree<RootState, RootState> = {
+  'coin': {
+    'btc': state => state.btc,
+    'bch': state => state.bch,
+    'eth': state => state.eth,
+    'ltc': state => state.ltc,
+    'xrp': state => state.xrp,
+    'error': state => state.error,
+    'loading': state => state.loading
+  } ,
+  'exchange': state => state.exchange
+}
+
+export const mutations: MutationTree<RootState> = {
   SET_BCH(state, payload) {
     state.coin.bch = payload
   },
@@ -40,48 +64,43 @@ export const mutations = {
   }
 }
 
-export const actions = {
-  async GET_COINS({ commit }) {
-    const urls = [
-      'https://www.bitstamp.net/api/v2/ticker/btcusd',
-      'https://www.bitstamp.net/api/v2/ticker/bchusd',
-      'https://www.bitstamp.net/api/v2/ticker/ethusd',
-      'https://www.bitstamp.net/api/v2/ticker/ltcusd',
-      'https://www.bitstamp.net/api/v2/ticker/xrpusd'
-    ]
+export const actions: ActionTree<RootState, RootState> = {
+  GET_COINS({ commit }) {
     try {
-      await urls.map(async url => {
-        const response = await axios.get(url)
-        if (response.status === 200) {
-          const respData = await response.data
-          const coinName = url.substr(url.length - 6)
-          switch (coinName) {
-            case 'btcusd':
-              commit('SET_BTC', respData)
-              commit('SET_END', false)
-              break
-            case 'bchusd':
-              commit('SET_BCH', respData)
-              commit('SET_END', false)
-              break
-            case 'ethusd':
-              commit('SET_ETH', respData)
-              commit('SET_END', false)
-              break
-            case 'ltcusd':
-              commit('SET_LTC', respData)
-              commit('SET_END', false)
-              break
-            case 'xrpusd':
-              commit('SET_XRP', respData)
-              commit('SET_END', false)
-              break
-            default:
-              console.log('No coins')
-          }
-          commit('SET_EXCHANGE', 'bitstamp')
-          commit('SET_END', false)
-        }
+      API_URLS.map(url => {
+        Axios.get(url)
+          .then((response) => {
+            const respData: object = response.data
+            const coinName: string = url.substr(url.length - 6)
+            switch (coinName) {
+              case 'btcusd':
+                commit('SET_BTC', respData)
+                commit('SET_END', false)
+                break
+              case 'bchusd':
+                commit('SET_BCH', respData)
+                commit('SET_END', false)
+                break
+              case 'ethusd':
+                commit('SET_ETH', respData)
+                commit('SET_END', false)
+                break
+              case 'ltcusd':
+                commit('SET_LTC', respData)
+                commit('SET_END', false)
+                break
+              case 'xrpusd':
+                commit('SET_XRP', respData)
+                commit('SET_END', false)
+                break
+              default:
+                console.log('No coins')
+            }
+            commit('SET_EXCHANGE', 'bitstamp')
+            commit('SET_END', false)
+          }).catch((error) => {
+            console.log(error)
+        })
       })
     } catch (error) {
       commit('SET_ERROR_MESSAGE', error)

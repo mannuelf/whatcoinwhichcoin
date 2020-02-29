@@ -1,4 +1,4 @@
-import { GetterTree, ActionTree, MutationTree } from "vuex"
+import { GetterTree, ActionTree, MutationTree } from 'vuex'
 import Axios from 'axios'
 
 const API_URL = "https://api.mybitx.com/api/1/tickers";
@@ -21,9 +21,9 @@ export const state = () => ({
 export type RootState = ReturnType<typeof state>
 
 export const getters: GetterTree<RootState, RootState> = {
-  "list": state => state.list,
-  "exchange": state => state.exchange,
-  "error": state => state.error
+  'list': state => state.list,
+  'exchange': state => state.exchange,
+  'error': state => state.error
 }
 
 export const mutations: MutationTree<RootState> = {

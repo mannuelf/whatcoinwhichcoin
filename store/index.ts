@@ -14,7 +14,7 @@ export const getters: GetterTree<RootState, RootState> = {
 
 export const mutations: MutationTree<RootState> = {
   SET_LANG(state, locale) {
-    if (state.locales.indexOf(locale) !== -1) {
+    if (state.locales.includes(locale)) {
       state.locale = locale
     }
   }
