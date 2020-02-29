@@ -1,12 +1,21 @@
+import { GetterTree, ActionTree, MutationTree } from "vuex"
 import axios from 'axios'
 
 export const state = () => ({
-  list: [],
-  exchange: '',
-  error: ''
+  list: [] as string [],
+  exchange: '' as string,
+  error: '' as string
 })
 
-export const mutations = {
+export type RootState = ReturnType<typeof state>
+
+export const getters: GetterTree<RootState, RootState> = {
+  "list": state => state.list,
+  "exchange": state => state.exchange,
+  "error": state => state.error
+}
+
+export const mutations: MutationTree<RootState> = {
   SET_ALL(state, coins) {
     state.list = coins
   },
@@ -18,7 +27,7 @@ export const mutations = {
   }
 }
 
-export const actions = {
+export const actions: ActionTree<RootState, RootState> = {
   async GET_ALL({ commit }) {
     try {
       await axios
