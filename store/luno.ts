@@ -2,6 +2,7 @@ import { GetterTree, ActionTree, MutationTree } from 'vuex'
 import Axios from 'axios'
 
 const API_URL = "https://api.mybitx.com/api/1/tickers";
+
 const CONFIG: object = {
   method: 'get',
   headers: {
@@ -12,7 +13,7 @@ const CONFIG: object = {
   }
 }
 
-export const state = () => ({
+export const state = (): object => ({
   list: [] as string[],
   exchange: '' as string,
   error: '' as string

@@ -9,7 +9,7 @@ const API_URLS: string[] = [
   'https://www.bitstamp.net/api/v2/ticker/xrpusd'
 ]
 
-export const state = () => ({
+export const state = (): object => ({
   coin: {
     btc: {} as object,
     bch: {} as object,
@@ -65,46 +65,43 @@ export const mutations: MutationTree<RootState> = {
 }
 
 export const actions: ActionTree<RootState, RootState> = {
-  GET_COINS({ commit }) {
-    try {
-      API_URLS.map(url => {
-        Axios.get(url)
-          .then((response) => {
-            const respData: object = response.data
-            const coinName: string = url.substr(url.length - 6)
+  async GET_COINS({ commit }) {
+    await API_URLS.map((url) => {
+      Axios.get(url)
+        .then((response) => {
+          const respData: object = response.data
+          const coinName: string = url.substr(url.length - 6)
 
-            switch (coinName) {
-              case 'btcusd':
-                commit('SET_BTC', respData)
-                commit('SET_END', false)
-                break
-              case 'bchusd':
-                commit('SET_BCH', respData)
-                commit('SET_END', false)
-                break
-              case 'ethusd':
-                commit('SET_ETH', respData)
-                commit('SET_END', false)
-                break
-              case 'ltcusd':
-                commit('SET_LTC', respData)
-                commit('SET_END', false)
-                break
-              case 'xrpusd':
-                commit('SET_XRP', respData)
-                commit('SET_END', false)
-                break
-              default:
-                commit('SET_ERROR_MESSAGE', 'no coins')
-            }
-            commit('SET_EXCHANGE', 'bitstamp')
-            commit('SET_END', false)
-          }).catch((error) => {
-            commit('SET_ERROR_MESSAGE', error)
+          switch (coinName) {
+            case 'btcusd':
+              commit('SET_BTC', respData)
+              commit('SET_END', false)
+              break
+            case 'bchusd':
+              commit('SET_BCH', respData)
+              commit('SET_END', false)
+              break
+            case 'ethusd':
+              commit('SET_ETH', respData)
+              commit('SET_END', false)
+              break
+            case 'ltcusd':
+              commit('SET_LTC', respData)
+              commit('SET_END', false)
+              break
+            case 'xrpusd':
+              commit('SET_XRP', respData)
+              commit('SET_END', false)
+              break
+            default:
+              commit('SET_ERROR_MESSAGE', 'no coins')
+          }
+          commit('SET_EXCHANGE', 'bitstamp')
+          commit('SET_END', false)
         })
-      })
-    } catch (error) {
-      commit('SET_ERROR_MESSAGE', error)
-    }
+        .catch((error) => {
+          commit('SET_ERROR_MESSAGE', error)
+        })
+    })
   }
 }
