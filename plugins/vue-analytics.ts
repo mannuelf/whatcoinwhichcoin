@@ -1,4 +1,4 @@
-export default ({ app }): any => {
+export default ({ app }) => {
   if (process.env.NODE_ENV !== 'production') return // Only run on client-side and only in production mode
   (function(i, s, o, g, r, a, m): void {
     i["GoogleAnalyticsObject"] = r
@@ -15,7 +15,7 @@ export default ({ app }): any => {
   ga('create', 'UA-19677147-2', 'auto')
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  app.router.afterEach((to, from): any => {
+  app.router.afterEach((to, from) => {
     ga('set', 'page', to.fullPath)
     ga('send', 'pageview')
   })

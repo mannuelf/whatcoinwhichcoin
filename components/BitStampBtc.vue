@@ -21,6 +21,7 @@ export default {
   },
   computed: {
     ...mapState({
+      hello: state => state.hello,
       coin: state => state.bitstamp.coin.btc,
       loading: state => state.bitstamp.coin.loading,
       error: state => state.bitstamp.coin.error

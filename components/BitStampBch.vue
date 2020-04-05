@@ -7,6 +7,7 @@
 <script lang="ts">
 import { mapState } from 'vuex'
 import CoinPriceTicker from '@/components/coinPriceTicker'
+import { getterTree } from 'typed-vuex'
 
 export default {
   name: 'BitcoinCash',
@@ -25,7 +26,6 @@ export default {
       loading: state => state.bitstamp.coin.loading,
       error: state => state.bitstamp.coin.error
     })
-  },
-  mounted() {}
+  }
 }
 </script>

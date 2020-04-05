@@ -21,15 +21,8 @@ export default {
   data() {
     return {}
   },
-  computed: {
-    ...mapState({
-      exchange: state => state.exchange,
-      coins: state => state.luno.list,
-      error: state => state.luno.error
-    })
-  },
   async fetch({ store }) {
-    await store.dispatch('luno/GET_ALL')
+    // await store.dispatch('luno/GET_ALL')
   },
   head() {
     return {

@@ -1,5 +1,6 @@
-// https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
-
+/*
+  @Documentation: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
+*/
 module.exports = {
   root: true,
   env: {
@@ -21,7 +22,7 @@ module.exports = {
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    'prettier/@typescript-eslint'
+    "prettier/@typescript-eslint"
   ],
   plugins: [
     "@typescript-eslint"

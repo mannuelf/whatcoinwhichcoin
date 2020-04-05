@@ -1,6 +1,5 @@
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
 import Axios from 'axios'
-
 const API_URLS: string[] = [
   'https://www.bitstamp.net/api/v2/ticker/btcusd',
   'https://www.bitstamp.net/api/v2/ticker/bchusd',
@@ -25,53 +24,52 @@ export const state = (): object => ({
 export type RootState = ReturnType<typeof state>
 
 export const getters: GetterTree<RootState, RootState> = {
-  'coin': {
-    'btc': state => state.btc,
-    'bch': state => state.bch,
-    'eth': state => state.eth,
-    'ltc': state => state.ltc,
-    'xrp': state => state.xrp,
-    'error': state => state.error,
-    'loading': state => state.loading
+  coin: {
+    btc: state => state.btc,
+    bch: state => state.bch,
+    eth: state => state.eth,
+    ltc: state => state.ltc,
+    xrp: state => state.xrp,
+    error: state => state.error,
+    loading: state => state.loading
   },
-  'exchange': state => state.exchange
+  exchange: state => state.exchange
 }
 
 export const mutations: MutationTree<RootState> = {
-  SET_BCH(state, payload) {
+  SET_BCH: (state, payload) => {
     state.coin.bch = payload
   },
-  SET_BTC(state, payload) {
+  SET_BTC: (state, payload) => {
     state.coin.btc = payload
   },
-  SET_ETH(state, payload) {
+  SET_ETH: (state, payload) => {
     state.coin.eth = payload
   },
-  SET_LTC(state, payload) {
+  SET_LTC: (state, payload) => {
     state.coin.ltc = payload
   },
-  SET_XRP(state, payload) {
+  SET_XRP: (state, payload) => {
     state.coin.xrp = payload
   },
-  SET_ERROR_MESSAGE(state, payload) {
+  SET_ERROR_MESSAGE: (state, payload) => {
     state.coin.error = payload
   },
-  SET_EXCHANGE(state, payload) {
+  SET_EXCHANGE: (state, payload) => {
     state.exchange = payload
   },
-  SET_END(state, payload) {
+  SET_END: (state, payload) => {
     state.coin.loading = payload
   }
 }
 
 export const actions: ActionTree<RootState, RootState> = {
-  async GET_COINS({ commit }) {
-    await API_URLS.map((url) => {
+  GET_COINS({ commit }) {
+    API_URLS.map((url) => {
       Axios.get(url)
         .then((response) => {
           const respData: object = response.data
           const coinName: string = url.substr(url.length - 6)
-
           switch (coinName) {
             case 'btcusd':
               commit('SET_BTC', respData)

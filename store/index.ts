@@ -1,4 +1,4 @@
-import { GetterTree, MutationTree } from "vuex"
+import { GetterTree, MutationTree } from 'vuex'
 
 export const state = (): object => ({
   locales: ['en', 'pt'] as string[],
@@ -8,8 +8,8 @@ export const state = (): object => ({
 export type RootState = ReturnType<typeof  state>
 
 export const getters: GetterTree<RootState, RootState> = {
-  "locales": state => state.locales,
-  "locale": state => state.locale
+  locales: state => state.locales,
+  locale: state => state.locale
 }
 
 export const mutations: MutationTree<RootState> = {

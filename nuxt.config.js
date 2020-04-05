@@ -123,11 +123,15 @@ module.exports = {
   css: ['~/assets/sass/app.sass'],
   plugins: [
     {
-      src: '~/plugins/vue-analytics.ts',
+      src: '~/plugins/composition-api',
       ssr: false
     },
     {
-      src: '~/plugins/vue-i18n.ts',
+      src: '~/plugins/vue-analytics',
+      ssr: false
+    },
+    {
+      src: '~/plugins/vue-i18n',
       ssr: true
     }
     // {
@@ -199,6 +203,9 @@ module.exports = {
     plugins: []
   },
   build: {
+    transpile: [
+      /typed-vuex/,
+    ],
     cssSourceMap: true,
     build: ['vue-i18n'],
     extend(config, ctx) {
