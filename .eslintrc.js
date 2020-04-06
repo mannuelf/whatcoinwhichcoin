@@ -7,25 +7,31 @@ module.exports = {
     browser: true,
     node: true
   },
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     parser: __dirname,
-    extraFileExtensions: [".vue"],
-    project: ["./tsconfig.json"],
+    extraFileExtensions: ['.vue'],
+    project: ['./tsconfig.json'],
     ecmaFeatures: {
       jsx: true
     }
   },
   extends: [
-    "plugin:vue/base",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier/@typescript-eslint"
+    'plugin:vue/base',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier/@typescript-eslint'
   ],
   plugins: [
-    "@typescript-eslint"
+    '@typescript-eslint'
   ],
-  rules: {}
+  rules: {
+    'no-var-requires': false,
+    'no-unused-expressions': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'// allow debugger during development only
+  }
+
 }
