@@ -2,8 +2,10 @@
 /config
 /dist
 /public
+/middleware
 /test/unit/coverage
 /node_modules
 /plugins
 /test
 nuxt.config.js
+/_OLD

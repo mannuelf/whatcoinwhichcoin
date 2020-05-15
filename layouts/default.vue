@@ -1,128 +1,55 @@
 <template>
   <div>
-    <site-header />
-    <div v-if="$nuxt.isOffline">
-      You are offline
-    </div>
     <nuxt />
-    <site-footer />
-    <app-nav-bar />
   </div>
 </template>
-<script lang="ts">
-import SiteHeader from '@/components/siteHeader'
-import SiteFooter from '@/components/siteFooter'
-import AppNavBar from '@/components/appNavBar'
 
-export default {
-  name: 'DefaultLayout',
-  components: {
-    'site-header': SiteHeader,
-    'site-footer': SiteFooter,
-    'app-nav-bar': AppNavBar
-  },
-  data() {
-    return {}
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      setTimeout(() => this.$nuxt.$loading.start())
-    })
-  }
+<style>
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
-</script>
 
-<style lang="sass">
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
 
-body
-  background: $babyPowder
-  font-family: $defaultFont
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+}
 
-#app
-  font-family: $defaultFont
-  color: $richBlack
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
 
-#__nuxt
-  height: 100vh
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
 
-.container
-  display: grid
-  grid-gap: 0
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
-  max-width: 100%
-  padding: 10px
-
-  @media (min-width: 640px)
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr))
-
-.site-header
-  background-color: $brightCerulean
-  color: $white
-  grid-area: header
-  padding: .9em
-  min-height: 40px
-  z-index: 100
-
-.block
-  border: none
-  grid-gap: 0
-  grid-template-columns: 200px 1fr
-  justify-content: center
-  padding: 0
-
-a
-  color: $darkLiver
-  text-decoration: none
-  &:hover
-    color: $richBlack
-
-  &:visited
-    color: $darkLiver
-
-.block
-  padding: 0
-
-  &__btn--std
-    border-left: 10px solid $babyPowder
-    display: grid
-    font-size: 2em
-    grid-gap: 0
-    grid-template-columns: 0.5fr 20px 1fr
-    padding: 1em 0.5em
-    transition: all 0.5s ease-out
-
-    &:hover
-      background: $blockBtnHover
-      border-left: 5px solid $brightCerulean
-      transition: all 0.5s ease-out
-
-  &__btn--coin
-    align-self: end
-    font-family: $rajdHani, $defaultFont
-    font-size: 0.8em
-    font-weight: $fontBold
-
-  &__btn--currency
-    font-family: $rajdHani, $defaultFont
-    font-size: 0.8em
-    font-weight: $fontBold
-
-  &__btn--price
-    align-self: end
-    font-family: $robotoMono, $defaultFont
-    font-weight: $fontThin
-    font-size: 1.1em
-    @media(min-width: 460px)
-      font-size: 1.8em
-
-.about-site, .footer-note
-  padding: 1em
-  background-color: $mediumAquamarine
-  p
-    margin-bottom: 0
-    color: $richBlack
-
-.footer-note
-  padding-bottom: 2em
+.button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
+}
 </style>
